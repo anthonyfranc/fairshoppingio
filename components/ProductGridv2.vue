@@ -88,40 +88,26 @@
               group-hover:translate-y-0
             "
           >
-          <NuxtLink :to="`/product/${ProductData.id}`" title="">
-            <button
-              type="button"
-              class="
-                flex
-                items-center
-                justify-center
-                w-full
-                px-4
-                py-2.5
-                text-sm
-                font-bold
-                text-white
-                transition-all
-                duration-200
-                bg-gray-900
-              "
-            >
-              <svg
-                class="w-5 h-5 mr-2"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            <NuxtLink :to="`/product/${ProductData.id}`" title="">
+              <button
+                type="button"
+                class="
+                  flex
+                  items-center
+                  justify-center
+                  w-full
+                  px-4
+                  py-2.5
+                  text-sm
+                  font-bold
+                  text-white
+                  transition-all
+                  duration-200
+                  bg-gray-900
+                "
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                />
-              </svg>
-              More Info
-            </button>
+                More Info
+              </button>
             </NuxtLink>
           </div>
         </div>
