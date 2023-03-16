@@ -76,6 +76,9 @@
                       <button>5</button>
                     </div>
                   </div>
+                  <div class="text-xs text-gray-400">
+                  ({{ProductData.current_rating}})
+                  </div>
                 </div>
               </div>
               <p class="mt-0.5 text-xs sm:text-sm font-medium text-gray-400">
