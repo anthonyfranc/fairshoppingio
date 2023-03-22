@@ -101,8 +101,13 @@
                 </div>
                 <div v-else="ProductData.current_price < ProductData.previous_price_day">
                     <!--Price has decreased-->
-                    <img class="inline-block align-baseline w-3"
-                    style="margin-left:2px"
+                    <img class="
+                    w-2.5
+                    "
+                    style="
+                    margin-left:2.2px;
+                    padding-top:40%;
+                    "
                     src="https://upload.wikimedia.org/wikipedia/commons/8/82/Decrease.svg">
                 </div>
                 </div>
