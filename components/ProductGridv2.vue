@@ -77,20 +77,38 @@
                     </div>
                   </div>
                   <div class="text-xs text-gray-400">
-                  ({{ProductData.current_rating}})
+                    ({{ ProductData.current_rating }})
                   </div>
                 </div>
               </div>
               <p class="mt-0.5 text-xs sm:text-sm font-medium text-gray-400">
                 {{ ProductData.current_reviews }} Reviews
               </p>
-              <p class="mt-5 text-sm font-bold text-gray-900">
+              <p class="mt-2 text-sm font-bold text-gray-900 flex">
                 {{
                   Number(ProductData.current_price).toLocaleString('en-US', {
                     style: 'currency',
                     currency: 'USD',
                   })
                 }}
+                <div v-if="ProductData.previous_price_day > 0.00">
+                <div v-if="ProductData.current_price == ProductData.previous_price_day">
+                    <!--Price is the same-->
+                </div>
+                <div v-else="ProductData.current_price > ProductData.previous_price_day">
+                   <!--Price has increased-->
+                   
+                </div>
+                <div v-else="ProductData.current_price < ProductData.previous_price_day">
+                    <!--Price has decreased-->
+                    <img class="inline-block align-baseline w-3"
+                    style="margin-left:2px"
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/82/Decrease.svg">
+                </div>
+                </div>
+                <div v-else>
+                    <!--Price is the same-->
+                </div>
               </p>
             </div>
           </div>
@@ -137,7 +155,7 @@
 <script setup>
 const supabase = useSupabaseClient();
 
-const { data } = await supabase.from('productinfov7').select('*');
+const { data } = await supabase.from('productinfov1').select('*');
 </script>
 <style lang="scss">
 ////
