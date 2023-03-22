@@ -161,7 +161,7 @@
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="mt-8 space-y-5">
         <div>
-          <div class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-3">
+          <div class="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3">
             <div class="relative overflow-hidden rounded-lg group">
               <div>
                 <img
