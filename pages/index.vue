@@ -1,6 +1,6 @@
 <template>
   <div>
     <NavBar />
-    <ProductGridv2 />
+    <LazyProductGridv2 />
   </div>
 </template>

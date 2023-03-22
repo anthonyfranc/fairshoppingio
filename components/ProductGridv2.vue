@@ -6,9 +6,9 @@
       </div>
       <div
         class="
-          grid grid-cols-1
+          grid grid-cols-2
           gap-5
-          mt-6
+          mt-0
           sm:grid-cols-2
           md:grid-cols-3
           lg:grid-cols-5
@@ -161,6 +161,7 @@ const supabase = useSupabaseClient();
 
 const { data } = await supabase.from('productinfov1').select('*');
 </script>
+
 <style lang="scss">
 ////
 /// Star Rating
