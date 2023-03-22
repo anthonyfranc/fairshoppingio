@@ -33,10 +33,9 @@
                 inline-flex
                 items-center
                 justify-center
-                text-gray-400
-                hover:text-rose-500
               "
-            ></button>
+            >
+            </button>
           </div>
           <div class="relative">
             <div class="aspect-w-1 aspect-h-1">
@@ -92,14 +91,14 @@
                   })
                 }}
                 <div v-if="ProductData.previous_price_day > 0.00">
-                <div v-if="ProductData.current_price == ProductData.previous_price_day">
+                  <div v-if="ProductData.current_price == ProductData.previous_price_day">
                     <!--Price is the same-->
-                </div>
-                <div v-else="ProductData.current_price > ProductData.previous_price_day">
+                 </div>
+                  <div v-else="ProductData.current_price > ProductData.previous_price_day">
                    <!--Price has increased-->
                    
-                </div>
-                <div v-else="ProductData.current_price < ProductData.previous_price_day">
+                 </div>
+                  <div v-else="ProductData.current_price < ProductData.previous_price_day">
                     <!--Price has decreased-->
                     <img class="
                     w-2.5
@@ -109,7 +108,7 @@
                     padding-top:40%;
                     "
                     src="https://upload.wikimedia.org/wikipedia/commons/8/82/Decrease.svg">
-                </div>
+                 </div>
                 </div>
                 <div v-else>
                     <!--Price is the same-->
