@@ -161,7 +161,7 @@
 <script setup>
 const supabase = useSupabaseClient();
 
-const { data } = await supabase.from('productinfov2').select('*');
+const { data } = await supabase.from('productinfov1').select('*');
 </script>
 
 <style lang="scss">
