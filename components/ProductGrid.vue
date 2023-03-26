@@ -47,11 +47,15 @@
             </div>
             <div class="px-4 py-4">
             <!--Store Name-->
-            <template v-for="(item, key, index) in ProductData.store_info" :StoreCount="item.length">
-              <template v-if="ProductData.store_info.length <= 2">
-              test {{StoreCount}}
+            {{(storeCount = ProductData.store_info.length, null)}}
+            <div>
+            <template v-if="ProductData.store_info.length <= 2">
+               <template v-for="(item, key, index) in ProductData.store_info.slice(0,2)">
+                {{item.store_name}}<span v-if="key+1 < storeCount">, </span>
               </template>
+              <span v-if="storeCount > 2">+ {{storeCount-2}} More</span>
             </template>
+            </div>
             <!--End Stoer Name-->
               <h3 class="text-sm font-medium text-gray-800">
                 <NuxtLink :to="`/product/${ProductData.id}`" title="">
@@ -169,8 +173,6 @@
 const supabase = useSupabaseClient();
 
 const { data } = await supabase.from('productinfo_testv11').select('*');
-
-
 </script>
 
 <style lang="scss">
