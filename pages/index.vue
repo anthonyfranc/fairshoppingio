@@ -1,7 +1,10 @@
 <template>
   <div>
-    <LazyLoadItem />
     <NavBar />
     <LazyProductGrid />
   </div>
 </template>
+
+<script>
+
+</script>

@@ -56,7 +56,7 @@
               <span v-if="storeCount > 2">+ {{storeCount-2}} More</span>
             </template>
             </div>
-            <!--End Stoer Name-->
+            <!--End Store Name-->
               <h3 class="text-sm font-medium text-gray-800">
                 <NuxtLink :to="`/product/${ProductData.id}`" title="">
                   {{ ProductData.product_name }}
@@ -140,7 +140,7 @@
               group-hover:translate-y-0
             "
           >
-            <NuxtLink :to="`/product/${ProductData.id}`" title="">
+            <span @click:testMessage="`test`" title="">
               <button
                 type="button"
                 class="
@@ -160,7 +160,7 @@
               >
                 More Info
               </button>
-            </NuxtLink>
+            </span>
           </div>
         </div>
       </div>
@@ -169,10 +169,18 @@
   </section>
 </template>
 
-<script setup>
+<script>
 const supabase = useSupabaseClient();
 
 const { data, error } = await supabase.from('productinfo_testv11').select();
+
+export default {
+data() {
+  return {
+      data: data
+    };
+  }
+}
 </script>
 
 <style lang="scss">
