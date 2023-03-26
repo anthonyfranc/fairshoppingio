@@ -48,7 +48,7 @@
             <div class="px-4 py-4">
              <!--Store Name-->
             {{(storeCount = ProductData.store_info.length, null)}}
-            <div class="flex">
+            <div class="mt-0.5 text-xs sm:text-sm text-gray-400">
             <template v-if="ProductData.store_info.length <= 2">
                <template v-for="(item, key, index) in ProductData.store_info.slice(0,2)">
                 {{item.store_name}}<span v-if="key+1 < storeCount">, </span>
@@ -172,7 +172,7 @@
 <script setup>
 const supabase = useSupabaseClient();
 
-const { data } = await supabase.from('productinfo_testv11').select('*');
+const { data, error } = await supabase.from('productinfo_testv11').select();
 </script>
 
 <style lang="scss">
