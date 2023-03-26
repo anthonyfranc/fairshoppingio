@@ -1,5 +1,5 @@
 <template>
-  <header class="relative sticky top-0 z-30">
+  <header class="relative">
     <div class="bg-white border-b border-gray-200">
       <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="grid place-items-center h-16 lg:h-[72px]">
