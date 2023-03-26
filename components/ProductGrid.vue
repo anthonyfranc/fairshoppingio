@@ -46,9 +46,9 @@
               />
             </div>
             <div class="px-4 py-4">
-            <!--Store Name-->
+             <!--Store Name-->
             {{(storeCount = ProductData.store_info.length, null)}}
-            <div>
+            <div class="flex">
             <template v-if="ProductData.store_info.length <= 2">
                <template v-for="(item, key, index) in ProductData.store_info.slice(0,2)">
                 {{item.store_name}}<span v-if="key+1 < storeCount">, </span>
