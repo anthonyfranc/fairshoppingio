@@ -46,9 +46,16 @@
               />
             </div>
             <div class="px-4 py-4">
+            <!--Store Name-->
+            <template v-for="(item, key, index) in ProductData.store_info" :StoreCount="item.length">
+              <template v-if="ProductData.store_info.length <= 2">
+              test {{StoreCount}}
+              </template>
+            </template>
+            <!--End Stoer Name-->
               <h3 class="text-sm font-medium text-gray-800">
                 <NuxtLink :to="`/product/${ProductData.id}`" title="">
-                  {{ ProductData.Name }}
+                  {{ ProductData.product_name }}
                   <span class="absolute inset-0" aria-hidden="true"></span>
                 </NuxtLink>
               </h3>
@@ -161,7 +168,9 @@
 <script setup>
 const supabase = useSupabaseClient();
 
-const { data } = await supabase.from('productinfov1').select('*');
+const { data } = await supabase.from('productinfo_testv11').select('*');
+
+
 </script>
 
 <style lang="scss">
