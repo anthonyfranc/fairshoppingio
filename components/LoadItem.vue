@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot as="template" :show="show">
+  <TransitionRoot as="template" @show="show" :show="show">
     <Dialog as="div" class="relative z-10" @close="open = false">
       <div class="fixed inset-0" />
 
@@ -91,5 +91,11 @@ import {
 import { XMarkIcon } from '@heroicons/vue/24/outline';
 
 const open = ref(true);
-const props = defineProps(['show']);
+const props = defineProps({
+  show: {
+    type: Array,
+    default: false,
+    required: true,
+  },
+});
 </script>
