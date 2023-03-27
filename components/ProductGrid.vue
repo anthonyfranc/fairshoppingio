@@ -171,6 +171,7 @@
 </template>
 
 <script>
+
 const supabase = useSupabaseClient();
 
 const { data } = await supabase.from('productinfo_testv11').select();
