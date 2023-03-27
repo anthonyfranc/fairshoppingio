@@ -1,5 +1,5 @@
 <template>
-<LoadItem  v-if="show" @show="show" />
+<LoadItem  v-if="show" :show="show" />
   <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-center lg:justify-between">
@@ -158,7 +158,7 @@
                   duration-200
                   bg-gray-900
                 "
-                @click='$emit("show", true)'
+                @click="show = true"
               >
                 More Info
               </button>
@@ -175,13 +175,15 @@
 const supabase = useSupabaseClient();
 
 const { data, error } = await supabase.from('productinfo_testv11').select();
-const emits = defineEmits([
-    'show'
-  ]);
-const showStore = (event) => {
-  // no console warning
-  emit('show', true)
-}
+const props = defineProps({
+  show: {
+    type: Boolean,
+    default: false,
+    required: true,
+  }
+});
+
+console.log(props.show);
 </script>
 
 <style lang="scss">
