@@ -53,6 +53,7 @@
                             focus:outline-none focus:ring-2 focus:ring-white
                           "
                           @click="open = false"
+                          :show="false"
                         >
                           <span class="sr-only">Close panel</span>
                           <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -79,16 +80,16 @@
   </TransitionRoot>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-import {
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-  TransitionChild,
-  TransitionRoot,
-} from '@headlessui/vue';
-import { XMarkIcon } from '@heroicons/vue/24/outline';
+<script>
+
 
 const open = ref(true);
+
+export default {
+data() {
+  return {
+      show: false
+    };
+  }
+}
 </script>

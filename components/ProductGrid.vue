@@ -1,5 +1,5 @@
 <template>
-<LazyLoadItem  v-if="show"/>
+<LoadItem  v-if="show" :show="false" />
   <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-center lg:justify-between">
@@ -173,7 +173,7 @@
 <script>
 const supabase = useSupabaseClient();
 
-const { data, error } = await supabase.from('productinfo_testv11').select();
+const { data } = await supabase.from('productinfo_testv11').select();
 
 export default {
 data() {
@@ -186,7 +186,7 @@ data() {
     showStore() {
       this.show = true
     }
-  }
+  },
 }
 </script>
 
