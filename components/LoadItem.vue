@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot as="template">
+  <TransitionRoot as="template" @show="show">
     <Dialog as="div" class="relative z-10" @close="open = false">
       <div class="fixed inset-0" />
 
@@ -52,8 +52,7 @@
                             hover:text-white
                             focus:outline-none focus:ring-2 focus:ring-white
                           "
-                          @click="open = false"
-                          :show="false"
+                          @click='(open = false), $emit("show", true)'
                         >
                           <span class="sr-only">Close panel</span>
                           <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -80,16 +79,17 @@
   </TransitionRoot>
 </template>
 
-<script>
-
+<script setup>
+import { ref } from 'vue';
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  TransitionChild,
+  TransitionRoot,
+} from '@headlessui/vue';
+import { XMarkIcon } from '@heroicons/vue/24/outline';
 
 const open = ref(true);
-
-export default {
-data() {
-  return {
-      show: false
-    };
-  }
-}
+const emits = defineEmits(['show']);
 </script>

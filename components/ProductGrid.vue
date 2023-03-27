@@ -1,5 +1,5 @@
 <template>
-<LoadItem  v-if="show" :show="false" />
+<LoadItem  v-if="show" @show="show" />
   <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-center lg:justify-between">
@@ -141,7 +141,7 @@
               group-hover:translate-y-0
             "
           >
-            <span @click="showStore" title="">
+            <span title="">
               <button
                 type="button"
                 class="
@@ -158,6 +158,7 @@
                   duration-200
                   bg-gray-900
                 "
+                @click='$emit("show", true)'
               >
                 More Info
               </button>
@@ -170,24 +171,16 @@
   </section>
 </template>
 
-<script>
-
+<script setup>
 const supabase = useSupabaseClient();
 
-const { data } = await supabase.from('productinfo_testv11').select();
-
-export default {
-data() {
-  return {
-      data: data,
-      show: false
-    };
-  },
-  methods: {
-    showStore() {
-      this.show = true
-    }
-  },
+const { data, error } = await supabase.from('productinfo_testv11').select();
+const emits = defineEmits([
+    'show'
+  ]);
+const showStore = (event) => {
+  // no console warning
+  emit('show', true)
 }
 </script>
 
