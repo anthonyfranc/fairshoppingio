@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot as="template" :show="open">
+  <TransitionRoot as="template">
     <Dialog as="div" class="relative z-10" @close="open = false">
       <div class="fixed inset-0" />
 

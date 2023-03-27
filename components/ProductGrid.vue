@@ -1,4 +1,5 @@
 <template>
+<LazyLoadItem  v-if="show"/>
   <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-center lg:justify-between">
@@ -140,7 +141,7 @@
               group-hover:translate-y-0
             "
           >
-            <span @click:testMessage="`test`" title="">
+            <span @click="showStore" title="">
               <button
                 type="button"
                 class="
@@ -177,8 +178,14 @@ const { data, error } = await supabase.from('productinfo_testv11').select();
 export default {
 data() {
   return {
-      data: data
+      data: data,
+      show: false
     };
+  },
+  methods: {
+    showStore() {
+      this.show = true
+    }
   }
 }
 </script>
