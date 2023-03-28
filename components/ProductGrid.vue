@@ -1,5 +1,5 @@
 <template>
-<LoadItem  v-if="show" :show="show" />
+<LoadItem v-if="show" :show="show" @close="show = false"/>
   <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-center lg:justify-between">
@@ -25,7 +25,7 @@
             rounded-xl
             group
           "
-          v-for="ProductData in data"
+          v-for="ProductData in data" 
         >
           <div class="absolute z-10 top-3 right-3">
             <button
@@ -182,6 +182,12 @@ const props = defineProps({
     required: true,
   }
 });
+
+const emit = defineEmits(['close']);
+
+function storeSleep(){
+  setTimeout(1000);
+}
 
 console.log(props.show);
 </script>
