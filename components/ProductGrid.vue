@@ -1,5 +1,5 @@
 <template>
-<LoadItem v-if="show" :show="show" @close="show = false"/>
+<LoadItem v-if="show" :show="show" @close="show = false" :storeID="storeID" />
   <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-center lg:justify-between">
@@ -59,10 +59,10 @@
             </div>
             <!--End Store Name-->
               <h3 class="text-sm font-medium text-gray-800">
-                <NuxtLink :to="`/product/${ProductData.id}`" title="">
+                <a href="#" @click="(show = true), (storeID = ProductData.id)" title="">
                   {{ ProductData.product_name }}
                   <span class="absolute inset-0" aria-hidden="true"></span>
-                </NuxtLink>
+                </a>
               </h3>
               <div class="flex items-center">
                 <div class="flex items-center space-x-px">
@@ -158,7 +158,7 @@
                   duration-200
                   bg-gray-900
                 "
-                @click="show = true"
+                @click="(show = true), (storeID = ProductData.id)"
               >
                 More Info
               </button>
@@ -179,8 +179,10 @@ const props = defineProps({
   show: {
     type: Boolean,
     default: false,
-    required: true,
-  }
+  },
+  storeID: {
+    type: Number,
+  },
 });
 
 const emit = defineEmits(['close']);

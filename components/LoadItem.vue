@@ -1,9 +1,23 @@
 <template>
   <TransitionRoot as="template" :show="show">
     <Dialog as="div" class="relative z-10" @close="open = false">
+      <TransitionChild
+        as="template"
+        enter="ease-in-out duration-500"
+        enter-from="opacity-0"
+        enter-to="opacity-100"
+        leave="ease-in-out duration-500"
+        leave-from="opacity-100"
+        leave-to="opacity-0"
+      >
+        <div
+          id="storeClose"
+          class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+        />
+      </TransitionChild>
       <div class="fixed inset-0" />
 
-      <div class="fixed inset-0 overflow-hidden">
+      <div class="fixed inset-0 overflow-hidden" v-for="ProductData in data">
         <div class="absolute inset-0 overflow-hidden">
           <div
             class="
@@ -25,7 +39,7 @@
               leave-from="translate-x-0"
               leave-to="translate-x-full"
             >
-              <DialogPanel class="pointer-events-auto w-screen max-w-md">
+              <DialogPanel class="pointer-events-auto w-screen max-w-xl">
                 <div
                   id="storeMenu"
                   class="
@@ -37,22 +51,16 @@
                     shadow-xl
                   "
                 >
-                  <div class="bg-indigo-700 py-6 px-4 sm:px-6">
+                  <div class="bg-gray-50 px-4 py-6 sm:px-6">
                     <div class="flex items-center justify-between">
                       <DialogTitle
-                        class="text-base font-semibold leading-6 text-white"
-                        >Panel title</DialogTitle
+                        class="text-base font-semibold leading-6 text-gray-900"
+                        >{{ ProductData.product_name }}</DialogTitle
                       >
                       <div class="ml-3 flex h-7 items-center">
                         <button
                           type="button"
-                          class="
-                            rounded-md
-                            bg-indigo-700
-                            text-indigo-200
-                            hover:text-white
-                            focus:outline-none focus:ring-2 focus:ring-white
-                          "
+                          class="text-gray-400 hover:text-gray-500"
                           @click="
                             closeStore();
                             open = false;
@@ -64,9 +72,9 @@
                       </div>
                     </div>
                     <div class="mt-1">
-                      <p class="text-sm text-indigo-300">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                        aliquam ad hic recusandae soluta.
+                      <p class="text-sm text-gray-500">
+                        Get started by filling in the information below to
+                        create your new project.
                       </p>
                     </div>
                   </div>
@@ -102,6 +110,9 @@ const props = defineProps({
     default: false,
     required: true,
   },
+  storeID: {
+    type: Number,
+  },
 });
 
 const emit = defineEmits(['close']);
@@ -111,14 +122,22 @@ const emitClose = () => {
 };
 
 function closeStore() {
+  //Close Sidemenu CSS
   $('#storeMenu').addClass(
     'transform transition ease-in-out duration-700 sm:duration-700'
   );
   $('#storeMenu').addClass('translate-x-0');
   $('#storeMenu').addClass('translate-x-full');
+  //use Javascript to emulate ease-out
+  $('#storeClose').fadeTo(250, 0);
   setTimeout(function () {
     return emit('close');
-  }, 1000);
+  }, 750);
 }
-console.log(open);
+
+const supabase = useSupabaseClient();
+const { data, error } = await supabase
+  .from('productinfo_testv11')
+  .select('*')
+  .eq('id', props.storeID);
 </script>
