@@ -89,6 +89,8 @@
                   </div>
                   <div class="relative flex-1 py-6 px-4 sm:px-6">
                     <!-- Your content -->
+                    <LazyLoadItemGallery />
+                    <!--End of Content-->
                   </div>
                 </div>
               </DialogPanel>
