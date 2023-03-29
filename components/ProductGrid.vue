@@ -10,6 +10,7 @@
           grid grid-cols-2
           gap-5
           mt-0
+          xs:grid-cols-1
           sm:grid-cols-2
           md:grid-cols-3
           lg:grid-cols-4
