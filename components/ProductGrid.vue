@@ -43,7 +43,7 @@
           <div class="relative">
             <div class="aspect-w-1 aspect-h-1">
               <img
-                class="object-cover w-full h-full"
+                class="object-scale-down w-full h-full"
                 :src="ProductData.Image"
                 alt=""
               />

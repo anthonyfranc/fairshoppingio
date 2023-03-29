@@ -179,7 +179,15 @@
               </div>
               <div class="absolute inset-x-0 bottom-0">
                 <div class="px-4 py-3">
-                  <p class="text-xl font-bold text-gray-900 sm:text-base">
+                  <p
+                    class="
+                      text-xl
+                      font-bold
+                      text-gray-900
+                      sm:text-base
+                      xs:text-xs
+                    "
+                  >
                     Furniture
                   </p>
                 </div>
@@ -205,7 +213,15 @@
               </div>
               <div class="absolute inset-x-0 bottom-0">
                 <div class="px-4 py-3">
-                  <p class="text-xl font-bold text-gray-900 sm:text-base">
+                  <p
+                    class="
+                      text-xl
+                      font-bold
+                      text-gray-900
+                      sm:text-base
+                      xs:text-xs
+                    "
+                  >
                     Electronics
                   </p>
                 </div>
@@ -232,7 +248,15 @@
               </div>
               <div class="absolute inset-x-0 bottom-0">
                 <div class="px-4 py-3">
-                  <p class="text-xl font-bold text-gray-900 sm:text-base">
+                  <p
+                    class="
+                      text-xl
+                      font-bold
+                      text-gray-900
+                      sm:text-base
+                      xs:text-xs
+                    "
+                  >
                     Gaming
                   </p>
                 </div>
@@ -259,7 +283,15 @@
               </div>
               <div class="absolute inset-x-0 bottom-0">
                 <div class="px-4 py-3">
-                  <p class="text-xl font-bold text-gray-900 sm:text-base">
+                  <p
+                    class="
+                      text-xl
+                      font-bold
+                      text-gray-900
+                      sm:text-base
+                      xs:text-xs
+                    "
+                  >
                     Entertainment
                   </p>
                 </div>
@@ -286,7 +318,15 @@
               </div>
               <div class="absolute inset-x-0 bottom-0">
                 <div class="px-4 py-3">
-                  <p class="text-xl font-bold text-gray-900 sm:text-base">
+                  <p
+                    class="
+                      text-xl
+                      font-bold
+                      text-gray-900
+                      sm:text-base
+                      xs:text-xs
+                    "
+                  >
                     Smart Home
                   </p>
                 </div>
