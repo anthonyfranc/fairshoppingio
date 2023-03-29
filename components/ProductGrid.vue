@@ -61,6 +61,11 @@
             <!--End Store Name-->
               <h3 class="
               xs:text-xs
+              sm:text-sm
+              md:text-md
+              lg:text-md
+              xl:text-md
+              text-xs
               font-medium text-gray-800"
               >
                 <button @click="(show = true), (storeID = ProductData.id)" title="">
