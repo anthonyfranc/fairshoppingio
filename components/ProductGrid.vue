@@ -59,10 +59,10 @@
             </div>
             <!--End Store Name-->
               <h3 class="text-sm font-medium text-gray-800">
-                <a href="#" @click="(show = true), (storeID = ProductData.id)" title="">
+                <button @click="(show = true), (storeID = ProductData.id)" title="">
                   {{ ProductData.product_name }}
                   <span class="absolute inset-0" aria-hidden="true"></span>
-                </a>
+                </button>
               </h3>
               <div class="flex items-center">
                 <div class="flex items-center space-x-px">
