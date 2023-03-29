@@ -40,7 +40,7 @@
             >
             </button>
           </div>
-          <div class="relative">
+          <div class="relative" @click="(show = true), (storeID = ProductData.id)">
             <div class="aspect-w-1 aspect-h-1">
               <img
                 class="object-scale-down w-full h-full"
@@ -69,20 +69,12 @@
               text-xs
               font-medium text-gray-800"
               >
-                <button @click="(show = true), (storeID = ProductData.id)" title="">
+                
                   {{ ProductData.product_name }}
                   <span class="absolute inset-0" aria-hidden="true"></span>
-                </button>
               </h3>
               <div class="flex items-center">
                 <div class="flex items-center space-x-px">
-                  <!--Ratings-->
-                  <!--<star-rating
-                    v-model:rating="ProductData.current_rating"
-                    :round-start-rating="false"
-                    :star-size="14"
-                    :show-rating="false"
-                  ></star-rating>-->
                   <div class="rating-holder">
                     <div
                       class="c-rating c-rating--small"
@@ -187,19 +179,14 @@ const supabase = useSupabaseClient();
 const { data, error } = await supabase.from('productinfo_testv11').select();
 const props = defineProps({
   show: {
-    type: Boolean,
-    default: false,
+    type: Boolean
   },
   storeID: {
-    type: Number,
-  },
+    type: Number
+  }
 });
 
 const emit = defineEmits(['close']);
-
-function storeSleep(){
-  setTimeout(1000);
-}
 
 console.log(props.show);
 </script>

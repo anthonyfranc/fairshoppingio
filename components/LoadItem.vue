@@ -32,10 +32,10 @@
           >
             <TransitionChild
               as="template"
-              enter="transform transition ease-in-out md:duration-500 duration-500"
+              enter="transform transition ease-in-out duration-500"
               enter-from="translate-x-full"
               enter-to="translate-x-0"
-              leave="transform transition ease-in-out md:duration-500 duration-500"
+              leave="transform transition ease-in-out duration-500"
               leave-from="translate-x-0"
               leave-to="translate-x-full"
             >
@@ -61,10 +61,7 @@
                         <button
                           type="button"
                           class="text-gray-400 hover:text-gray-500"
-                          @click="
-                            closeStore();
-                            open = false;
-                          "
+                          @click="closeStore(), (open = false)"
                         >
                           <span class="sr-only">Close panel</span>
                           <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -123,8 +120,9 @@ const emitClose = () => {
 
 function closeStore() {
   //Close Sidemenu CSS
+  let open = false;
   $('#storeMenu').addClass(
-    'transform transition ease-in-out md:duration-500 duration-500 translate-x-0 translate-x-full'
+    'transform transition ease-in-out duration-500 translate-x-0 translate-x-full'
   );
   //use Javascript to emulate ease-out
   $('#storeClose').fadeTo(100, 0);
@@ -134,7 +132,7 @@ function closeStore() {
 }
 
 const supabase = useSupabaseClient();
-const { data, error } = await supabase
+const { data } = await supabase
   .from('productinfo_testv11')
   .select('*')
   .eq('id', props.storeID);
