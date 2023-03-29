@@ -32,10 +32,10 @@
           >
             <TransitionChild
               as="template"
-              enter="transform transition ease-in-out duration-500 sm:duration-700"
+              enter="transform transition ease-in-out duration-500 sm:duration-500"
               enter-from="translate-x-full"
               enter-to="translate-x-0"
-              leave="transform transition ease-in-out duration-500 sm:duration-700"
+              leave="transform transition ease-in-out duration-500 sm:duration-500"
               leave-from="translate-x-0"
               leave-to="translate-x-full"
             >
@@ -124,7 +124,7 @@ const emitClose = () => {
 function closeStore() {
   //Close Sidemenu CSS
   $('#storeMenu').addClass(
-    'transform transition ease-in-out duration-700 sm:duration-700'
+    'transform transition ease-in-out duration-700 sm:duration-500'
   );
   $('#storeMenu').addClass('translate-x-0');
   $('#storeMenu').addClass('translate-x-full');
