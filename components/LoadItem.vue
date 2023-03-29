@@ -124,13 +124,13 @@ const emitClose = () => {
 function closeStore() {
   //Close Sidemenu CSS
   $('#storeMenu').addClass(
-    'transform transition ease-in-out md:duration-700 duration-500 translate-x-0 translate-x-full'
+    'transform transition ease-in-out md:duration-500 duration-500 translate-x-0 translate-x-full'
   );
   //use Javascript to emulate ease-out
   $('#storeClose').fadeTo(100, 0);
   setTimeout(function () {
     return emit('close');
-  }, 700);
+  }, 500);
 }
 
 const supabase = useSupabaseClient();
