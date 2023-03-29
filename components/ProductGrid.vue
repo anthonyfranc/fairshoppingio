@@ -1,5 +1,5 @@
 <template>
-<LoadItem v-if="show" :show="show" @close="show = false" :storeID="storeID" />
+<LazyLoadItem v-if="show" :show="show" @close="show = false" :storeID="storeID" />
   <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-center lg:justify-between">
