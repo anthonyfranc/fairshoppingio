@@ -32,7 +32,7 @@
           >
             <TransitionChild
               as="template"
-              enter="transform transition ease-in-out duration-500 sm:duration-00"
+              enter="transform transition ease-in-out duration-500 sm:duration-500"
               enter-from="translate-x-full"
               enter-to="translate-x-0"
               leave="transform transition ease-in-out duration-500 sm:duration-500"
