@@ -1,13 +1,19 @@
 <template>
   <main class="mx-auto max-w-7xl">
-    <div class="mx-auto max-w-1xl lg:max-w-none">
+    <div class="mx-auto max-w-2xl lg:max-w-none">
       <!-- Product -->
-      <div class="lg:grid lg:grid-cols-1 lg:items-start lg:gap-x-8">
+      <div class="grid grid-cols-1 items-start">
         <!-- Image gallery -->
         <div class="flex flex-col-reverse">
           <!-- Image selector -->
           <div
-            class="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none"
+            class="
+              mx-auto
+              mt-6
+              w-full
+              max-w-2xl
+              lg:max-w-none
+            "
           >
             <div
               class="grid grid-cols-4 gap-6"
@@ -16,7 +22,6 @@
             >
               <button
                 v-on:click="toggleTabs(1)"
-                id="tabs-2-tab-1"
                 class="
                   relative
                   flex
@@ -69,7 +74,6 @@
 
               <button
                 v-on:click="toggleTabs(2)"
-                id="tabs-2-tab-1"
                 class="
                   relative
                   flex
