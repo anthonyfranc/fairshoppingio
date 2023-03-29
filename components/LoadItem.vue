@@ -124,7 +124,7 @@ const emitClose = () => {
 function closeStore() {
   //Close Sidemenu CSS
   $('#storeMenu').addClass(
-    'transform transition ease-in-out duration-700 sm:duration-700 translate-x-0 translate-x-full'
+    'transform transition ease-in-out duration-700 sm:duration-700 xs:duration-300 translate-x-0 translate-x-full'
   );
   //use Javascript to emulate ease-out
   $('#storeClose').fadeTo(100, 0);
