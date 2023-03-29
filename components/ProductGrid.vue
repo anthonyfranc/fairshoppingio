@@ -12,7 +12,8 @@
           mt-0
           sm:grid-cols-2
           md:grid-cols-3
-          lg:grid-cols-5
+          lg:grid-cols-4
+          xl:grid-cols-5
           sm:mt-10
         "
       >
@@ -58,7 +59,10 @@
             </template>
             </div>
             <!--End Store Name-->
-              <h3 class="text-sm font-medium text-gray-800">
+              <h3 class="
+              xs:text-xs
+              font-medium text-gray-800"
+              >
                 <button @click="(show = true), (storeID = ProductData.id)" title="">
                   {{ ProductData.product_name }}
                   <span class="absolute inset-0" aria-hidden="true"></span>
