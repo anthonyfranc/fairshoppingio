@@ -32,7 +32,7 @@
           >
             <TransitionChild
               as="template"
-              enter="transform transition ease-in-out duration-500 sm:duration-500"
+              enter="transform transition ease-in-out duration-500 sm:duration-00"
               enter-from="translate-x-full"
               enter-to="translate-x-0"
               leave="transform transition ease-in-out duration-500 sm:duration-500"
@@ -124,15 +124,13 @@ const emitClose = () => {
 function closeStore() {
   //Close Sidemenu CSS
   $('#storeMenu').addClass(
-    'transform transition ease-in-out duration-700 sm:duration-500'
+    'transform transition ease-in-out duration-700 sm:duration-700 translate-x-0 translate-x-full'
   );
-  $('#storeMenu').addClass('translate-x-0');
-  $('#storeMenu').addClass('translate-x-full');
   //use Javascript to emulate ease-out
-  $('#storeClose').fadeTo(250, 0);
+  $('#storeClose').fadeTo(100, 0);
   setTimeout(function () {
     return emit('close');
-  }, 750);
+  }, 700);
 }
 
 const supabase = useSupabaseClient();
