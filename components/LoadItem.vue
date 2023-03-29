@@ -3,10 +3,10 @@
     <Dialog as="div" class="relative z-10" @close="open = false">
       <TransitionChild
         as="template"
-        enter="ease-in-out duration-500"
+        enter="ease-in-out duration-700"
         enter-from="opacity-0"
         enter-to="opacity-100"
-        leave="ease-in-out duration-500"
+        leave="ease-in-out duration-700"
         leave-from="opacity-100"
         leave-to="opacity-0"
       >
