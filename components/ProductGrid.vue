@@ -141,6 +141,7 @@
               duration-200
               translate-y-full
               group-hover:translate-y-0
+              xs:invisible
             "
           >
             <span title="">
