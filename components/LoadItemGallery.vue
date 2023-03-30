@@ -114,7 +114,7 @@ const props = defineProps({
   },
 });
 
-const openTab = ref();
+const openTab = ref(0);
 
 onMounted(() => {
   openTab.value = props.startingID; // <div>
