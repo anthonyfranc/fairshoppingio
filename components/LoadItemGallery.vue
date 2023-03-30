@@ -129,7 +129,7 @@ const { data, error } = await supabase
   .eq('id', props.storeID);
 
 function toggleTabs(tabNumber) {
-  this.openTab = tabNumber;
+  openTab.value = tabNumber;
 }
 //:startingID="(openTab = ProductData['images'][0].id)"
 </script>
