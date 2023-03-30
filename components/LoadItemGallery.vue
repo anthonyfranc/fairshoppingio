@@ -3,10 +3,10 @@
     class="mx-auto max-w-7xl"
     v-for="ProductData in data"
     :storeID="storeID"
+    :startingID="startingID"
   >
     <div
       class="mx-auto max-w-2xl lg:max-w-none"
-      openTab="ProductData['images'][0].id"
     >
       <!-- Product -->
       <div class="grid grid-cols-1 items-start">
@@ -110,7 +110,7 @@ const props = defineProps({
   },
 });
 
-const openTab = ref('2');
+const openTab = ref(null);
 
 const supabase = useSupabaseClient();
 
@@ -120,7 +120,8 @@ const { data, error } = await supabase
   .eq('id', props.storeID);
 
 function toggleTabs(tabNumber) {
-  openTab = tabNumber;
+  this.openTab = tabNumber;
 }
 console.log(openTab);
+//:startingID="(openTab = ProductData['images'][0].id)"
 </script>
