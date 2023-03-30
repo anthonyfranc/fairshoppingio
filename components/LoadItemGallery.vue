@@ -1,15 +1,17 @@
 <template>
-  <main class="mx-auto max-w-7xl" v-for="ProductData in data" :startingID="startingID">
-    <div class="mx-auto max-w-2xl lg:max-w-none" :startingID="openTab = ProductData['images'][0].id">
+  <main
+    class="mx-auto max-w-7xl"
+    v-for="ProductData in data"
+    :storeID="storeID"
+  >
+    <div id="startingID">{{ ProductData['images'][0].id }}</div>
+    <div class="mx-auto max-w-2xl lg:max-w-none">
       <!-- Product -->
-      <div class="grid grid-cols-1 items-start" >
+      <div class="grid grid-cols-1 items-start">
         <!-- Image gallery -->
         <div class="flex flex-col-reverse">
           <!-- Image selector -->
-          <div
-            class="mx-auto mt-6 w-full max-w-3xl lg:max-w-none"
-            
-          >
+          <div class="mx-auto mt-6 w-full max-w-3xl lg:max-w-none">
             <div
               class="grid grid-cols-4 gap-6"
               aria-orientation="horizontal"
@@ -17,7 +19,7 @@
             >
               <button
                 v-for="(item, key, index) in ProductData.images"
-                @click="startingID = item.id"
+                @click="toggleTabs(item.id)"
                 class="
                   relative
                   flex
@@ -73,11 +75,22 @@
           <!--Image Shown on Top-->
           <div class="aspect-w-1 aspect-h-1 w-full">
             <!-- Tab panel, show/hide based on tab state. -->
-            <div v-for="(item, key, index) in ProductData.images" v-bind:class="{ hidden: openTab !== item.id, block: openTab === item.id }">
+            <div
+              v-for="(item, key, index) in ProductData.images"
+              v-bind:class="{
+                hidden: openTab !== item.id,
+                block: openTab === item.id,
+              }"
+            >
               <img
                 :src="item.image_url"
                 alt="Angled front view with bag zipped and handles upright."
-                class="h-40 w-full object-scale-down object-center sm:rounded-lg"
+                class="
+                  h-40
+                  w-full
+                  object-scale-down object-center
+                  sm:rounded-lg
+                "
               />
             </div>
           </div>
@@ -89,27 +102,22 @@
 </template>
 
 <script setup>
+import $ from 'jquery';
 const props = defineProps({
   storeID: {
     type: Number,
   },
-  startingID: {
-    type: Number,
-    default: 1
-  },
 });
 
-const openTab = props.startingID;
-
 const supabase = useSupabaseClient();
-
 const { data, error } = await supabase
   .from('productinfo_testv13')
   .select('images')
   .eq('id', props.storeID);
 
+const openTab = document.getElementById('startingID').textContent;
+
 function toggleTabs(tabNumber) {
   this.openTab = tabNumber;
 }
-console.log(openTab);
 </script>
