@@ -4,8 +4,10 @@
     v-for="ProductData in data"
     :storeID="storeID"
   >
-    <div id="startingID">{{ ProductData['images'][0].id }}</div>
-    <div class="mx-auto max-w-2xl lg:max-w-none">
+    <div
+      class="mx-auto max-w-2xl lg:max-w-none"
+      openTab="ProductData['images'][0].id"
+    >
       <!-- Product -->
       <div class="grid grid-cols-1 items-start">
         <!-- Image gallery -->
@@ -102,22 +104,23 @@
 </template>
 
 <script setup>
-import $ from 'jquery';
 const props = defineProps({
   storeID: {
     type: Number,
   },
 });
 
+const openTab = ref('2');
+
 const supabase = useSupabaseClient();
+
 const { data, error } = await supabase
   .from('productinfo_testv13')
   .select('images')
   .eq('id', props.storeID);
 
-const openTab = document.getElementById('startingID').textContent;
-
 function toggleTabs(tabNumber) {
-  this.openTab = tabNumber;
+  openTab = tabNumber;
 }
+console.log(openTab);
 </script>
