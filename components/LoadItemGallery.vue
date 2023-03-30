@@ -3,11 +3,8 @@
     class="mx-auto max-w-7xl"
     v-for="ProductData in data"
     :storeID="storeID"
-    :startingID="startingID"
   >
-    <div
-      class="mx-auto max-w-2xl lg:max-w-none"
-    >
+    <div class="mx-auto max-w-2xl lg:max-w-none">
       <!-- Product -->
       <div class="grid grid-cols-1 items-start">
         <!-- Image gallery -->
@@ -110,7 +107,8 @@ const props = defineProps({
   },
 });
 
-const openTab = ref(null);
+const startingId = null;
+const openTab = this.startingId;
 
 const supabase = useSupabaseClient();
 
