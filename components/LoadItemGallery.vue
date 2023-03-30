@@ -3,7 +3,6 @@
     class="mx-auto max-w-7xl"
     v-for="ProductData in data"
     :storeID="storeID"
-    v-bind:startingId="ProductData['images'][0].id"
   >
     <div class="mx-auto max-w-2xl lg:max-w-none">
       <!-- Product -->
@@ -110,7 +109,7 @@ const props = defineProps({
 
 const startingId = ref();
 const openTab = ref();
-openTab.value = 2;
+//openTab.value = 2;
 
 const supabase = useSupabaseClient();
 
@@ -122,6 +121,6 @@ const { data, error } = await supabase
 function toggleTabs(tabNumber) {
   this.openTab = tabNumber;
 }
-console.log(startingId);
+console.log(openTab);
 //:startingID="(openTab = ProductData['images'][0].id)"
 </script>
