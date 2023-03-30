@@ -177,7 +177,7 @@
 <script setup>
 const supabase = useSupabaseClient();
 
-const { data, error } = await supabase.from('productinfo_testv11').select();
+const { data, error } = await supabase.from('productinfo_testv12').select();
 const props = defineProps({
   show: {
     type: Boolean

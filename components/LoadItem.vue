@@ -61,7 +61,11 @@
                         <button
                           type="button"
                           class="text-gray-400 hover:text-gray-500"
-                          @click="closeStore(), (open = false)"
+                          @click="
+                            closeStore(),
+                              (open = false),
+                              (storeID = ProductData.id)
+                          "
                         >
                           <span class="sr-only">Close panel</span>
                           <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -89,7 +93,7 @@
                   </div>
                   <div class="relative flex-1 py-6 px-4 sm:px-6">
                     <!-- Your content -->
-                    <LazyLoadItemGallery />
+                    <LazyLoadItemGallery :storeID="storeID" />
                     <!--End of Content-->
                   </div>
                 </div>
@@ -147,7 +151,7 @@ function closeStore() {
 
 const supabase = useSupabaseClient();
 const { data } = await supabase
-  .from('productinfo_testv11')
+  .from('productinfo_testv12')
   .select('*')
   .eq('id', props.storeID);
 </script>
