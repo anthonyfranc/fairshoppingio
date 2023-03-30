@@ -128,6 +128,9 @@ const props = defineProps({
   storeID: {
     type: Number,
   },
+  startingID: {
+    type: Number,
+  },
 });
 
 const emit = defineEmits(['close']);
