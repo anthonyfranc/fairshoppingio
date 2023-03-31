@@ -89,10 +89,11 @@
                 :src="item.image_url"
                 alt="Angled front view with bag zipped and handles upright."
                 class="
-                  h-40
+                  h-96
                   w-full
                   object-scale-down object-center
-                  sm:rounded-lg
+                  rounded-xl
+                  p-3
                 "
               />
             </div>

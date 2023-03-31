@@ -87,7 +87,7 @@
                             clip-rule="evenodd"
                           />
                         </svg>
-                        Last Updated 24 minutes ago
+                        Last Updated {{ProductData.last_updated}}
                       </p>
                     </div>
                   </div>

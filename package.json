@@ -19,6 +19,7 @@
     "@heroicons/vue": "^2.0.16",
     "@nuxtjs/supabase": "^0.3.1",
     "jquery": "^3.6.4",
+    "moment": "^2.29.4",
     "vue-loading-skeleton": "^1.1.9",
     "vue-star-rating": "^2.1.0"
   }
