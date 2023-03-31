@@ -118,9 +118,8 @@ const props = defineProps({
 const openTab = ref(1);
 
 onMounted(() => {
-  openTab.value = props.startingID; // <div>
+  openTab.value = props.startingID;
 });
-//openTab.value = 2;
 
 const supabase = useSupabaseClient();
 
@@ -132,5 +131,4 @@ const { data, error } = await supabase
 function toggleTabs(tabNumber) {
   openTab.value = tabNumber;
 }
-//:startingID="(openTab = ProductData['images'][0].id)"
 </script>

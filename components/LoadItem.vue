@@ -93,7 +93,7 @@
                   </div>
                   <div class="relative flex-1 py-6 px-4 sm:px-6">
                     <!-- Your content -->
-                    <LazyLoadItemGallery :storeID="storeID" />
+                    <LoadItemGallery :storeID="storeID" />
                     <!--End of Content-->
                   </div>
                 </div>
