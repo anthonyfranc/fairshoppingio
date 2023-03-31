@@ -87,7 +87,7 @@
                             clip-rule="evenodd"
                           />
                         </svg>
-                        Last Updated {{ProductData.last_updated}}
+                        Last Updated {{ relativeDate(ProductData.last_updated) }} ago
                       </p>
                     </div>
                   </div>
