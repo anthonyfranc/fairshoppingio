@@ -87,7 +87,7 @@
                             clip-rule="evenodd"
                           />
                         </svg>
-                        Last Updated {{ProductData.last_updated}}
+                        Last Updated {{ $moment().startOf('hour').fromNow() }}
                       </p>
                     </div>
                   </div>
