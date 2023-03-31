@@ -11,4 +11,7 @@ export default defineNuxtConfig({
       'top-level-await': true, //browsers can handle top-level-await features
     },
   },
+  buildModules: [
+    '@nuxtjs/moment'
+  ],
 });
