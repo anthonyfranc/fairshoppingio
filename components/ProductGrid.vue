@@ -1,5 +1,18 @@
 <template>
-<LazyLoadItem v-if="show" :show="show" @close="show = false" :storeID="storeID" />
+<!--Start of Drawer-->
+<div>
+<!-- drawer init and toggle -->
+<div class="text-center hidden">
+   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example" data-drawer-placement="right" aria-controls="drawer-right-example">
+   Show right drawer
+   </button>
+</div>
+<!-- drawer component -->
+<div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white max-w-xl" tabindex="-1" aria-labelledby="drawer-right-label">
+    <test />
+  </div>
+</div>
+<!--End of Drawer-->
   <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-center lg:justify-between">
@@ -161,7 +174,9 @@
                   duration-200
                   bg-gray-900
                 "
-                @click="(show = true), (storeID = ProductData.id)"
+                @click=""
+                data-drawer-show="drawer-right-example"
+                data-drawer-placement="right"
               >
                 More Info
               </button>
@@ -175,21 +190,16 @@
 </template>
 
 <script setup>
+//Supabase stuff
 const supabase = useSupabaseClient();
-
 const { data, error } = await supabase.from('productinfo_testv12').select();
+
+//Pass/store StoreID
 const props = defineProps({
-  show: {
-    type: Boolean
-  },
   storeID: {
-    type: Number
-  }
+    type: Function,
+  },
 });
-
-const emit = defineEmits(['close']);
-
-console.log(props.show);
 </script>
 
 <style lang="scss">
