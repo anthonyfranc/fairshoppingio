@@ -13,6 +13,7 @@
       "
     >
       <!--Product Name-->
+      {{ data }}
     </h5>
     <button
       type="button"
@@ -124,9 +125,23 @@
   </div>
 </template>
 <script setup>
+//import Store Data
+import { useAppStore } from '~/store/app';
+
+//set Store as a Constant
+const appStore = useAppStore();
+
 const supabase = useSupabaseClient();
-const storeData = await supabase
-  .from('productinfo_testv12')
-  .select('*')
-  .eq('id');
+
+watch(
+  () => appStore.storeID,
+  () => {
+    if (appStore.storeID > 0) {
+      const { data } = await supabase
+        .from('productinfo_testv12')
+        .select('*')
+        .eq('id');
+    }
+  }
+);
 </script>
