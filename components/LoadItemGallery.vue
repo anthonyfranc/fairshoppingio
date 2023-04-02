@@ -1,11 +1,8 @@
 <template>
   <div v-if="loading == false">
-    <div
-      role="status"
-      class="flex-row flex-col max-w-sm p-4 animate-pulse md:p-1"
-    >
+    <div role="status" class="flex-row flex-col animate-pulse">
       <div
-        class="flex items-center justify-center h-96 mb-4 bg-gray-300 rounded"
+        class="flex items-center justify-center h-96 mb-3 bg-gray-300 rounded"
       >
         <svg
           class="w-full h-12 text-gray-200 dark:text-gray-600"
@@ -26,7 +23,7 @@
               flex
               items-center
               justify-center
-              h-24
+              h-28
               w-16
               bg-gray-300
               rounded
