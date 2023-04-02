@@ -16,6 +16,6 @@ export const useAppStore = defineStore('app-store', {
     },
   },
   getters: {
-    storeID: (state) => state.storeID,
+    getStoreID: (state) => state.storeID,
   },
 });

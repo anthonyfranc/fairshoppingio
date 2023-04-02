@@ -174,11 +174,11 @@
                   duration-200
                   bg-gray-900
                 "
-                @click=""
+                @click="appStore.updateStoreID(ProductData.id)"
                 data-drawer-show="drawer-right-example"
                 data-drawer-placement="right"
               >
-                More Info 
+                More Info
               </button>
             </span>
           </div>
@@ -190,11 +190,16 @@
 </template>
 
 <script setup>
+//import Store Data
 import { useAppStore } from '~/store/app'
+
 //Supabase stuff
 const supabase = useSupabaseClient();
 const { data, error } = await supabase.from('productinfo_testv12').select();
+
+//set Store as a Constant
 const appStore = useAppStore()
+
 </script>
 
 <style lang="scss">
