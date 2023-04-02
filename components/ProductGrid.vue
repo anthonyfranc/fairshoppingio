@@ -178,7 +178,7 @@
                 data-drawer-show="drawer-right-example"
                 data-drawer-placement="right"
               >
-                More Info
+                More Info 
               </button>
             </span>
           </div>
@@ -190,16 +190,11 @@
 </template>
 
 <script setup>
+import { useAppStore } from '~/store/app'
 //Supabase stuff
 const supabase = useSupabaseClient();
 const { data, error } = await supabase.from('productinfo_testv12').select();
-
-//Pass/store StoreID
-const props = defineProps({
-  storeID: {
-    type: Function,
-  },
-});
+const appStore = useAppStore()
 </script>
 
 <style lang="scss">

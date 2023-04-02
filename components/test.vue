@@ -1,5 +1,5 @@
-<template :storeID="storeID">
-  <div v-for="ProductData in data">
+<template>
+  <div>
     <h5
       id="drawer-right-label"
       class="
@@ -124,17 +124,9 @@
   </div>
 </template>
 <script setup>
-const props = defineProps({
-  storeData: {
-    type: Number,
-  },
-});
-
 const supabase = useSupabaseClient();
-const data = await supabase
+const storeData = await supabase
   .from('productinfo_testv12')
   .select('*')
-  .eq('id', props.storeData)
-
-console.log(props.storeData);
+  .eq('id');
 </script>

@@ -1,3 +1,10 @@
+<template>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <div>
+    <NavBar />
+    <LazyProductGrid />
+  </div>
+</template>
 <script setup>
 import { Drawer } from 'flowbite';
 import { onMounted } from 'vue';
@@ -30,10 +37,3 @@ onMounted(() => {
   initTooltips();
 });
 </script>
-<template>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <div>
-    <NavBar />
-    <LazyProductGrid />>
-  </div>
-</template>
