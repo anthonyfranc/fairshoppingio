@@ -3,7 +3,8 @@
     <h5
       id="drawer-right-label"
       class="
-        inline-flex
+        flex-row
+        flex-col
         items-center
         mb-4
         text-base
@@ -14,41 +15,22 @@
     >
       <!--Product Name-->
       {{ ProductData.product_name }}
+      <div>
+        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="w-4 h-4 mr-0.5 flex"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+        Last Updated {{ relativeDate(ProductData.last_updated) }} ago
+      </div>
     </h5>
-    <button
-      type="button"
-      data-drawer-hide="drawer-right-example"
-      aria-controls="drawer-right-example"
-      class="
-        text-gray-400
-        bg-transparent
-        hover:bg-gray-200 hover:text-gray-900
-        rounded-lg
-        text-sm
-        p-1.5
-        absolute
-        top-2.5
-        right-2.5
-        inline-flex
-        items-center
-        dark:hover:bg-gray-600 dark:hover:text-white
-      "
-    >
-      <svg
-        aria-hidden="true"
-        class="w-5 h-5"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-          clip-rule="evenodd"
-        ></path>
-      </svg>
-      <span class="sr-only">Close menu</span>
-    </button>
     <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
       Supercharge your hiring by taking advantage of our
       <a
