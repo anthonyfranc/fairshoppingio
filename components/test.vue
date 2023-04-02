@@ -1,5 +1,5 @@
 <template>
-  <div v-for="ProductData in data">
+  <div>
     <h5
       id="drawer-right-label"
       class="
@@ -141,6 +141,7 @@ watch(
         .from('productinfo_testv12')
         .select('*')
         .eq('id', appStore.storeID); // added the value of storeID to the query
+      test.push = ref(data);
     }
   }
 );
