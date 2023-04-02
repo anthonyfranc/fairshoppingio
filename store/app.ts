@@ -4,7 +4,7 @@ interface AppStoreState {
   storeID: Number;
 }
 
-export const useAppstore = defineStore('app-store', {
+export const useAppStore = defineStore('app-store', {
   state: (): AppStoreState => {
     return {
       storeID: 0,
