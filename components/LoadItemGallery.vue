@@ -88,7 +88,7 @@
                 type="button"
               >
                 <span class="absolute inset-0 overflow-hidden rounded-md">
-                  <nuxt-img
+                  <img
                     :src="item.image_url"
                     alt=""
                     class="h-full w-full object-cover object-scale-down"
@@ -131,7 +131,7 @@
                 block: openTab === item.id,
               }"
             >
-              <nuxt-img
+              <img
                 :src="item.image_url"
                 alt="Angled front view with bag zipped and handles upright."
                 class="
