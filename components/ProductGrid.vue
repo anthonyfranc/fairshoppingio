@@ -8,7 +8,7 @@
    </button>
 </div>
 <!-- drawer component -->
-<div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white max-w-xl xs:max-w-lg" tabindex="-1" aria-labelledby="drawer-right-label">
+<div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white max-w-xl" tabindex="-1" aria-labelledby="drawer-right-label">
   <button
       type="button"
       data-drawer-hide="drawer-right-example"
@@ -43,7 +43,7 @@
       </svg>
       <span class="sr-only">Close menu</span>
     </button>  
-  <test />
+    <test />
   </div>
 </div>
 <!--End of Drawer-->
