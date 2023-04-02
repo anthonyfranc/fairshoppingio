@@ -20,7 +20,7 @@
         </svg>
       </div>
       <div class="flex grid grid-cols-4 gap-2">
-        <span v-for="i in 4">
+        <span v-for="(item, key, index) in data[0]['images']">
           <div
             class="
               flex
