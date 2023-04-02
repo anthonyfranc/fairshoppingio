@@ -2,13 +2,8 @@
 <!--Start of Drawer-->
 <div>
 <!-- drawer init and toggle -->
-<div class="text-center hidden">
-   <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example" data-drawer-placement="right" aria-controls="drawer-right-example">
-   Show right drawer
-   </button>
-</div>
 <!-- drawer component -->
-<div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white max-w-xl" tabindex="-1" aria-labelledby="drawer-right-label">
+<div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80" tabindex="-1" aria-labelledby="drawer-right-label">
   <button
       type="button"
       data-drawer-hide="drawer-right-example"
@@ -43,7 +38,7 @@
       </svg>
       <span class="sr-only">Close menu</span>
     </button>  
-    <test />
+    <Lazytest />
   </div>
 </div>
 <!--End of Drawer-->
@@ -87,9 +82,12 @@
             >
             </button>
           </div>
-          <div role="button" class="relative" @click="appStore.updateStoreID(ProductData.id)"
-                data-drawer-show="drawer-right-example"
-                data-drawer-placement="right">
+          <div role="button" class="relative" @click="(appStore.updateStoreID(ProductData.id))"
+                data-drawer-target="drawer-right-example"
+                data-drawer-show="drawer-right-example" 
+                data-drawer-placement="right"
+                aria-controls="drawer-right-example"
+          >
             <div class="aspect-w-1 aspect-h-1">
               <img
                 class="object-scale-down w-full h-full"
@@ -232,6 +230,16 @@ const { data, error } = await supabase.from('productinfo_testv12').select();
 
 //set Store as a Constant
 const appStore = useAppStore()
+
+watch(
+  () => appStore.storeID,
+   () => {
+    // added async keyword here
+    if (appStore.storeID > 0) {
+       appStore.updateDataID(0);
+    }
+   }
+);
 
 </script>
 

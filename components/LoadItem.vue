@@ -87,7 +87,8 @@
                             clip-rule="evenodd"
                           />
                         </svg>
-                        Last Updated {{ relativeDate(ProductData.last_updated) }} ago
+                        Last Updated
+                        {{ relativeDate(ProductData.last_updated) }} ago
                       </p>
                     </div>
                   </div>
@@ -107,7 +108,6 @@
 </template>
 
 <script setup>
-import $ from 'jquery';
 import { ref } from 'vue';
 import {
   Dialog,
@@ -133,28 +133,10 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(['close']);
-
-const emitClose = () => {
-  return emit('close');
-};
-
-function closeStore() {
-  //Close Sidemenu CSS
-  let open = false;
-  $('#storeMenu').addClass(
-    'transform transition ease-in-out duration-500 translate-x-0 translate-x-full'
-  );
-  //use Javascript to emulate ease-out
-  $('#storeClose').fadeTo(100, 0);
-  setTimeout(function () {
-    return emit('close');
-  }, 500);
-}
-
 const supabase = useSupabaseClient();
 const { data } = await supabase
   .from('productinfo_testv12')
   .select('*')
   .eq('id', props.storeID);
+appStore.reset();
 </script>

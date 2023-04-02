@@ -19,7 +19,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="w-4 h-4 mr-0.5 mt-1.5"
+          class="w-4 h-4 mr-0.5 mt-[1.5px] flex"
         >
           <path
             fill-rule="evenodd"
@@ -27,9 +27,12 @@
             clip-rule="evenodd"
           />
         </svg>
-        {{ relativeDate(ProductData.last_updated) }} ago
+        Last Updated {{ relativeDate(ProductData.last_updated) }} ago
       </div>
     </h5>
+    <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
+      <LazyLoadItemGallery :key="JSON.stringify(Math.random() * 100)" />
+    </p>
   </div>
 </template>
 
@@ -48,11 +51,14 @@ watch(
     // added async keyword here
     if (appStore.storeID > 0) {
       const { data } = await supabase
-        .from('productinfo_testv12')
+        .from('productinfo_testv13')
         .select('*')
         .eq('id', appStore.storeID); // added the value of storeID to the query
       appStore.updateDataID(data);
+      console.log(appStore.storeID);
     }
   }
 );
+//reset Data ID this allows us to have a clean Skeleton.
+console.log(appStore.storeID);
 </script>
