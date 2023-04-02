@@ -87,7 +87,9 @@
             >
             </button>
           </div>
-          <div class="relative" @click="(show = true), (storeID = ProductData.id)">
+          <div role="button" class="relative" @click="appStore.updateStoreID(ProductData.id)"
+                data-drawer-show="drawer-right-example"
+                data-drawer-placement="right">
             <div class="aspect-w-1 aspect-h-1">
               <img
                 class="object-scale-down w-full h-full"
@@ -208,9 +210,6 @@
                   duration-200
                   bg-gray-900
                 "
-                @click="appStore.updateStoreID(ProductData.id)"
-                data-drawer-show="drawer-right-example"
-                data-drawer-placement="right"
               >
                 More Info
               </button>

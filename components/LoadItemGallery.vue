@@ -1,10 +1,5 @@
 <template>
-  <main
-    class="mx-auto max-w-7xl"
-    v-for="ProductData in data"
-    :storeID="storeID"
-    :startingID="startingID"
-  >
+  <main class="mx-auto max-w-7xl" v-for="ProductData in data">
     <div
       class="mx-auto max-w-2xl lg:max-w-none"
       :v-bind="(startingID = ProductData['images'][0].id)"
@@ -106,6 +101,11 @@
 </template>
 
 <script setup>
+//import Store Data
+import { useAppStore } from '~/store/app';
+
+//set Store as a Constant
+const appStore = useAppStore();
 const props = defineProps({
   storeID: {
     type: Number,
@@ -123,10 +123,19 @@ onMounted(() => {
 
 const supabase = useSupabaseClient();
 
-const { data, error } = await supabase
-  .from('productinfo_testv13')
-  .select('images')
-  .eq('id', props.storeID);
+watch(
+  () => appStore.storeID,
+  async () => {
+    // added async keyword here
+    if (appStore.storeID > 0) {
+      const { data, error } = await supabase
+        .from('productinfo_testv13')
+        .select('images')
+        .eq('id', appStore.storeID);
+      //to-do place product-images into a store to be access outside of this block.
+    }
+  }
+);
 
 function toggleTabs(tabNumber) {
   openTab.value = tabNumber;

@@ -1,15 +1,13 @@
-module.exports = {
-  content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-  ],
+export default {
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: {
+          min: '0px',
+          max: '475px',
+        },
+      },
+    },
   },
-  plugins: [
-    require('flowbite')
-  ],
-}
+  plugins: [require('flowbite')],
+};
