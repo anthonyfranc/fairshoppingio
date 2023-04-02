@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-for="ProductData in appStore.dataID">
     <h5
       id="drawer-right-label"
       class="
@@ -13,6 +13,7 @@
       "
     >
       <!--Product Name-->
+      {{ ProductData.product_name }}
     </h5>
     <button
       type="button"
@@ -123,6 +124,7 @@
     </div>
   </div>
 </template>
+
 <script setup>
 //import Store Data
 import { useAppStore } from '~/store/app';
@@ -137,11 +139,11 @@ watch(
   async () => {
     // added async keyword here
     if (appStore.storeID > 0) {
-      const { data, error } = await supabase
+      const { data } = await supabase
         .from('productinfo_testv12')
         .select('*')
         .eq('id', appStore.storeID); // added the value of storeID to the query
-      test.push = ref(data);
+      appStore.updateDataID(data);
     }
   }
 );
