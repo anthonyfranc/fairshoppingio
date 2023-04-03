@@ -6,7 +6,7 @@ export default {
       screens: {
         xs: {
           min: '0px',
-          max: '475px',
+          max: '640px',
         },
         sxl: {
           min: '1536px',

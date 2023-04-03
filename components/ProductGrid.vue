@@ -1,6 +1,6 @@
 <template>
   <section class="bg-gray-50">
-    <div class="mx-auto">
+    <div class="mx-auto pl-12 pr-12 pt-6">
       <div
         class="
           grid grid-cols-1
@@ -51,8 +51,17 @@
             </div>
             <div class="px-4 py-4">
               <span class="
-              sm:text-sm xs:text-lg text-md font-semibold tracking-tight text-gray-900
-              "
+               xs:text-md
+               sm:text-xs
+               md:text-xs
+               lg:text-md
+               xl:text-md
+               2xl:text-sm
+               font-semibold
+               tracking-tight
+               text-gray-900
+               truncate block
+               "
               >
                   {{ ProductData.product_name }}
                   <span class="absolute inset-0" aria-hidden="true"></span>

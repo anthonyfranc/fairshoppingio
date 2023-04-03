@@ -18,4 +18,10 @@ export default defineNuxtConfig({
       'top-level-await': true, //browsers can handle top-level-await features
     },
   },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    },
+  },
 });
