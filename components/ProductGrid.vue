@@ -65,7 +65,7 @@
               </svg>
               <p class="ml-1 text-sm font-bold text-gray-900">{{ProductData.current_rating}}</p>
                 <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-                {{ ProductData.current_reviews }} Reviews
+                {{ ProductData.current_reviews }}
                 </span>
               </div>
               <p class="mt-1.5">
