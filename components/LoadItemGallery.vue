@@ -2,7 +2,15 @@
   <div v-if="loading == false">
     <div role="status" class="flex-row flex-col animate-pulse">
       <div
-        class="flex items-center justify-center h-96 mb-3 bg-gray-300 rounded"
+        class="
+          flex
+          items-center
+          justify-center
+          h-96
+          mb-3
+          dark:bg-gray-300
+          rounded
+        "
       >
         <svg
           class="w-full h-12 text-gray-200 dark:text-gray-600"
@@ -25,7 +33,7 @@
               justify-center
               h-28
               w-16
-              bg-gray-300
+              dark:bg-gray-300
               rounded
             "
           >
@@ -47,8 +55,8 @@
   </div>
   <main
     class="mx-auto max-w-7xl"
-    v-for="ProductData in data"
     v-if="loading == true"
+    v-for="ProductData in data"
   >
     <div id="image_main" class="mx-auto max-w-2xl lg:max-w-none">
       <!-- Product -->
@@ -138,7 +146,6 @@
                   rounded-xl
                   p-3
                 "
-                loading="lazy"
               />
             </div>
           </div>
@@ -170,7 +177,6 @@ function toggleTabs(tabNumber) {
 }
 
 const supabase = useSupabaseClient();
-
 const { data } = await supabase
   .from('productinfo_testv13')
   .select('images')
@@ -180,6 +186,7 @@ openTab.value = data[0]['images'][0]['id'];
 
 setTimeout(function () {
   loading.value = true;
+  appStore.updatefinishLoading(1);
   //reset Store to help Skeleton Loading look better
   appStore.reset();
 }, 850);

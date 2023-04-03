@@ -4,6 +4,7 @@ interface AppStoreState {
   storeID: Number;
   dataID: [];
   imageID: [];
+  finishLoading: Number;
 }
 
 export const useAppStore = defineStore('app-store', {
@@ -12,6 +13,7 @@ export const useAppStore = defineStore('app-store', {
       storeID: 0,
       dataID: [],
       imageID: [],
+      finishLoading: 0,
     };
   },
   actions: {
@@ -24,6 +26,9 @@ export const useAppStore = defineStore('app-store', {
     updateImageID(this: AppStoreState, value: []) {
       this.imageID = value;
     },
+    updatefinishLoading(this: AppStoreState, value: Number) {
+      this.finishLoading = value;
+    },
     reset() {
       this.storeID = 0;
     },
@@ -32,5 +37,6 @@ export const useAppStore = defineStore('app-store', {
     getStoreID: (state) => state.storeID,
     getDataID: (state) => state.dataID,
     getImageID: (state) => state.imageID,
+    getfinishLoading: (state) => state.finishLoading,
   },
 });

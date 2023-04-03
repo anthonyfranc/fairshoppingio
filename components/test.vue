@@ -13,8 +13,39 @@
       "
     >
       <!--Product Name-->
-      {{ ProductData.product_name }}
-      <div class="flex">
+      <div v-if="appStore.finishLoading == 0">
+        <div role="status" class="max-w-sm animate-pulse">
+          <div
+            class="
+              h-2.5
+              bg-gray-200
+              rounded-full
+              dark:bg-gray-300
+              w-52
+              h-[12px]
+            "
+          ></div>
+        </div>
+      </div>
+      <div v-else>
+        {{ ProductData.product_name }}
+      </div>
+      <div v-if="appStore.finishLoading == 0">
+        <div role="status" class="max-w-sm animate-pulse">
+          <div
+            class="
+              h-2.5
+              bg-gray-200
+              rounded-full
+              dark:bg-gray-300
+              w-52
+              mt-2
+              h-[12px]
+            "
+          ></div>
+        </div>
+      </div>
+      <div class="flex" v-else>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -31,7 +62,7 @@
       </div>
     </h5>
     <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
-      <LazyLoadItemGallery :key="JSON.stringify(Math.random() * 100)" />
+      <LoadItemGallery />
     </p>
   </div>
 </template>
@@ -59,6 +90,4 @@ watch(
     }
   }
 );
-//reset Data ID this allows us to have a clean Skeleton.
-console.log(appStore.storeID);
 </script>

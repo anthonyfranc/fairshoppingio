@@ -82,7 +82,7 @@
             >
             </button>
           </div>
-          <div role="button" class="relative" @click="(appStore.updateStoreID(ProductData.id))"
+          <div role="button" class="relative" @click="(appStore.updatefinishLoading(0)), (appStore.updateStoreID(ProductData.id))"
                 data-drawer-target="drawer-right-example"
                 data-drawer-show="drawer-right-example" 
                 data-drawer-placement="right"
