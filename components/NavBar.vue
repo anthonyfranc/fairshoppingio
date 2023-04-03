@@ -1,343 +1,157 @@
 <template>
-  <header class="relative">
-    <div class="bg-white border-b border-gray-200">
-      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div class="grid place-items-center h-16 lg:h-[72px]">
-          <div class="flex place-items-center flex-shrink-0 -m-1">
-            <NuxtLink to="/">
-              <span class="sr-only"> Rareblocks logo </span>
-              <img
-                class="w-auto h-8"
-                src="https://cdn.rareblocks.xyz/collection/clarity-ecommerce/images/logo.svg"
-                alt=""
-              />
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
+  <button
+    data-drawer-target="logo-sidebar"
+    data-drawer-toggle="logo-sidebar"
+    aria-controls="logo-sidebar"
+    type="button"
+    class="
+      inline-flex
+      items-center
+      p-2
+      mt-2
+      ml-3
+      text-sm text-gray-500
+      rounded-lg
+      sm:hidden
+      hover:bg-gray-100
+      focus:outline-none focus:ring-2 focus:ring-gray-200
+      dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+    "
+  >
+    <span class="sr-only">Open sidebar</span>
+    <svg
+      class="w-6 h-6"
+      aria-hidden="true"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+      ></path>
+    </svg>
+  </button>
+
+  <aside
+    id="logo-sidebar"
+    class="
+      fixed
+      top-0
+      left-0
+      z-50
+      w-64
+      h-screen
+      transition-transform
+      -translate-x-full
+      sm:translate-x-0
+    "
+    aria-label="Sidebar"
+  >
+    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 bg-gray-800">
+      <NuxtLink to="/" class="flex items-center pl-2.5 mb-5">
+        <img
+          src="https://flowbite.com/docs/images/logo.svg"
+          class="h-6 mr-3 sm:h-7"
+          alt="Flowbite Logo"
+        />
+        <span
+          class="
+            self-center
+            text-xl
+            font-semibold
+            whitespace-nowrap
+            dark:text-white
+          "
+          >Flowbite</span
+        >
+      </NuxtLink>
+      <ul class="-space-y-0.5 font-medium">
+        <li>
+          <div class="text-white pb-2"></div>
+        </li>
+        <li>
+          <NuxtLink
+            to="?c=electronics"
+            class="
+              flex
+              items-center
+              p-2
+              text-gray-900
+              rounded-lg
+              dark:text-white
+              hover:bg-gray-100
+              dark:hover:bg-gray-700
+            "
+          >
+            <div
+              class="rounded-full border-2 flex p-1 relative bg-amber-500"
+            ></div>
+            <span class="flex-1 ml-3 whitespace-nowrap">Electronics</span>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
+            to="?c=videogames"
+            class="
+              flex
+              items-center
+              p-2
+              text-gray-900
+              rounded-lg
+              dark:text-white
+              hover:bg-gray-100
+              dark:hover:bg-gray-700
+            "
+          >
+            <div
+              class="rounded-full border-2 flex p-1 relative bg-violet-600"
+            ></div>
+            <span class="flex-1 ml-3 whitespace-nowrap">Video Games</span>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
+            to="?c=entertainment"
+            class="
+              flex
+              items-center
+              p-2
+              text-gray-900
+              rounded-lg
+              dark:text-white
+              hover:bg-gray-100
+              dark:hover:bg-gray-700
+            "
+          >
+            <div
+              class="rounded-full border-2 flex p-1 relative bg-cyan-600"
+            ></div>
+            <span class="flex-1 ml-3 whitespace-nowrap">Entertainment</span>
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
+            to="?c=smarthome"
+            class="
+              flex
+              items-center
+              p-2
+              text-gray-900
+              rounded-lg
+              dark:text-white
+              hover:bg-gray-100
+              dark:hover:bg-gray-700
+            "
+          >
+            <div
+              class="rounded-full border-2 flex p-1 relative bg-rose-300"
+            ></div>
+            <span class="flex-1 ml-3 whitespace-nowrap">Smart Home</span>
+          </NuxtLink>
+        </li>
+      </ul>
     </div>
-  </header>
-  <div class="hidden py-12 bg-white lg:block bg-slate-50 shadow-sm">
-    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-      <div class="grid grid-cols-5 gap-4">
-        <div class="relative overflow-hidden rounded-lg group">
-          <div>
-            <img
-              class="
-                object-cover
-                w-full
-                h-full
-                transition-all
-                duration-300
-                group-hover:-rotate-3 group-hover:scale-125
-              "
-              src="https://ik.imagekit.io/offershackio/assets/banners/furniture.png?updatedAt=1678556371684"
-              alt=""
-            />
-          </div>
-          <div class="absolute inset-x-0 bottom-0">
-            <div class="px-4 py-3 xl:px-5 xl:py-4">
-              <p class="text-base font-bold text-gray-900 xl:text-lg">
-                Furniture
-              </p>
-            </div>
-          </div>
-          <a href="#" title="" class="">
-            <span class="absolute inset-0" aria-hidden="true"></span>
-          </a>
-        </div>
-        <div class="relative overflow-hidden rounded-lg group">
-          <div>
-            <img
-              class="
-                object-cover
-                w-full
-                h-full
-                transition-all
-                duration-300
-                group-hover:-rotate-3 group-hover:scale-125
-              "
-              src="https://ik.imagekit.io/offershackio/assets/banners/electronics.png?updatedAt=1678556671557"
-              alt=""
-            />
-          </div>
-          <div class="absolute inset-x-0 bottom-0">
-            <div class="px-4 py-3 xl:px-5 xl:py-4">
-              <p class="text-base font-bold text-gray-900 xl:text-lg">
-                Electronics
-              </p>
-            </div>
-          </div>
-          <a href="#" title="" class="">
-            <span class="absolute inset-0" aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <div>
-            <img
-              class="
-                object-cover
-                w-full
-                h-full
-                transition-all
-                duration-300
-                group-hover:-rotate-3 group-hover:scale-125
-              "
-              src="https://ik.imagekit.io/offershackio/assets/banners/consoles.png?updatedAt=1678556962349"
-              alt=""
-            />
-          </div>
-          <div class="absolute inset-x-0 bottom-0">
-            <div class="px-4 py-3 xl:px-4 xl:py-4">
-              <p class="text-base font-bold text-gray-900 xl:text-lg">
-                Video Games
-              </p>
-            </div>
-          </div>
-          <a href="#" title="" class="">
-            <span class="absolute inset-0" aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <div>
-            <img
-              class="
-                object-cover
-                w-full
-                h-full
-                transition-all
-                duration-300
-                group-hover:-rotate-3 group-hover:scale-125
-              "
-              src="https://ik.imagekit.io/offershackio/assets/banners/entertainment-2_1_.png?updatedAt=1678557951425"
-              alt=""
-            />
-          </div>
-          <div class="absolute inset-x-0 bottom-0">
-            <div class="px-4 py-3 xl:px-5 xl:py-4">
-              <p class="text-base font-bold text-gray-900 xl:text-lg">
-                Entertainment
-              </p>
-            </div>
-          </div>
-          <a href="#" title="" class="">
-            <span class="absolute inset-0" aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div class="relative overflow-hidden rounded-lg group">
-          <div>
-            <img
-              class="
-                object-cover
-                w-full
-                h-full
-                transition-all
-                duration-300
-                group-hover:-rotate-3 group-hover:scale-125
-              "
-              src="https://ik.imagekit.io/offershackio/assets/banners/smart-home.png?updatedAt=1678557172208"
-              alt=""
-            />
-          </div>
-          <div class="absolute inset-x-0 bottom-0">
-            <div class="px-4 py-3 xl:px-5 xl:py-4">
-              <p class="text-base font-bold text-gray-900 xl:text-lg">
-                Smart Home
-              </p>
-            </div>
-          </div>
-          <a href="#" title="" class="">
-            <span class="absolute inset-0" aria-hidden="true"></span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="py-8 bg-white lg:hidden">
-    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-      <div class="mt-8 space-y-5">
-        <div>
-          <div class="grid grid-cols-2 gap-4 mt-4 sm:grid-cols-3">
-            <div class="relative overflow-hidden rounded-lg group">
-              <div>
-                <img
-                  class="
-                    object-cover
-                    w-full
-                    h-full
-                    transition-all
-                    duration-300
-                    group-hover:-rotate-3 group-hover:scale-125
-                  "
-                  src="https://ik.imagekit.io/offershackio/assets/banners/furniture.png?updatedAt=1678556371684"
-                  alt=""
-                />
-              </div>
-              <div class="absolute inset-x-0 bottom-0">
-                <div class="px-4 py-3">
-                  <p
-                    class="
-                      text-xl
-                      font-bold
-                      text-gray-900
-                      sm:text-base
-                      xs:text-xs
-                    "
-                  >
-                    Furniture
-                  </p>
-                </div>
-              </div>
-              <a href="#" title="" class="">
-                <span class="absolute inset-0" aria-hidden="true"></span>
-              </a>
-            </div>
-            <div class="relative overflow-hidden rounded-lg group">
-              <div>
-                <img
-                  class="
-                    object-cover
-                    w-full
-                    h-full
-                    transition-all
-                    duration-300
-                    group-hover:-rotate-3 group-hover:scale-125
-                  "
-                  src="https://ik.imagekit.io/offershackio/assets/banners/electronics.png?updatedAt=1678556671557"
-                  alt=""
-                />
-              </div>
-              <div class="absolute inset-x-0 bottom-0">
-                <div class="px-4 py-3">
-                  <p
-                    class="
-                      text-xl
-                      font-bold
-                      text-gray-900
-                      sm:text-base
-                      xs:text-xs
-                    "
-                  >
-                    Electronics
-                  </p>
-                </div>
-              </div>
-              <a href="#" title="" class="">
-                <span class="absolute inset-0" aria-hidden="true"></span>
-              </a>
-            </div>
-
-            <div class="relative overflow-hidden rounded-lg group">
-              <div>
-                <img
-                  class="
-                    object-cover
-                    w-full
-                    h-full
-                    transition-all
-                    duration-300
-                    group-hover:-rotate-3 group-hover:scale-125
-                  "
-                  src="https://ik.imagekit.io/offershackio/assets/banners/consoles.png?updatedAt=1678556962349"
-                  alt=""
-                />
-              </div>
-              <div class="absolute inset-x-0 bottom-0">
-                <div class="px-4 py-3">
-                  <p
-                    class="
-                      text-xl
-                      font-bold
-                      text-gray-900
-                      sm:text-base
-                      xs:text-xs
-                    "
-                  >
-                    Gaming
-                  </p>
-                </div>
-              </div>
-              <a href="#" title="" class="">
-                <span class="absolute inset-0" aria-hidden="true"></span>
-              </a>
-            </div>
-
-            <div class="relative overflow-hidden rounded-lg group">
-              <div>
-                <img
-                  class="
-                    object-cover
-                    w-full
-                    h-full
-                    transition-all
-                    duration-300
-                    group-hover:-rotate-3 group-hover:scale-125
-                  "
-                  src="https://ik.imagekit.io/offershackio/assets/banners/entertainment-2_1_.png?updatedAt=1678557951425"
-                  alt=""
-                />
-              </div>
-              <div class="absolute inset-x-0 bottom-0">
-                <div class="px-4 py-3">
-                  <p
-                    class="
-                      text-xl
-                      font-bold
-                      text-gray-900
-                      sm:text-base
-                      xs:text-xs
-                    "
-                  >
-                    Entertainment
-                  </p>
-                </div>
-              </div>
-              <a href="#" title="" class="">
-                <span class="absolute inset-0" aria-hidden="true"></span>
-              </a>
-            </div>
-
-            <div class="relative overflow-hidden rounded-lg group">
-              <div>
-                <img
-                  class="
-                    object-cover
-                    w-full
-                    h-full
-                    transition-all
-                    duration-300
-                    group-hover:-rotate-3 group-hover:scale-125
-                  "
-                  src="https://ik.imagekit.io/offershackio/assets/banners/smart-home.png?updatedAt=1678557172208"
-                  alt=""
-                />
-              </div>
-              <div class="absolute inset-x-0 bottom-0">
-                <div class="px-4 py-3">
-                  <p
-                    class="
-                      text-xl
-                      font-bold
-                      text-gray-900
-                      sm:text-base
-                      xs:text-xs
-                    "
-                  >
-                    Smart Home
-                  </p>
-                </div>
-              </div>
-              <a href="#" title="" class="">
-                <span class="absolute inset-0" aria-hidden="true"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </aside>
 </template>

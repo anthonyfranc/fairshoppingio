@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 export default {
   theme: {
     extend: {
@@ -5,6 +7,9 @@ export default {
         xs: {
           min: '0px',
           max: '475px',
+        },
+        sxl: {
+          min: '1536px',
         },
       },
     },
