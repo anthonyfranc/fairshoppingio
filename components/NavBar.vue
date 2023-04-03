@@ -12,7 +12,7 @@
       ml-3
       text-sm text-gray-500
       rounded-lg
-      md:hidden
+      sm:hidden
       hover:bg-gray-100
       focus:outline-none focus:ring-2 focus:ring-gray-200
       dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
@@ -46,7 +46,6 @@
       transition-transform
       -translate-x-full
       sm:translate-x-0
-      xs:hidden
     "
     aria-label="Sidebar"
   >
