@@ -74,9 +74,46 @@
           >
         </div>
       </NuxtLink>
-      <ul class="-space-y-0.5 font-medium tracking-tight">
-        <li>
-          <div class="text-white pb-2"></div>
+      <ul
+        class="
+          -space-y-0.5
+          font-medium
+          tracking-tight
+          rounded-lg
+          text-white
+          bg-gray-700
+          static
+        "
+      >
+        <li
+          class="
+            flex
+            items-center
+            p-2
+            text-gray-900
+            rounded-t-lg
+            text-white
+            bg-gray-500
+          "
+        >
+          <div class="flex ml-0 text-[10.5pt] text-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 mr-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+              />
+            </svg>
+
+            Category
+          </div>
         </li>
         <li>
           <NuxtLink
@@ -85,10 +122,8 @@
               flex
               items-center
               p-2
-              text-gray-900
-              rounded-lg
-              text-white
-              hover:bg-gray-100 hover:bg-gray-700
+              text-gray-900 text-white
+              hover:bg-gray-500
             "
           >
             <div
@@ -104,10 +139,8 @@
               flex
               items-center
               p-2
-              text-gray-900
-              rounded-lg
-              text-white
-              hover:bg-gray-100 hover:bg-gray-700
+              text-gray-900 text-white
+              hover:bg-gray-500
             "
           >
             <div
@@ -123,10 +156,8 @@
               flex
               items-center
               p-2
-              text-gray-900
-              rounded-lg
-              text-white
-              hover:bg-gray-100 hover:bg-gray-700
+              text-gray-900 text-white
+              hover:bg-gray-500
             "
           >
             <div
@@ -142,10 +173,8 @@
               flex
               items-center
               p-2
-              text-gray-900
-              rounded-lg
-              text-white
-              hover:bg-gray-100 hover:bg-gray-700
+              text-gray-900 text-white
+              hover:bg-gray-500
             "
           >
             <div

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-50">
+  <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
     <div class="mx-auto">
       <div
         class="
@@ -10,8 +10,9 @@
           md:grid-cols-3
           lg:grid-cols-4
           xl:grid-cols-5
-          sxl:grid-cols-6
+          sxl:grid-cols-7
           2xl:grid-cols-7
+          px-4 mx-1 sm:px-8 lg:px-8
         "
       >
          <div
