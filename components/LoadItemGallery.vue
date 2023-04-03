@@ -8,7 +8,7 @@
           justify-center
           h-96
           mb-3
-          dark:bg-gray-200
+          bg-gray-200
           rounded
         "
       >
@@ -32,8 +32,8 @@
               items-center
               justify-center
               h-28
-              w-16
-              dark:bg-gray-200
+              w-20
+              bg-gray-200
               rounded
             "
           >

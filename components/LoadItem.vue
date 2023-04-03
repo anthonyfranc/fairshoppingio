@@ -19,7 +19,7 @@
               h-2.5
               bg-gray-200
               rounded-full
-              dark:bg-gray-200
+              bg-gray-200
               w-52
               h-[12px]
             "

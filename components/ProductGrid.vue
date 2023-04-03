@@ -51,15 +51,7 @@
             </div>
             <div class="px-4 py-4">
               <span class="
-               xs:text-md
-               sm:text-xs
-               md:text-xs
-               lg:text-md
-               xl:text-md
-               2xl:text-sm
-               font-semibold
-               tracking-tight
-               text-gray-900
+               text-md font-semibold tracking-tight text-gray-900
                truncate block
                "
               >
