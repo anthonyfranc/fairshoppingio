@@ -160,12 +160,12 @@
 </template>
 <style type="css">
 .logoSlide {
-  animation: slideInLogo 1.5s ease 0s 1 normal none;
+  animation: slideInLogo 1s ease 0s 1 normal none;
 }
 
 @keyframes slideInLogo {
   0% {
-    transform: translateY(18px);
+    transform: translateY(10px);
     opacity: 0;
   }
 
