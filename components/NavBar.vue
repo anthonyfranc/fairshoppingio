@@ -160,21 +160,21 @@
 </template>
 <style type="css">
 .logoSlide {
-  animation: slideInLogo 1s ease 0s 1 normal none;
+  animation: slideInLogo 1.5s ease 0s 1 normal none;
 }
 
 @keyframes slideInLogo {
   0% {
+    transform: translateY(18px);
     opacity: 0;
-    transform: translateY(20px);
   }
 
   100% {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 </style>
 <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap');
 </style>
