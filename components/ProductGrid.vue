@@ -1,17 +1,17 @@
 <template>
   <section class="bg-gray-50">
-    <div class="mx-auto pl-12 pr-12 pt-6">
+    <div class="mx-auto">
       <div
         class="
           grid grid-cols-1
-          gap-4
-          mt-0
+          gap-5
           xs:grid-cols-1
           sm:grid-cols-2
           md:grid-cols-3
           lg:grid-cols-4
           xl:grid-cols-5
           sxl:grid-cols-6
+          2xl:grid-cols-7
         "
       >
          <div
