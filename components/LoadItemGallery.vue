@@ -8,7 +8,7 @@
           justify-center
           h-96
           mb-3
-          dark:bg-gray-300
+          dark:bg-gray-200
           rounded
         "
       >
@@ -33,7 +33,7 @@
               justify-center
               h-28
               w-16
-              dark:bg-gray-300
+              dark:bg-gray-200
               rounded
             "
           >
@@ -189,5 +189,5 @@ setTimeout(function () {
   appStore.updatefinishLoading(1);
   //reset Store to help Skeleton Loading look better
   appStore.reset();
-}, 850);
+}, 1000);
 </script>

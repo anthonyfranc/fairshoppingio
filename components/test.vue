@@ -9,7 +9,6 @@
         text-base
         font-semibold
         text-gray-500
-        dark:text-gray-400
       "
     >
       <!--Product Name-->
@@ -20,7 +19,7 @@
               h-2.5
               bg-gray-200
               rounded-full
-              dark:bg-gray-300
+              dark:bg-gray-200
               w-52
               h-[12px]
             "
@@ -37,7 +36,7 @@
               h-2.5
               bg-gray-200
               rounded-full
-              dark:bg-gray-300
+              dark:bg-gray-200
               w-52
               mt-2
               h-[12px]
