@@ -51,7 +51,7 @@
             </div>
             <div class="px-4 py-4">
               <span class="
-              text-md font-semibold tracking-tight text-gray-900
+              sm:text-sm xs:text-lg text-md font-semibold tracking-tight text-gray-900
               "
               >
                   {{ ProductData.product_name }}
