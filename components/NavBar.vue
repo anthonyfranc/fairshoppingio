@@ -51,15 +51,28 @@
   >
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 bg-gray-800">
       <NuxtLink to="/" class="flex items-center pl-2.5 mb-5">
-        <img
-          src="https://flowbite.com/docs/images/logo.svg"
-          class="h-6 mr-3 sm:h-7"
-          alt="Flowbite Logo"
-        />
-        <span
-          class="self-center text-xl font-semibold whitespace-nowrap text-white"
-          >Flowbite</span
-        >
+        <!--Logo-->
+        <div class="logoSlide">
+          <span
+            style="
+              color: rgb(255, 255, 255);
+              font-size: 24px;
+              font-weight: bold;
+              font-family: 'Urbanist', sans-serif;
+            "
+          >
+            FairShopping</span
+          >
+          <span
+            style="
+              color: rgb(75, 152, 108);
+              font-size: 24px;
+              font-weight: bold;
+              font-family: 'Urbanist', sans-serif;
+            "
+            >.io</span
+          >
+        </div>
       </NuxtLink>
       <ul class="-space-y-0.5 font-medium tracking-tight">
         <li>
@@ -145,3 +158,23 @@
     </div>
   </aside>
 </template>
+<style type="css">
+.logoSlide {
+  animation: slideInLogo 1s ease 0s 1 normal none;
+}
+
+@keyframes slideInLogo {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+<style scoped>
+  @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@700&display=swap');
+</style>
