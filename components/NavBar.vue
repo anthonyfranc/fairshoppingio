@@ -57,13 +57,7 @@
           alt="Flowbite Logo"
         />
         <span
-          class="
-            self-center
-            text-xl
-            font-semibold
-            whitespace-nowrap
-            dark:text-white
-          "
+          class="self-center text-xl font-semibold whitespace-nowrap text-white"
           >Flowbite</span
         >
       </NuxtLink>
@@ -80,9 +74,8 @@
               p-2
               text-gray-900
               rounded-lg
-              dark:text-white
-              hover:bg-gray-100
-              dark:hover:bg-gray-700
+              text-white
+              hover:bg-gray-100 hover:bg-gray-700
             "
           >
             <div
@@ -100,9 +93,8 @@
               p-2
               text-gray-900
               rounded-lg
-              dark:text-white
-              hover:bg-gray-100
-              dark:hover:bg-gray-700
+              text-white
+              hover:bg-gray-100 hover:bg-gray-700
             "
           >
             <div
@@ -120,9 +112,8 @@
               p-2
               text-gray-900
               rounded-lg
-              dark:text-white
-              hover:bg-gray-100
-              dark:hover:bg-gray-700
+              text-white
+              hover:bg-gray-100 hover:bg-gray-700
             "
           >
             <div
@@ -140,9 +131,8 @@
               p-2
               text-gray-900
               rounded-lg
-              dark:text-white
-              hover:bg-gray-100
-              dark:hover:bg-gray-700
+              text-white
+              hover:bg-gray-100 hover:bg-gray-700
             "
           >
             <div
