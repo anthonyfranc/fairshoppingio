@@ -67,7 +67,7 @@
           >Flowbite</span
         >
       </NuxtLink>
-      <ul class="-space-y-0.5 font-medium">
+      <ul class="-space-y-0.5 font-medium tracking-tight">
         <li>
           <div class="text-white pb-2"></div>
         </li>
