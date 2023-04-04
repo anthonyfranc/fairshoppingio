@@ -15,14 +15,7 @@
       <div v-if="appStore.finishLoading == 0">
         <div role="status" class="max-w-sm animate-pulse">
           <div
-            class="
-              h-2.5
-              bg-gray-200
-              rounded-full
-              bg-gray-200
-              w-52
-              h-[12px]
-            "
+            class="h-2.5 bg-gray-200 rounded-full bg-gray-200 w-52 h-[12px]"
           ></div>
         </div>
       </div>
@@ -81,7 +74,7 @@ watch(
     // added async keyword here
     if (appStore.storeID > 0) {
       const { data } = await supabase
-        .from('productinfo_testv13')
+        .from('productinfo')
         .select('*')
         .eq('id', appStore.storeID); // added the value of storeID to the query
       appStore.updateDataID(data);

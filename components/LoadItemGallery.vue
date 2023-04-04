@@ -2,15 +2,7 @@
   <div v-if="loading == false">
     <div role="status" class="flex-row flex-col animate-pulse">
       <div
-        class="
-          flex
-          items-center
-          justify-center
-          h-96
-          mb-3
-          bg-gray-200
-          rounded
-        "
+        class="flex items-center justify-center h-96 mb-3 bg-gray-200 rounded"
       >
         <svg
           class="w-full h-12 text-gray-200 dark:text-gray-600"
@@ -178,7 +170,7 @@ function toggleTabs(tabNumber) {
 
 const supabase = useSupabaseClient();
 const { data } = await supabase
-  .from('productinfo_testv13')
+  .from('productinfo')
   .select('images')
   .eq('id', appStore.storeID); // added the value of storeID to the query
 

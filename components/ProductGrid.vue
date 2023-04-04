@@ -116,7 +116,7 @@ import { useAppStore } from '~/store/app';
 
 //Supabase stuff
 const supabase = useSupabaseClient();
-const { data, error } = await supabase.from('productinfo_testv13').select();
+const { data, error } = await supabase.from('productinfo').select();
 
 //set Store as a Constant
 const appStore = useAppStore();
