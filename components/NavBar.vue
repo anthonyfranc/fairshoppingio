@@ -127,7 +127,14 @@
             "
           >
             <div
-              class="rounded-full border-2 flex p-1 relative bg-amber-500"
+              class="
+                rounded-full
+                ring-1 ring-white
+                flex
+                p-[4.9px]
+                relative
+                bg-amber-500
+              "
             ></div>
             <span class="flex-1 ml-3 whitespace-nowrap">Electronics</span>
           </NuxtLink>
@@ -144,7 +151,14 @@
             "
           >
             <div
-              class="rounded-full border-2 flex p-1 relative bg-violet-600"
+              class="
+                rounded-full
+                ring-1 ring-white
+                flex
+                p-[4.9px]
+                relative
+                bg-violet-600
+              "
             ></div>
             <span class="flex-1 ml-3 whitespace-nowrap">Video Games</span>
           </NuxtLink>
@@ -161,7 +175,14 @@
             "
           >
             <div
-              class="rounded-full border-2 flex p-1 relative bg-cyan-600"
+              class="
+                rounded-full
+                ring-1 ring-white
+                flex
+                p-[4.9px]
+                relative
+                bg-cyan-600
+              "
             ></div>
             <span class="flex-1 ml-3 whitespace-nowrap">Entertainment</span>
           </NuxtLink>
@@ -178,7 +199,14 @@
             "
           >
             <div
-              class="rounded-full border-2 flex p-1 relative bg-rose-300"
+              class="
+                rounded-full
+                ring-1 ring-white
+                flex
+                p-[4.9px]
+                relative
+                bg-rose-300
+              "
             ></div>
             <span class="flex-1 ml-3 whitespace-nowrap">Smart Home</span>
           </NuxtLink>

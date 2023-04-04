@@ -35,7 +35,34 @@
                 justify-center
               "
             >
-           
+            <template v-for="(item) in ProductData.category">
+              <div v-if="item" class="flex">
+                  <div v-if="item == 'Electronics'" class="rounded-full border-4 border-gray-200 p-1.5 relative bg-amber-500" :data-tooltip-target="'tooltip-electronics-'+ProductData.id" >
+                    <div :id="'tooltip-electronics-'+ProductData.id" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                      Electronics
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                  </div>
+                  <div v-if="item == 'Video Games'" class="rounded-full border-4 border-gray-200 p-1.5 relative bg-violet-600" :data-tooltip-target="'tooltip-videogames-'+ProductData.id">
+                    <div :id="'tooltip-videogames-'+ProductData.id" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 whitespace-nowrap">
+                      Video Games
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                  </div>
+                  <div v-if="item == 'Entertainment'" class="rounded-full border-4 border-gray-200 p-1.5 relative bg-cyan-600" :data-tooltip-target="'tooltip-entertainment-'+ProductData.id">
+                  <div :id="'tooltip-entertainment-'+ProductData.id" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                      Entertainment
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                  </div>
+                  <div v-if="item == 'Smart Home'" class="rounded-full border-4 border-gray-200 p-1.5 bg-rose-300" :data-tooltip-target="'tooltip-smarthome-'+ProductData.id" >
+                    <div :id="'tooltip-smarthome-'+ProductData.id" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 whitespace-nowrap">
+                      Smart Home
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                  </div>
+              </div>
+            </template>
             </button>
           </div>
           <div role="button" class="relative" @click="(appStore.updatefinishLoading(0)), (appStore.updateStoreID(ProductData.id))"
