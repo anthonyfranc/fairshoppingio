@@ -4,7 +4,7 @@
   <!-- drawer init and toggle -->
   <!-- drawer component -->
   <div
-    id="drawer-right-example"
+    :id="'drawer-right-example'"
     class="
       fixed
       top-0
@@ -65,6 +65,7 @@
 <script setup>
 import { Drawer } from 'flowbite';
 import { onMounted } from 'vue';
+import $ from 'jquery';
 import {
   initAccordions,
   initCarousels,

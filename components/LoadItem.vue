@@ -62,6 +62,7 @@
 <script setup>
 //import Store Data
 import { useAppStore } from '~/store/app';
+import $ from 'jquery';
 
 //set Store as a Constant
 const appStore = useAppStore();
