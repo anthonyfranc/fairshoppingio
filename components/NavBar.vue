@@ -41,7 +41,7 @@
       top-0
       left-0
       z-50
-      w-64
+      w-[17em]
       h-screen
       transition-transform
       -translate-x-full
@@ -49,7 +49,7 @@
     "
     aria-label="Sidebar"
   >
-    <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 bg-gray-800">
+    <div class="h-full px-3.5 py-2 overflow-y-auto bg-gray-50 bg-gray-800">
       <NuxtLink to="/" class="flex items-center pl-2.5 mb-5">
         <!--Logo-->
         <div class="logoSlide">
@@ -76,7 +76,7 @@
       </NuxtLink>
       <ul
         class="
-          -space-y-0.5
+          -space-y-1
           font-medium
           tracking-tight
           rounded-lg
@@ -89,7 +89,7 @@
           class="
             flex
             items-center
-            p-2
+            p-1.5
             text-gray-900
             rounded-t-lg
             text-white

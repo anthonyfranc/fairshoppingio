@@ -35,6 +35,7 @@
                 justify-center
               "
             >
+           
             </button>
           </div>
           <div role="button" class="relative" @click="(appStore.updatefinishLoading(0)), (appStore.updateStoreID(ProductData.id))"
