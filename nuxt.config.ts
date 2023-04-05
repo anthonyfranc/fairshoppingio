@@ -22,6 +22,12 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      bodyAttrs: {
+        class: 'h-full bg-gray-50',
+      },
+      htmlAttrs: {
+        class: 'h-full',
+      },
     },
   },
 });

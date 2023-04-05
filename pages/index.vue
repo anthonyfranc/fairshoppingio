@@ -65,7 +65,6 @@
 <script setup lang="ts">
 import { Drawer } from 'flowbite';
 import { onMounted } from 'vue';
-import $ from 'jquery';
 import {
   initDrawers,
   initTooltips,
