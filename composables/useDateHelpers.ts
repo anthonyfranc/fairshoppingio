@@ -1,4 +1,4 @@
-import { formatDistance } from 'date-fns';
+import { formatDistance } from "date-fns";
 
 export const relativeDate = (date: string) => {
   console.log('date:', date);
