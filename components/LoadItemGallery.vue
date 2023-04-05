@@ -178,9 +178,9 @@ const { data } = await supabase
 openTab.value = data[0]['images'][0]['id'];
 
 setTimeout(function () {
-  loading.value = true;
   appStore.updatefinishLoading(1);
   //reset Store to help Skeleton Loading look better
   appStore.reset();
+  loading.value = true;
 }, 1000);
 </script>
