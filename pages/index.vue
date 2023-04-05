@@ -1,6 +1,6 @@
 <meta name="viewport" content= "width=device-width, initial-scale=1.0">
 <template>
-  <NavBar />
+  <sideBar2 />
   <!-- drawer init and toggle -->
   <!-- drawer component -->
   <div
