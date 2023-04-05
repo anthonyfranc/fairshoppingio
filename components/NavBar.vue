@@ -195,7 +195,7 @@
               items-center
               p-2
               text-gray-900 text-white
-              hover:bg-gray-500
+              hover:bg-gray-500 hover:rounded-b-md
             "
           >
             <div
