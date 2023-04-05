@@ -171,7 +171,7 @@
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-900 px-6">
         <div class="flex h-16 shrink-0 items-center">
-          <NuxtLink to="/" class="flex items-center pl-2.5 mb-5 pt-2.5">
+          <NuxtLink to="/" class="flex items-center mb-5 mt-[2.9em]">
             <!--Logo-->
             <div class="logoSlide">
               <span
