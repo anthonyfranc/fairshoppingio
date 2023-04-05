@@ -55,43 +55,25 @@
       </svg>
       <span class="sr-only">Close menu</span>
     </button>
-    <LoadItem />
+    <LazyLoadItem />
   </div>
   <!--End of Drawer-->
   <div class="p-4 sm:ml-64 bg-gray-50">
-    <ProductGrid />
+    <LazyProductGrid />
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { Drawer } from 'flowbite';
 import { onMounted } from 'vue';
 import $ from 'jquery';
 import {
-  initAccordions,
-  initCarousels,
-  initCollapses,
-  initDials,
-  initDismisses,
   initDrawers,
-  initDropdowns,
-  initModals,
-  initPopovers,
-  initTabs,
   initTooltips,
 } from 'flowbite';
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-  initAccordions();
-  initCarousels();
-  initCollapses();
-  initDials();
-  initDismisses();
   initDrawers();
-  initDropdowns();
-  initModals();
-  initPopovers();
-  initTabs();
   initTooltips();
 });
 </script>
