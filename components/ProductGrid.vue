@@ -1,10 +1,5 @@
 <template>
-    <main class="py-10 lg:pl-72">
-      <div class="px-4 sm:px-6 lg:px-8">
-        <!-- Your content -->
-      </div>
-    </main>
-  <section class="py-12 sm:py-16 lg:py-6 bg-gray-50">
+  <section class="py-12 sm:py-1 lg:py-6">
     <div class="mx-auto">
       <div
         class="
