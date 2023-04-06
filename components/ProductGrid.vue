@@ -101,7 +101,13 @@
               <p class="mt-1.5">
               <span class="text-md font-semibold tracking-tight text-gray-900">
                 <span v-if="ProductData.current_price !== null && ProductData.current_price < ProductData.previous_price_day">
+                <!--Show Previous price-->
+                <span class="line-through">
+                {{ProductData.previous_price_day}}
+                </span>
+                <!-- End of Previous Price-->                
                 <!--Show Current Price-->
+                
                 {{
                   Number(ProductData.current_price).toLocaleString('en-US', {
                     style: 'currency',
@@ -109,9 +115,6 @@
                   })
                 }}
                 <!--End of Current Price-->
-                <!--Show Previous price-->
-                {{ProductData.previous_price_day}}
-                <!-- End of Previous Price-->
                 </span>
                 <span v-else>
                 {{
