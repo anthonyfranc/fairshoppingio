@@ -112,7 +112,7 @@
                 </span>
                 <!-- End of Previous Price-->                
                 <!--Show Current Price-->
-                <span class="text-green-700 pl-1">
+                <span class="text-green-600 pl-1">
                 {{
                   Number(ProductData.current_price).toLocaleString('en-US', {
                     style: 'currency',
