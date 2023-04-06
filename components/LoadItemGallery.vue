@@ -171,7 +171,7 @@ function toggleTabs(tabNumber) {
 
 const supabase = useSupabaseClient();
 const { data } = await supabase
-  .from('productinfo')
+  .from('productinfo1')
   .select('images')
   .eq('id', appStore.storeID); // added the value of storeID to the query
 

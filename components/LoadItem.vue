@@ -77,7 +77,7 @@ watch(
     // added async keyword here
     if (appStore.storeID > 0) {
       const { data } = await supabase
-        .from('productinfo')
+        .from('productinfo1')
         .select('*')
         .eq('id', appStore.storeID); // added the value of storeID to the query
       appStore.updateDataID(data);

@@ -100,12 +100,27 @@
               </div>
               <p class="mt-1.5">
               <span class="text-md font-semibold tracking-tight text-gray-900">
+                <span v-if="ProductData.current_price !== null && ProductData.current_price < ProductData.previous_price_day">
+                <!--Show Current Price-->
                 {{
                   Number(ProductData.current_price).toLocaleString('en-US', {
                     style: 'currency',
                     currency: 'USD',
                   })
                 }}
+                <!--End of Current Price-->
+                <!--Show Previous price-->
+                {{ProductData.previous_price_day}}
+                <!-- End of Previous Price-->
+                </span>
+                <span v-else>
+                {{
+                  Number(ProductData.current_price).toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                  })
+                }}
+                </span>
                 </span>
                 <!--Analytics Stats Start-->
                 <div v-if="ProductData.previous_price_day > 0.00">
@@ -135,7 +150,7 @@ import { useAppStore } from '~/store/app';
 
 //Supabase stuff
 const supabase = useSupabaseClient();
-const { data, error } = await supabase.from('productinfo').select();
+const { data, error } = await supabase.from('productinfo1').select();
 
 //set Store as a Constant
 const appStore = useAppStore();
