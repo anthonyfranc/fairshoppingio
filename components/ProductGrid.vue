@@ -10,7 +10,7 @@
           md:grid-cols-3
           lg:grid-cols-4
           xl:grid-cols-5
-          sxl:grid-cols-7
+          sxl:grid-cols-6
           2xl:grid-cols-7
           px-4 mx-1 sm:px-8 lg:px-8
         "
@@ -112,7 +112,7 @@
                 </span>
                 <!-- End of Previous Price-->                
                 <!--Show Current Price-->
-                <span class="text-green-600 pl-1">
+                <span class="text-green-700 pl-1">
                 {{
                   Number(ProductData.current_price).toLocaleString('en-US', {
                     style: 'currency',
