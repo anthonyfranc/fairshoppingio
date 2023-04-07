@@ -19,12 +19,12 @@
     "@heroicons/vue": "^2.0.16",
     "@nuxtjs/supabase": "^0.3.1",
     "@pinia/nuxt": "^0.4.7",
+    "@railway/cli": "^3.0.13",
     "date-fns": "^2.29.3",
     "flowbite": "^1.6.4",
     "jquery": "^3.6.4",
     "moment": "^2.29.4",
     "pinia": "^2.0.33",
-    "vue-loading-skeleton": "^1.1.9",
     "vue-star-rating": "^2.1.0"
   },
   "resolutions": {
