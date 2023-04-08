@@ -30,28 +30,4 @@ export default defineNuxtConfig({
       },
     },
   },
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
-  ],
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-
-  vite: {
-    server: {
-      hmr: {
-        protocol: 'wss',
-        clientPort: 443,
-        path: 'hmr/',
-      },
-    },
-}
 });
