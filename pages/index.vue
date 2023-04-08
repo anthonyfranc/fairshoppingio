@@ -59,7 +59,7 @@
   </div>
   <!--End of Drawer-->
   <div class="p-4 ml-0 lg:ml-64 xl:ml-64 2xl:ml-64 bg-gray-50">
-    <LazyProductGrid />
+    <ProductGrid />
   </div>
 </template>
 <script setup lang="ts">
