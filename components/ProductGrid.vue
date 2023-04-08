@@ -200,14 +200,13 @@
               z-10
               top-3.5
               left-3
-              bg-blue-100
-              text-blue-800 text-xs
+              bg-green-100
+              text-gray-800 text-xs
               font-semibold
               mr-2
               px-1.5
               py-0.5
               rounded
-              dark:bg-blue-200 dark:text-blue-800
               flex
             "
           >
@@ -217,7 +216,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-[13px] h-[13px] mt-[1px] mr-[3px]"
+              class="w-[13px] h-[13px] mt-[px] mr-[3px]"
             >
               <path
                 stroke-linecap="round"
