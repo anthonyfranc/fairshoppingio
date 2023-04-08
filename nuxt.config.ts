@@ -49,4 +49,12 @@ export default defineNuxtConfig({
     host: '0.0.0.0',
     port: process.env.PORT || 3000,
   },
+  vite: {
+    server: {
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost'
+      }
+    }
+  }
 });
