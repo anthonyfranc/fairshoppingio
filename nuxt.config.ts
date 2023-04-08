@@ -45,15 +45,13 @@ export default defineNuxtConfig({
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  server: {
-    host: '0.0.0.0',
-    port: process.env.PORT || 3000,
-  },
   vite: {
     server: {
       hmr: {
-        protocol: 'ws',
-      }
-    }
-  }
+        protocol: 'wss',
+        clientPort: 443,
+        path: 'hmr/',
+      },
+    },
+}
 });
