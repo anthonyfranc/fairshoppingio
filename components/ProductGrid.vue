@@ -194,7 +194,7 @@
               </template>
             </button>
           </div>
-          <div
+          <div v-if="ProductData.last_updated"
             class="
               absolute
               z-10
@@ -232,7 +232,7 @@
           </div>
           <div
             role="button"
-            class="relative"
+            class="relative pt-5"
             @click="
               appStore.updatefinishLoading(0),
                 appStore.updateStoreID(ProductData.id)
