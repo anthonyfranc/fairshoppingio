@@ -54,9 +54,7 @@
       </div>
     </h5>
     <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
-      <KeepAlive>
-        <LoadItemGallery />
-      </KeepAlive>
+        <LazyLoadItemGallery />
     </p>
   </div>
 </template>
