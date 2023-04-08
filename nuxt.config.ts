@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     url: 'https://qfgusybkqqvjhrotseuz.supabase.co',
     key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFmZ3VzeWJrcXF2amhyb3RzZXV6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzY4MTQ4NjQsImV4cCI6MTk5MjM5MDg2NH0.Go3YVWTVKvsvV2wkXNICDA7aZ7T6Yrji_W6i15oF6F4',
   },
-  ssr: false,
+  ssr: true,
   esbuild: {
     supported: {
       'top-level-await': true, //browsers can handle top-level-await features
@@ -30,4 +30,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  vite: {
+    server: {
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost'
+      }
+    }
+  }
 });
