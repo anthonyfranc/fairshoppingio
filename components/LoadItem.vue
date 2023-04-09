@@ -56,7 +56,7 @@
     <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
       <LoadItemGallery />
     </p>
-    <p v-if="appStore.finishLoading == 1">
+    <p v-if="appStore.finishLoading == 1" class="mt-3 mb-3">
       <template v-for="(item, key, index) in ProductData.store_data">
         <div
           id="alert-additional-content-5"
@@ -68,16 +68,14 @@
             <h3 class="text-lg font-medium text-gray-800 flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="green"
-                class="w-[20px] h-[20px] mt-[1px]"
+                fill="green"
+                class="w-[20px] h-[20px] mt-0.5"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+                  fill-rule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                  clip-rule="evenodd"
                 />
               </svg>
 
