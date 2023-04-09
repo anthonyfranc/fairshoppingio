@@ -66,11 +66,12 @@
           <div class="flex items-center">
             <span class="sr-only">Info</span>
             <h3 class="text-lg font-medium text-gray-800 flex items-center">
+              {{ item.store }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="green"
-                class="w-[20px] h-[20px] mt-0.5"
+                class="w-[20px] h-[20px] mt-0.5 ml-0.5"
               >
                 <path
                   fill-rule="evenodd"
@@ -78,8 +79,6 @@
                   clip-rule="evenodd"
                 />
               </svg>
-
-              {{ item.store }}
             </h3>
           </div>
           <div class="mt-2 mb-4 text-sm text-gray-800">
