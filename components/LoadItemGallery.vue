@@ -132,7 +132,7 @@
                 :src="item.image_url"
                 alt="Angled front view with bag zipped and handles upright."
                 class="
-                  h-96
+                  h-[18em]
                   w-full
                   object-scale-down object-center
                   rounded-xl

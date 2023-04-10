@@ -60,9 +60,17 @@
       <template v-for="(item, key, index) in ProductData.store_data">
         <div
           id="alert-additional-content-5"
-          class="p-4 border border-gray-300 rounded-lg bg-gray-50"
+          class="p-3 border border-gray-300 rounded-md bg-gray-50 mb-4"
           role="alert"
         >
+        <img 
+        class="
+        absolute
+        right-7
+        object-scale-down w-[5em] 
+        h-10
+        "
+        :src="item.store_url"/>
           <div class="flex items-center">
             <span class="sr-only">Info</span>
             <h3 class="text-lg font-medium text-gray-800 flex items-center">
@@ -81,7 +89,7 @@
               </svg>
             </h3>
           </div>
-          <div class="mt-2 mb-4 text-sm text-gray-800">
+          <div class="mt-2 mb-4 text-sm text-gray-800 flex">
             <span
               class="
                 text-md
@@ -89,8 +97,12 @@
                 px-2.5
                 py-0.5
                 rounded
-                bg-blue-200
-                text-blue-800
+                bg-green-200
+                text-black
+                flex
+                items-center
+                bg-opacity-30
+                border-[1.9px] border-green-500
               "
             >
               {{
@@ -104,15 +116,33 @@
               class="
                 text-md
                 font-semibold
-                px-2.5
+                px-2
                 py-0.5
                 rounded
-                bg-blue-200
-                text-blue-800
+                bg-green-200
+                text-black
                 ml-2
+                flex
+                items-center
+                bg-opacity-30
+                border-[1.9px] border-green-500
               "
             >
-              Reviews: {{ item.reviews }}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="red"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="red"
+                class="w-4 h-6 mr-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+              {{ Number(item.reviews).toLocaleString('en-US') }}
             </span>
             <span
               class="
@@ -121,12 +151,28 @@
                 px-2.5
                 py-0.5
                 rounded
-                bg-blue-200
-                text-blue-800
+                bg-green-200
+                text-black
                 ml-2
+                flex
+                items-center
+                bg-opacity-30
+                border-[1.9px] border-green-500
               "
             >
-              Rating: {{ item.rating }}
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 text-yellow-300 mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Rating star</title>
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              {{ item.rating }}
             </span>
           </div>
           <div class="flex">
@@ -134,8 +180,7 @@
               type="button"
               class="
                 text-white
-                bg-gray-700
-                hover:bg-gray-800
+                hover:bg-blue-700
                 focus:ring-4 focus:outline-none focus:ring-gray-300
                 font-medium
                 rounded-lg
@@ -146,22 +191,9 @@
                 text-center
                 inline-flex
                 items-center
-                dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-800
               "
+              style="background: rgb(75, 152, 108)"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="-ml-0.5 mr-2 h-5 w-4"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-
               Purchase
             </button>
           </div>
