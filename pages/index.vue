@@ -74,11 +74,16 @@ import {
 onMounted(() => {
   initDrawers();
   initTooltips();
+  document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
 });
 </script>
 <style type="css">
 .bg-gray-900 {
   background-color: #111827;
   opacity: 0.8;
+}
+.h-screen {
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
 }
 </style>
