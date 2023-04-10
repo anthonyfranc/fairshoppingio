@@ -10,7 +10,7 @@
       top-0
       right-0
       z-40
-      h-screen
+      h-full
       p-4
       overflow-y-auto
       transition-transform
