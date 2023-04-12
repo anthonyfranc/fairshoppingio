@@ -77,7 +77,7 @@ onMounted(() => {
   document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
 });
 </script>
-<style type="css" scoped>
+<style type="css">
 .bg-gray-900 {
   background-color: #111827;
   opacity: 0.8;

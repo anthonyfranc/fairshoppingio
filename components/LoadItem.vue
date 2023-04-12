@@ -63,14 +63,10 @@
           class="p-3 border border-gray-300 rounded-md bg-gray-50 mb-4"
           role="alert"
         >
-        <img 
-        class="
-        absolute
-        right-7
-        object-scale-down w-[5em] 
-        h-10
-        "
-        :src="item.store_url"/>
+          <img
+            class="absolute right-7 object-scale-down w-[5em] h-10"
+            :src="item.store_url"
+          />
           <div class="flex items-center">
             <span class="sr-only">Info</span>
             <h3 class="text-lg font-medium text-gray-800 flex items-center">
