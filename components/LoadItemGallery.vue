@@ -1,51 +1,61 @@
 <template>
-  <div v-if="loading == false">
+  <div v-if="loading == false" v-for="ProductData in data">
     <div role="status" class="flex-row flex-col animate-pulse">
       <div
-        class="flex items-center justify-center h-96 mb-3 bg-gray-200 rounded"
+        class="
+          flex
+          items-center
+          justify-center
+          mb-2
+          bg-gray-200
+          rounded
+          aspect-w-1 aspect-h-1
+          w-full
+        "
       >
-        <svg
-          class="w-full h-12 text-gray-200 dark:text-gray-600"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 640 512"
-        >
-          <path
-            d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"
-          />
-        </svg>
+        <img
+          :src="ProductData.images[0].image_url"
+          alt="Angled front view with bag zipped and handles upright."
+          class="
+            h-[18em]
+            w-full
+            object-scale-down object-center
+            rounded-xl
+            p-3
+            opacity-0
+          "
+        />
       </div>
-      <div class="flex grid grid-cols-4 gap-2">
+      <div
+        class="
+          flex
+          grid grid-cols-4
+          gap-6
+          mx-auto
+          mt-6
+          w-full
+          max-w-3xl
+          lg:max-w-none
+        "
+      >
         <span v-for="(item, key, index) in data[0]['images']">
           <!--We are hiding images while the rest loads so the brower is able to cache the images-->
-          <img
-            :src="item.image_url"
-            alt="Angled front view with bag zipped and handles upright."
-            class="hidden"
-          />
           <div
             class="
               flex
               items-center
               justify-center
-              h-28
-              w-20
               bg-gray-200
               rounded
+              aspect-w-1 aspect-h-1
+              w-full
+              h-24
             "
           >
-            <svg
-              class="flex w-6 h-6 text-gray-200 dark:text-gray-600"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 640 512"
-            >
-              <path
-                d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"
-              />
-            </svg>
+            <img
+              :src="item.image_url"
+              class="h-full w-full object-cover object-scale-down opacity-0"
+            />
           </div>
         </span>
       </div>
