@@ -18,6 +18,12 @@
       </div>
       <div class="flex grid grid-cols-4 gap-2">
         <span v-for="(item, key, index) in data[0]['images']">
+        <!--We are hiding images while the rest loads so the brower is able to cache the images-->
+          <img
+            :src="item.image_url"
+            alt="Angled front view with bag zipped and handles upright."
+            class="hidden"
+          />
           <div
             class="
               flex
@@ -89,7 +95,6 @@
                     :src="item.image_url"
                     alt=""
                     class="h-full w-full object-cover object-scale-down"
-                    loading="lazy"
                   />
                 </span>
                 <span
@@ -145,7 +150,6 @@
         </div>
       </div>
     </div>
-    
   </main>
 </template>
 

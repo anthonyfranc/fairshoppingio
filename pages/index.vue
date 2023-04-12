@@ -1,6 +1,6 @@
 <meta name="viewport" content= "width=device-width, initial-scale=1.0">
 <template>
-  <sideBar2 />
+<sideBar2 />
   <!-- drawer init and toggle -->
   <!-- drawer component -->
   <div
@@ -55,7 +55,7 @@
       </svg>
       <span class="sr-only">Close menu</span>
     </button>
-    <LazyLoadItem />
+    <LoadItem />
   </div>
   <!--End of Drawer-->
   <div class="p-4 ml-0 lg:ml-64 xl:ml-64 2xl:ml-64 bg-gray-50">
@@ -77,7 +77,7 @@ onMounted(() => {
   document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
 });
 </script>
-<style type="css">
+<style type="css" scoped>
 .bg-gray-900 {
   background-color: #111827;
   opacity: 0.8;
