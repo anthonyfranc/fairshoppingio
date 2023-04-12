@@ -30,9 +30,9 @@
         class="
           flex
           grid grid-cols-4
-          gap-6
+          gap-5
           mx-auto
-          mt-6
+          mt-3
           w-full
           max-w-3xl
           lg:max-w-none
