@@ -241,9 +241,9 @@
             data-drawer-placement="right"
             aria-controls="drawer-right-example"
           >
-            <div class="aspect-w-1 aspect-h-1">
+            <div class="object-scale-down w-full h-[12.5em] grid content-center">
               <img
-                class="object-scale-down w-full h-full pt-[20%] pl-[20%] pr-[20%]"
+                class="object-scale-down w-full max-h-[9.5vh] min-h-[12vh] mt-[2.9em] p-[1em]"
                 :src="ProductData.Image"
                 alt=""
               />
