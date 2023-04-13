@@ -4,7 +4,7 @@
       <div
         class="
           grid grid-cols-1
-          gap-4
+          gap-6
           xs:grid-cols-1
           sm:grid-cols-2
           md:grid-cols-3
@@ -241,9 +241,19 @@
             data-drawer-placement="right"
             aria-controls="drawer-right-example"
           >
-            <div class="object-scale-down w-full h-[12.5em] grid content-center">
+            <div
+              class="object-scale-down w-full h-[12.5em] grid content-center"
+            >
               <img
-                class="object-scale-down w-full max-h-[9.5vh] min-h-[12vh] mt-[2.9em] p-[1em]"
+                class="
+                  object-scale-down
+                  w-full
+                  max-h-[9.5vh]
+                  xs:min-h-[13vh]
+                  min-h-[12vh]
+                  mt-[2.9em]
+                  p-[1em]
+                "
                 :src="ProductData.Image"
                 alt=""
               />
