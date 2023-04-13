@@ -1,10 +1,10 @@
 <template>
-  <section class="py-12 sm:py-1 lg:py-6">
+  <section class="">
     <div class="mx-auto">
       <div
         class="
           grid grid-cols-1
-          gap-5
+          gap-4
           xs:grid-cols-1
           sm:grid-cols-2
           md:grid-cols-3
@@ -12,10 +12,10 @@
           xl:grid-cols-5
           sxl:grid-cols-6
           2xl:grid-cols-7
-          px-4
+          px-1
           mx-1
-          sm:px-8
-          lg:px-8
+          sm:px-1
+          lg:px-1
         "
       >
         <div
@@ -231,7 +231,7 @@
           </div>
           <div
             role="button"
-            class="relative pt-5"
+            class="relative"
             @click="
               appStore.updatefinishLoading(0),
                 appStore.updateStoreID(ProductData.id)
@@ -243,7 +243,7 @@
           >
             <div class="aspect-w-1 aspect-h-1">
               <img
-                class="object-scale-down w-full h-full"
+                class="object-scale-down w-full h-full pt-[20%] pl-[20%] pr-[20%]"
                 :src="ProductData.Image"
                 alt=""
               />
