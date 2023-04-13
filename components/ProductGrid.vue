@@ -242,19 +242,13 @@
             aria-controls="drawer-right-example"
           >
             <div
-              class="object-scale-down w-full h-[12.5em] grid content-center"
+              class="aspect-w-1 aspect-h-1"
             >
               <img
                 class="
-                  object-scale-down
-                  w-full
-                  max-h-[9.5vh]
-                  xs:min-h-[10em]
-                  min-h-[12vh]
-                  mt-[2.9em]
-                  p-[1em]
+                  object-scale-down w-full h-full p-12 top-5 relative content-center
                 "
-                :src="ProductData.Image"
+                :src="ProductData.Image+'&tr=h-140,w-140,cm-pad_resize,bg-fff'"
                 alt=""
               />
             </div>
