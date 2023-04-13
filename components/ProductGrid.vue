@@ -249,7 +249,7 @@
                   object-scale-down
                   w-full
                   max-h-[9.5vh]
-                  xs:min-h-[13vh]
+                  xs:min-h-[10em]
                   min-h-[12vh]
                   mt-[2.9em]
                   p-[1em]
