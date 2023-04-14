@@ -246,7 +246,7 @@
             >
               <img
                 class="
-                  object-scale-down w-full h-full p-12 top-5 relative content-center
+                  object-scale-down w-full h-full top-5 relative content-center
                 "
                 :src="ProductData.Image+'&tr=h-140,w-140,cm-pad_resize,bg-fff'"
                 alt=""
