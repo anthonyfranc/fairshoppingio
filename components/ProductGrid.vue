@@ -10,8 +10,6 @@
           md:grid-cols-3
           lg:grid-cols-4
           xl:grid-cols-5
-          sxl:grid-cols-6
-          2xl:grid-cols-7
           px-1
           mx-1
           sm:px-1
@@ -29,7 +27,7 @@
           "
           v-for="ProductData in data"
         >
-          <div class="absolute z-10 top-3 right-3">
+          <div class="absolute z-10 left-3 top-3">
             <button
               type="button"
               class="inline-flex items-center justify-center"
@@ -195,41 +193,6 @@
             </button>
           </div>
           <div
-            v-if="ProductData.last_updated"
-            class="
-              absolute
-              z-10
-              top-3.5
-              left-3
-              bg-green-100
-              text-gray-800 text-xs
-              font-semibold
-              mr-2
-              px-1.5
-              py-0.5
-              rounded
-              flex
-              items-center
-            "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-[13px] h-[13px] mr-[3px]"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
-              />
-            </svg>
-            {{ relativeDate(ProductData.last_updated).replace('about', '') }}
-            ago
-          </div>
-          <div
             role="button"
             class="relative"
             @click="
@@ -241,14 +204,19 @@
             data-drawer-placement="right"
             aria-controls="drawer-right-example"
           >
-            <div
-              class="aspect-w-1 aspect-h-1"
-            >
+            <div class="aspect-w-1 aspect-h-1">
               <img
                 class="
-                  object-scale-down w-full h-full top-5 relative content-center
+                  object-scale-down
+                  w-full
+                  h-full
+                  top-5
+                  relative
+                  content-center
                 "
-                :src="ProductData.Image+'&tr=h-140,w-140,cm-pad_resize,bg-fff'"
+                :src="
+                  ProductData.Image + '&tr=h-160,w-160,cm-pad_resize,bg-fff'
+                "
                 alt=""
               />
             </div>

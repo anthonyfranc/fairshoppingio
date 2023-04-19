@@ -1,6 +1,6 @@
 <meta name="viewport" content= "width=device-width, initial-scale=1.0">
 <template>
-<sideBar2 />
+<Header />
   <!-- drawer init and toggle -->
   <!-- drawer component -->
   <div
@@ -58,7 +58,7 @@
     <LoadItem />
   </div>
   <!--End of Drawer-->
-  <div class="p-4 ml-0 lg:ml-64 xl:ml-64 2xl:ml-64 bg-gray-50">
+  <div class="mx-auto max-w-7xl mt-10">
     <ProductGrid />
   </div>
 </template>
