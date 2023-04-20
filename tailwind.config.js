@@ -24,4 +24,6 @@ export default {
     // other files...
     './node_modules/flowbite.{js,ts}',
   ],
+  //this enables dark mode based on device setting
+  darkMode: 'media',
 };
