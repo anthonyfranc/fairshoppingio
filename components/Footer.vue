@@ -8,11 +8,11 @@
             <div class="logoSlide">
               <span
                 style="
-                  color: rgb(255, 255, 255);
                   font-size: 26px;
                   font-weight: bold;
                   font-family: 'Urbanist', sans-serif;
                 "
+                class="dark:text-white text-gray-600"
               >
                 FairShopping</span
               >

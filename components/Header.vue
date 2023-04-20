@@ -1,6 +1,6 @@
 <template>
-  <div class="divide-y-[0.12em] divide-gray-600">
-    <nav class="border-gray-200 bg-gray-700">
+  <div class="bg-white divide-y-[0.124em] shadow dark:divide-gray-600">
+    <nav class="dark:border-gray-200 dark:bg-gray-700">
       <div
         class="
           flex flex-wrap
@@ -16,11 +16,11 @@
           <div class="logoSlide">
             <span
               style="
-                color: rgb(255, 255, 255);
                 font-size: 26px;
                 font-weight: bold;
                 font-family: 'Urbanist', sans-serif;
               "
+              class="dark:text-white text-gray-600"
             >
               FairShopping</span
             >
@@ -38,7 +38,7 @@
         <div class="flex items-center"></div>
       </div>
     </nav>
-    <nav class="bg-gray-50 dark:bg-gray-800">
+    <nav class="bg-slate-50 dark:bg-gray-800">
       <div class="max-w-screen-xl px-4 py-3 mx-auto">
         <div class="items-center flex">
           <button
