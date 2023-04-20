@@ -1,5 +1,5 @@
 <template>
-  <div class="divide-y divide-gray-600">
+  <div class="divide-y-[0.12em] divide-gray-600">
     <nav class="bg-white border-gray-200 dark:bg-gray-700">
       <div
         class="
