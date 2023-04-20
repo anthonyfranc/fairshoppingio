@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white divide-y-[0.124em] shadow dark:divide-gray-600">
+  <div class="bg-white divide-y-[0.124em] shadow-sm dark:divide-gray-600">
     <nav class="dark:border-gray-200 dark:bg-gray-700">
       <div
         class="
@@ -38,7 +38,7 @@
         <div class="flex items-center"></div>
       </div>
     </nav>
-    <nav class="bg-slate-100 dark:bg-gray-800">
+    <nav class="bg-white dark:bg-gray-800">
       <div class="max-w-screen-xl px-4 py-3 mx-auto">
         <div class="items-center flex">
           <button
@@ -102,7 +102,8 @@
                   text-sm
                   font-medium
                   hover:bg-gray-800
-                  text-black dark:text-gray-400
+                  text-black
+                  dark:text-gray-400
                   hover:text-white hover:bg-gray-800
                 "
                 >Show All</a
@@ -117,7 +118,8 @@
                   href="team.href"
                   class="
                     hover:bg-gray-800
-                    text-black dark:text-gray-400
+                    text-black
+                    dark:text-gray-400
                     hover:text-white hover:bg-gray-800
                     group
                     flex
@@ -155,7 +157,8 @@
                   href="team.href"
                   class="
                     hover:bg-gray-800
-                    text-black dark:text-gray-400
+                    text-black
+                    dark:text-gray-400
                     hover:text-white hover:bg-gray-800
                     group
                     flex
@@ -193,7 +196,8 @@
                   href="team.href"
                   class="
                     hover:bg-gray-800
-                    text-black dark:text-gray-400
+                    text-black
+                    dark:text-gray-400
                     hover:text-white hover:bg-gray-800
                     group
                     flex
@@ -231,7 +235,8 @@
                   href="team.href"
                   class="
                     hover:bg-gray-800
-                    text-black dark:text-gray-400
+                    text-black
+                    dark:text-gray-400
                     hover:text-white hover:bg-gray-800
                     group
                     flex

@@ -3,7 +3,7 @@
     class="
       bg-white
       dark:bg-gray-900
-      border-t-2 border-slate-200 border-opacity-50
+      border-t-2 border-slate-300 border-opacity-30
     "
   >
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
