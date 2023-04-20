@@ -38,7 +38,7 @@
         <div class="flex items-center"></div>
       </div>
     </nav>
-    <nav class="bg-slate-50 dark:bg-gray-800">
+    <nav class="bg-slate-100 dark:bg-gray-800">
       <div class="max-w-screen-xl px-4 py-3 mx-auto">
         <div class="items-center flex">
           <button
