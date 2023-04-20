@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors');
-
 export default {
   theme: {
     extend: {
@@ -22,4 +20,8 @@ export default {
     },
   },
   plugins: [require('flowbite/plugin')],
+  content: [
+    // other files...
+    './node_modules/flowbite.{js,ts}',
+  ],
 };

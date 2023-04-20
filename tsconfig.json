@@ -19,6 +19,5 @@
     },
     "types": ["@nuxt/types", "@types/node"]
   },
-  "exclude": ["node_modules", ".nuxt", "dist"],
-  "include": ["src/**/*.ts*"],
+  "exclude": ["node_modules", ".nuxt", "dist"]
 }

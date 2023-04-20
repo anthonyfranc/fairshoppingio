@@ -78,6 +78,7 @@ onMounted(() => {
   initDrawers();
   initTooltips();
   initDropdowns();
+  initFlowbite();
   document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
 });
 </script>
