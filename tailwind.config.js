@@ -19,7 +19,7 @@ export default {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite')],
   content: [
     // other files...
     './node_modules/flowbite.{js,ts}',

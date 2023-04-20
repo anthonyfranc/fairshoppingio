@@ -70,6 +70,7 @@ import {
   initDrawers,
   initTooltips,
   initDropdowns,
+  initFlowbite
   
 } from 'flowbite';
 

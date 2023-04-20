@@ -8,23 +8,24 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.4.1",
-    "nuxt": "^3.2.3",
-    "sass": "^1.59.3",
-    "sass-loader": "^13.2.0",
+    "@nuxtjs/tailwindcss": "^6.6.6",
+    "nuxt": "^3.4.2",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
     "vue-star-rating": "^2.1.0"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.12",
-    "@heroicons/vue": "^2.0.16",
-    "@nuxtjs/supabase": "^0.3.1",
-    "@pinia/nuxt": "^0.4.7",
-    "@railway/cli": "^3.0.13",
+    "@headlessui/vue": "^1.7.13",
+    "@heroicons/vue": "^2.0.17",
+    "@nuxtjs/supabase": "^0.3.5",
+    "@pinia/nuxt": "^0.4.9",
+    "@railway/cli": "^3.0.22",
     "date-fns": "^2.29.3",
     "flowbite": "^1.6.5",
     "jquery": "^3.6.4",
     "moment": "^2.29.4",
-    "pinia": "^2.0.33",
+    "npm-check-updates": "^16.10.8",
+    "pinia": "^2.0.35",
     "vue-star-rating": "^2.1.0"
   },
   "resolutions": {
