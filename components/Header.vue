@@ -1,184 +1,366 @@
 <template>
-  <Disclosure as="header" class="bg-gray-800" v-slot="{ open }">
-    <div
-      class="
-        mx-auto
-        max-w-7xl
-        px-2
-        sm:px-2
-        lg:divide-y lg:divide-gray-700 lg:px-8
-      "
-    >
-      <div class="relative flex h-16 justify-between">
-        <div class="relative z-10 flex px-2 lg:px-0">
-          <div class="flex flex-shrink-0 items-center">
-            <NuxtLink to="/" class="flex items-center">
-              <!--Logo-->
-              <div class="logoSlide">
-                <span
-                  style="
-                    color: rgb(255, 255, 255);
-                    font-size: 26px;
-                    font-weight: bold;
-                    font-family: 'Urbanist', sans-serif;
-                  "
-                >
-                  FairShopping</span
-                >
-                <span
-                  style="
-                    color: rgb(75, 152, 108);
-                    font-size: 26px;
-                    font-weight: bold;
-                    font-family: 'Urbanist', sans-serif;
-                  "
-                  >.io</span
-                >
-              </div>
-            </NuxtLink>
+  <div class="divide-y divide-gray-600">
+    <nav class="bg-white border-gray-200 dark:bg-gray-700">
+      <div
+        class="
+          flex flex-wrap
+          justify-between
+          items-center
+          mx-auto
+          max-w-screen-xl
+          p-4
+        "
+      >
+        <NuxtLink to="/" class="flex items-center">
+          <!--Logo-->
+          <div class="logoSlide">
+            <span
+              style="
+                color: rgb(255, 255, 255);
+                font-size: 26px;
+                font-weight: bold;
+                font-family: 'Urbanist', sans-serif;
+              "
+            >
+              FairShopping</span
+            >
+            <span
+              style="
+                color: rgb(75, 152, 108);
+                font-size: 26px;
+                font-weight: bold;
+                font-family: 'Urbanist', sans-serif;
+              "
+              >.io</span
+            >
           </div>
-        </div>
-        <div class="relative z-10 flex items-center lg:hidden">
-          <!-- Mobile menu button -->
-          <DisclosureButton
+        </NuxtLink>
+        <div class="flex items-center"></div>
+      </div>
+    </nav>
+    <nav class="bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-screen-xl px-4 py-3 mx-auto">
+        <div class="items-center flex">
+          <button
+            id="dropdownDividerButton"
+            data-dropdown-toggle="dropdownDivider"
             class="
+              text-white
+              bg-blue-700
+              hover:bg-blue-800
+              font-medium
+              rounded-lg
+              text-sm
+              px-5
+              py-2.5
+              text-center
               inline-flex
               items-center
-              justify-center
-              rounded-md
-              p-2
-              text-gray-400
-              hover:bg-gray-700 hover:text-white
-              focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white
+              bg-blue-600
+              hover:bg-blue-700
             "
-          >
-            <span class="sr-only">Open menu</span>
-            <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-            <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
-          </DisclosureButton>
-        </div>
-      </div>
-      <nav class="hidden lg:flex lg:space-x-8 lg:py-2" aria-label="Global">
-        <a
-          v-for="item in navigation"
-          :key="item.name"
-          :href="item.href"
-          :class="[
-            item.current
-              ? 'bg-gray-900 text-white'
-              : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-            'inline-flex items-center rounded-md py-2 px-3 text-sm font-medium',
-          ]"
-          :aria-current="item.current ? 'page' : undefined"
-          >{{ item.name }}</a
-        >
-      </nav>
-    </div>
-
-    <DisclosurePanel as="nav" class="lg:hidden" aria-label="Global">
-      <div class="space-y-1 px-2 pb-3 pt-2">
-        <DisclosureButton
-          v-for="item in navigation"
-          :key="item.name"
-          as="a"
-          :href="item.href"
-          :class="[
-            item.current
-              ? 'bg-gray-900 text-white'
-              : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-            'block rounded-md py-2 px-3 text-base font-medium',
-          ]"
-          :aria-current="item.current ? 'page' : undefined"
-          >{{ item.name }}</DisclosureButton
-        >
-      </div>
-      <div class="border-t border-gray-700 pb-3 pt-4">
-        <div class="flex items-center px-4">
-          <div class="flex-shrink-0">
-            <img class="h-10 w-10 rounded-full" :src="user.imageUrl" alt="" />
-          </div>
-          <div class="ml-3">
-            <div class="text-base font-medium text-white">{{ user.name }}</div>
-            <div class="text-sm font-medium text-gray-400">
-              {{ user.email }}
-            </div>
-          </div>
-          <button
             type="button"
-            class="
-              ml-auto
-              flex-shrink-0
-              rounded-full
-              bg-gray-800
-              p-1
-              text-gray-400
-              hover:text-white
-              focus:outline-none
-              focus:ring-2
-              focus:ring-white
-              focus:ring-offset-2
-              focus:ring-offset-gray-800
-            "
           >
-            <span class="sr-only">View notifications</span>
-            <BellIcon class="h-6 w-6" aria-hidden="true" />
+            Categories
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
           </button>
-        </div>
-        <div class="mt-3 space-y-1 px-2">
-          <DisclosureButton
-            v-for="item in userNavigation"
-            :key="item.name"
-            as="a"
-            :href="item.href"
+
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownDivider"
             class="
-              block
-              rounded-md
-              px-3
-              py-2
-              text-base
-              font-medium
-              text-gray-400
-              hover:bg-gray-700 hover:text-white
+              z-20
+              hidden
+              bg-white
+              divide-y divide-gray-100
+              rounded-lg
+              shadow
+              dark:bg-gray-700 dark:divide-gray-600
             "
-            >{{ item.name }}</DisclosureButton
           >
+            <div class="py-1">
+              <a
+                href="#"
+                class="
+                  block
+                  px-4
+                  py-2
+                  text-sm
+                  font-medium
+                  hover:bg-gray-800
+                  text-white text-gray-400
+                  hover:text-white hover:bg-gray-800
+                "
+                >Show All</a
+              >
+            </div>
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownDividerButton"
+            >
+              <li>
+                <a
+                  href="team.href"
+                  class="
+                    hover:bg-gray-800
+                    text-white text-gray-400
+                    hover:text-white hover:bg-gray-800
+                    group
+                    flex
+                    gap-x-3
+                    rounded-md
+                    p-3
+                    text-sm
+                    leading-3
+                    font-semibold
+                  "
+                >
+                  <span
+                    class="
+                      flex
+                      h-3
+                      w-3
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      ring-1 ring-white
+                      bg-amber-500
+                      text-[0.625rem]
+                      font-medium
+                      text-gray-400
+                      group-hover:text-white
+                    "
+                  >
+                  </span>
+                  <span class="truncate">Electronics</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="team.href"
+                  class="
+                    hover:bg-gray-800
+                    text-white text-gray-400
+                    hover:text-white hover:bg-gray-800
+                    group
+                    flex
+                    gap-x-3
+                    rounded-md
+                    p-3
+                    text-sm
+                    leading-3
+                    font-semibold
+                  "
+                >
+                  <span
+                    class="
+                      flex
+                      h-3
+                      w-3
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      ring-1 ring-white
+                      bg-violet-600
+                      text-[0.625rem]
+                      font-medium
+                      text-gray-400
+                      group-hover:text-white
+                    "
+                  >
+                  </span>
+                  <span class="truncate">Video Games</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="team.href"
+                  class="
+                    hover:bg-gray-800
+                    text-white text-gray-400
+                    hover:text-white hover:bg-gray-800
+                    group
+                    flex
+                    gap-x-3
+                    rounded-md
+                    p-3
+                    text-sm
+                    leading-3
+                    font-semibold
+                  "
+                >
+                  <span
+                    class="
+                      flex
+                      h-3
+                      w-3
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      ring-1 ring-white
+                      bg-cyan-600
+                      text-[0.625rem]
+                      font-medium
+                      text-gray-400
+                      group-hover:text-white
+                    "
+                  >
+                  </span>
+                  <span class="truncate">Entertainment</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="team.href"
+                  class="
+                    hover:bg-gray-800
+                    text-white text-gray-400
+                    hover:text-white hover:bg-gray-800
+                    group
+                    flex
+                    gap-x-3
+                    rounded-md
+                    p-3
+                    text-sm
+                    leading-3
+                    font-semibold
+                  "
+                >
+                  <span
+                    class="
+                      flex
+                      h-3
+                      w-3
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-full
+                      ring-1 ring-white
+                      bg-rose-300
+                      text-[0.625rem]
+                      font-medium
+                      text-gray-400
+                      group-hover:text-white
+                    "
+                  >
+                  </span>
+                  <span class="truncate">Smart Home</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full">
+            <form class="float-right w-4/5">
+              <label
+                for="default-search"
+                class="
+                  mb-2
+                  text-sm
+                  font-medium
+                  text-gray-900
+                  sr-only
+                  dark:text-white
+                "
+                >Search</label
+              >
+              <div class="relative">
+                <div
+                  class="
+                    absolute
+                    inset-y-0
+                    left-0
+                    flex
+                    items-center
+                    pl-3
+                    pointer-events-none
+                  "
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  class="
+                    block
+                    w-full
+                    p-4
+                    pl-10
+                    text-sm text-gray-900
+                    border border-gray-300
+                    rounded-lg
+                    bg-gray-50
+                    focus:ring-blue-500 focus:border-blue-500
+                    dark:bg-gray-700
+                    dark:border-gray-600
+                    dark:placeholder-gray-400
+                    dark:text-white
+                    dark:focus:ring-blue-500
+                    dark:focus:border-blue-500
+                  "
+                  placeholder="Search Products"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="
+                    text-white
+                    absolute
+                    right-2.5
+                    bottom-2.5
+                    bg-blue-700
+                    hover:bg-blue-800
+                    focus:ring-4 focus:outline-none focus:ring-blue-300
+                    font-medium
+                    rounded-lg
+                    text-sm
+                    px-4
+                    py-2
+                    dark:bg-blue-600
+                    dark:hover:bg-blue-700
+                    dark:focus:ring-blue-800
+                  "
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </DisclosurePanel>
-  </Disclosure>
+    </nav>
+  </div>
 </template>
-
-<script setup>
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from '@headlessui/vue';
-import { MagnifyingGlassIcon } from '@heroicons/vue/20/solid';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline';
-
-const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-};
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-];
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-];
-</script>
 <style type="css">
 .logoSlide {
   animation: slideInLogo 1s ease 0s 1 normal none;

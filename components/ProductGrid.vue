@@ -10,10 +10,13 @@
           md:grid-cols-3
           lg:grid-cols-4
           xl:grid-cols-5
-          px-1
-          mx-1
-          sm:px-1
-          lg:px-1
+          pb-5
+          md:pl-5
+          pr-5
+          sm:pl-5
+          pr-5
+          xs:pl-5
+          pr-5
         "
       >
         <div

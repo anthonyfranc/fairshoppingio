@@ -58,7 +58,7 @@
     <LoadItem />
   </div>
   <!--End of Drawer-->
-  <div class="mx-auto max-w-7xl mt-10">
+  <div class="mx-auto max-w-7xl mt-5">
     <ProductGrid />
   </div>
 </template>
@@ -68,12 +68,15 @@ import { onMounted } from 'vue';
 import {
   initDrawers,
   initTooltips,
+  initDropdowns,
+  
 } from 'flowbite';
 
 // initialize components based on data attribute selectors
 onMounted(() => {
   initDrawers();
   initTooltips();
+  initDropdowns();
   document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
 });
 </script>
