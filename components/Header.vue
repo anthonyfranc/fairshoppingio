@@ -20,7 +20,7 @@
                 font-weight: bold;
                 font-family: 'Urbanist', sans-serif;
               "
-              class="dark:text-white text-gray-600"
+              class="dark:text-white text-gray-700"
             >
               FairShopping</span
             >
@@ -102,7 +102,7 @@
                   text-sm
                   font-medium
                   hover:bg-gray-800
-                  text-white text-gray-400
+                  text-black dark:text-gray-400
                   hover:text-white hover:bg-gray-800
                 "
                 >Show All</a
@@ -117,7 +117,7 @@
                   href="team.href"
                   class="
                     hover:bg-gray-800
-                    text-white text-gray-400
+                    text-black dark:text-gray-400
                     hover:text-white hover:bg-gray-800
                     group
                     flex
@@ -155,7 +155,7 @@
                   href="team.href"
                   class="
                     hover:bg-gray-800
-                    text-white text-gray-400
+                    text-black dark:text-gray-400
                     hover:text-white hover:bg-gray-800
                     group
                     flex
@@ -193,7 +193,7 @@
                   href="team.href"
                   class="
                     hover:bg-gray-800
-                    text-white text-gray-400
+                    text-black dark:text-gray-400
                     hover:text-white hover:bg-gray-800
                     group
                     flex
@@ -231,7 +231,7 @@
                   href="team.href"
                   class="
                     hover:bg-gray-800
-                    text-white text-gray-400
+                    text-black dark:text-gray-400
                     hover:text-white hover:bg-gray-800
                     group
                     flex
