@@ -83,7 +83,7 @@
                 >
               </li>
               <li class="mb-4">
-                <a class="hover:underline cursor-pointer">API </a>
+                <a class="">API </a>
                 <span
                   class="
                     bg-blue-100
