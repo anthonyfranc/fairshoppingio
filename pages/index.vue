@@ -58,9 +58,10 @@
     <LoadItem />
   </div>
   <!--End of Drawer-->
-  <div class="mx-auto max-w-7xl mt-5">
+  <div class="mx-auto max-w-7xl mt-5 pb-10">
     <ProductGrid />
   </div>
+  <Footer/>
 </template>
 <script setup lang="ts">
 import { Drawer } from 'flowbite';

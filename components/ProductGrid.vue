@@ -4,19 +4,15 @@
       <div
         class="
           grid grid-cols-1
-          gap-6
+          gap-5
           xs:grid-cols-1
           sm:grid-cols-2
           md:grid-cols-3
           lg:grid-cols-4
           xl:grid-cols-5
           pb-5
-          md:pl-5
-          pr-5
-          sm:pl-5
-          pr-5
-          xs:pl-5
-          pr-5
+          pl-3
+          pr-3
         "
       >
         <div
