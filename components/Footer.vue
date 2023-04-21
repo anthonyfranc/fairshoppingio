@@ -1,5 +1,5 @@
 <template>
-  <div class="top-shadow border-t-[1px] border-slate-300 border-opacity-20">
+  <div class="top-shadow border-t-[1px] border-slate-300 border-opacity-100">
     <footer
       class="
         bg-white
@@ -267,7 +267,7 @@
 .top-shadow {
   -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
   -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.7);
-  box-shadow: 0 1px 2px 2px rgb(50 50 50 / 0.1), 0 1px 5px 4px rgb(50 50 50 / 0.1);
+  box-shadow: 0 0px 5px 1px rgb(0 0 0 / 0.1), 0 10px 2px 9px rgb(0 0 0 / 0.1);
   /*box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);*/
 }
 </style>
