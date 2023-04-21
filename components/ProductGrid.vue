@@ -339,6 +339,58 @@
           </div>
         </div>
       </div>
+      <!--Show more Button-->
+      <div class="inline-flex items-center justify-center w-full">
+        <hr class="w-2/5 h-px my-8 bg-gray-200 border-0" />
+        <span
+          class="
+            absolute
+            px-6
+            font-medium
+            text-gray-900
+            -translate-x-1/2
+            left-1/2
+            bg-slate-50
+            capitalize
+          "
+        >
+          <button
+            type="button"
+            class="
+              text-white
+              bg-blue-700
+              hover:bg-blue-800
+              font-medium
+              rounded-md
+              text-sm
+              px-5
+              py-1.5
+              mr-2
+              mb-2
+              dark:bg-blue-600 dark:hover:bg-blue-700
+              focus:outline-none
+              dark:focus:ring-blue-800
+              capitalize
+              flex
+              pr-2
+            "
+          >
+            Show more
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5 pr-0.5 ml-1.5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15.312 11.424a5.5 5.5 0 01-9.201 2.466l-.312-.311h2.433a.75.75 0 000-1.5H3.989a.75.75 0 00-.75.75v4.242a.75.75 0 001.5 0v-2.43l.31.31a7 7 0 0011.712-3.138.75.75 0 00-1.449-.39zm1.23-3.723a.75.75 0 00.219-.53V2.929a.75.75 0 00-1.5 0V5.36l-.31-.31A7 7 0 003.239 8.188a.75.75 0 101.448.389A5.5 5.5 0 0113.89 6.11l.311.31h-2.432a.75.75 0 000 1.5h4.243a.75.75 0 00.53-.219z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </span>
+      </div>
     </div>
   </section>
 </template>

@@ -76,13 +76,6 @@
             </h2>
             <ul class="text-gray-600 dark:text-gray-400 font-medium">
               <li class="mb-4">
-                <a
-                  href="https://github.com/themesberg/flowbite"
-                  class="hover:underline"
-                  >Blog</a
-                >
-              </li>
-              <li class="mb-4">
                 <a class="">API </a>
                 <span
                   class="
