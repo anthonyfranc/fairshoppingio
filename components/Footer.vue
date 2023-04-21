@@ -1,12 +1,6 @@
 <template>
   <div class="top-shadow">
-    <footer
-      class="
-        bg-white
-        dark:bg-gray-900
-        border-t-[1px] border-slate-300 border-opacity-20
-      "
-    >
+    <footer class="bg-white dark:bg-gray-900">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
@@ -266,9 +260,10 @@
 </template>
 <style type="css">
 .top-shadow {
-  -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.7);
+  -webkit-box-shadow: 0 -1px 2px -1px rgb(0 0 0 / 0.25);
+  -moz-box-shadow: 0 -1px 2px -1px rgb(0 0 0 / 0.25);
   box-shadow: 0 -1px 2px -1px rgb(0 0 0 / 0.25);
   /*box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);*/
+  margin-top: 1em;
 }
 </style>
