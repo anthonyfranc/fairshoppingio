@@ -58,9 +58,10 @@
     <LoadItem />
   </div>
   <!--End of Drawer-->
-  <div class="mx-auto max-w-7xl mt-5 pb-10">
+  <div class="mx-auto max-w-7xl mt-5">
     <ProductGrid />
   </div>
+  <!--End Shadow-->
   <Footer/>
 </template>
 <script setup lang="ts">

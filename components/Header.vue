@@ -38,7 +38,14 @@
         <div class="flex items-center"></div>
       </div>
     </nav>
-    <nav class="bg-white dark:bg-gray-800">
+    <nav
+      class="
+        bg-white
+        dark:bg-gray-800
+        shadow-sm
+        border-b-2 border-slate-300 border-opacity-20
+      "
+    >
       <div class="max-w-screen-xl px-4 py-3 mx-auto">
         <div class="items-center flex">
           <button
