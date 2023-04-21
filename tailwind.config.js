@@ -1,3 +1,5 @@
+const withAnimations = require('animated-tailwindcss');
+
 export default {
   theme: {
     extend: {
@@ -19,11 +21,5 @@ export default {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
-  content: [
-    // other files...
-    './node_modules/flowbite.{js,ts}',
-  ],
-  //this enables dark mode based on device setting
   darkMode: 'media',
 };
