@@ -262,7 +262,7 @@
 .top-shadow {
   -webkit-box-shadow: 0 -1px 2px -1px rgb(0 0 0 / 0.25);
   -moz-box-shadow: 0 -1px 2px -1px rgb(0 0 0 / 0.25);
-  box-shadow: 0 -1px 2px -1px rgb(0 0 0 / 0.25);
+  box-shadow: 0 -1px 2px -1px rgb(0 0 0 / 0.28);
   /*box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);*/
   margin-top: 1em;
 }
