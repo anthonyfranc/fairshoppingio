@@ -4,6 +4,7 @@
   <!-- drawer init and toggle -->
   <!-- drawer component -->
   <div
+    v-if="appLoaded"
     id="drawer-right-example"
     class="
       fixed
@@ -65,21 +66,11 @@
   <Footer/>
 </template>
 <script setup lang="ts">
-import { Drawer } from 'flowbite';
-import { onMounted } from 'vue';
-import {
-  initDrawers,
-  initTooltips,
-  initDropdowns,
-  
-} from 'flowbite';
-
+const appLoaded = ref(false);
 // initialize components based on data attribute selectors
 onMounted(() => {
-  initDrawers();
-  initTooltips();
-  initDropdowns();
   document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
+  appLoaded.value = true;
 });
 </script>
 <style type="css">

@@ -24,7 +24,6 @@
             rounded-md
             group
           "
-          v-if="returnData != null"
           v-for="ProductData in returnData"
         >
           <div class="absolute z-10 left-3 top-3">
@@ -663,19 +662,21 @@ watch(
         setTimeout(function () {
           returnData.value = data;
           load.value = false;
-        }, 500);
+        }, 1000);
       } else {
         load.value = true;
         setTimeout(function () {
           returnData.value = data;
           load.value = false;
-        }, 800);
+        }, 1000);
       }
       //we are using to.value + 1 to set the value end.value = true once the last item has loaded
       if (to.value + 1 >= count) {
         //we are emting this to let the DOM know there are no more items to load.
         end.value = true;
       }
+      initDropdowns();
+      initTooltips();
     }
   },
   { immediate: true }
@@ -690,6 +691,31 @@ watch(
     // added async keyword here
     if (appStore.storeID > 0) {
       appStore.updateDataID(0);
+      //console.log(document.getElementById('drawer-right-example'));
+      // options with default values
+      const options = {
+        placement: 'right',
+        backdrop: true,
+        bodyScrolling: false,
+        edge: false,
+        edgeOffset: '',
+        backdropClasses:
+          'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
+        onHide: () => {
+          console.log('drawer is hidden');
+        },
+        onShow: () => {
+          console.log('drawer is shown');
+        },
+        onToggle: () => {
+          console.log('drawer has been toggled');
+        },
+      };
+      const drawer = new Drawer(
+        document.getElementById('drawer-right-example'),
+        options
+      );
+      drawer.toggle();
     }
   }
 );
