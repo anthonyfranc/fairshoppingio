@@ -637,6 +637,7 @@
 <script setup>
 //import Store Data
 import { useAppStore } from '~/store/app';
+import { initTooltips, initDropdowns, initDrawers } from 'flowbite';
 const supabase = useSupabaseClient();
 const to = ref(14);
 const load = ref(false);
@@ -679,10 +680,6 @@ watch(
   },
   { immediate: true }
 );
-
-nextTick(() => {
-    console.log(test)
-  })
 
 //set Store as a Constant
 const appStore = useAppStore();
