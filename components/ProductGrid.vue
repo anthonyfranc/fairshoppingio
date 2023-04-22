@@ -24,7 +24,7 @@
             rounded-md
             group
           "
-          v-for="ProductData in data"
+          v-for="ProductData in returnData"
         >
           <div class="absolute z-10 left-3 top-3">
             <button
@@ -338,9 +338,244 @@
             </div>
           </div>
         </div>
+        <!--Before Data is loaded we are showing this-->
+        <div v-if="!returnData" v-for="n in 15">
+          <div
+            class="
+              relative
+              overflow-hidden
+              bg-white
+              border border-gray-200
+              rounded-md
+              group
+            "
+          >
+            <div class="absolute z-10 left-3 top-0">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center"
+              >
+                <div role="status" class="max-w-sm animate-pulse">
+                  <div class="h-2.5 bg-gray-200 rounded-full w-12"></div>
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </button>
+            </div>
+            <div>
+              <div class="aspect-w-1 aspect-h-1 mt-1">
+                <div
+                  role="status"
+                  class="
+                    animate-pulse
+                    space-y-0 space-x-8
+                    flex
+                    items-center
+                    md:h-[19.9rem]
+                    lg:h-[19rem]
+                    sm:h-[22.4rem]
+                    h-[38rem]
+                    p-3
+                  "
+                >
+                  <div
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      w-full
+                      bg-gray-300
+                      rounded
+                      sm:w-96
+                      object-scale-down
+                      w-full
+                      h-full
+                      top-5
+                      relative
+                      content-center
+                    "
+                  >
+                    <svg
+                      class="w-12 h-12 text-gray-200"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 640 512"
+                    >
+                      <path
+                        d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+              <div class="px-4 py-4">
+                <span
+                  class="
+                    text-md
+                    font-semibold
+                    tracking-tight
+                    text-gray-900
+                    truncate
+                    block
+                  "
+                >
+                  <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-2.5 bg-gray-200 rounded-full w-48 mt-5"></div>
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <span class="absolute inset-0" aria-hidden="true"></span>
+                </span>
+                <div class="flex items-center mt-1">
+                  <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-2.5 bg-gray-200 rounded-full w-12"></div>
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <p class="ml-1 text-sm font-bold text-gray-900"></p>
+                  <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-2.5 bg-gray-200 rounded-full w-12"></div>
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+                <p class="">
+                  <span
+                    class="text-md font-semibold tracking-tight text-gray-900"
+                  >
+                    <div role="status" class="max-w-sm animate-pulse">
+                      <div
+                        class="h-2.5 bg-gray-200 rounded-full w-48 mt-1"
+                      ></div>
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end of before data-->
+        <!--Before Data is loaded we are showing this-->
+        <div v-if="load == true" v-for="n in 5">
+          <div
+            class="
+              relative
+              overflow-hidden
+              bg-white
+              border border-gray-200
+              rounded-md
+              group
+            "
+          >
+            <div class="absolute z-10 left-3 top-0">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center"
+              >
+                <div role="status" class="max-w-sm animate-pulse">
+                  <div class="h-2.5 bg-gray-200 rounded-full w-12"></div>
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </button>
+            </div>
+            <div>
+              <div class="aspect-w-1 aspect-h-1 mt-1">
+                <div
+                  role="status"
+                  class="
+                    animate-pulse
+                    space-y-0 space-x-8
+                    flex
+                    items-center
+                    md:h-[19.9rem]
+                    lg:h-[19rem]
+                    sm:h-[22.4rem]
+                    h-[38rem]
+                    p-3
+                  "
+                >
+                  <div
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      w-full
+                      bg-gray-300
+                      rounded
+                      sm:w-96
+                      object-scale-down
+                      w-full
+                      h-full
+                      top-5
+                      relative
+                      content-center
+                    "
+                  >
+                    <svg
+                      class="w-12 h-12 text-gray-200"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 640 512"
+                    >
+                      <path
+                        d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+              <div class="px-4 py-4">
+                <span
+                  class="
+                    text-md
+                    font-semibold
+                    tracking-tight
+                    text-gray-900
+                    truncate
+                    block
+                  "
+                >
+                  <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-2.5 bg-gray-200 rounded-full w-48 mt-5"></div>
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <span class="absolute inset-0" aria-hidden="true"></span>
+                </span>
+                <div class="flex items-center mt-1">
+                  <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-2.5 bg-gray-200 rounded-full w-12"></div>
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <p class="ml-1 text-sm font-bold text-gray-900"></p>
+                  <div role="status" class="max-w-sm animate-pulse">
+                    <div class="h-2.5 bg-gray-200 rounded-full w-12"></div>
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                </div>
+                <p class="">
+                  <span
+                    class="text-md font-semibold tracking-tight text-gray-900"
+                  >
+                    <div role="status" class="max-w-sm animate-pulse">
+                      <div
+                        class="h-2.5 bg-gray-200 rounded-full w-48 mt-1"
+                      ></div>
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end of before data-->
       </div>
       <!--Show more Button-->
-      <div class="inline-flex items-center justify-center w-full">
+      <div
+        v-if="returnData && end == false"
+        class="inline-flex items-center justify-center w-full"
+      >
         <hr class="w-2/5 h-px my-8 bg-gray-200 border-0" />
         <span
           class="
@@ -355,7 +590,7 @@
           "
         >
           <button
-            disabled
+            @click="supaPagination"
             type="button"
             class="
               text-white
@@ -391,21 +626,59 @@
                 fill="currentColor"
               />
             </svg>
-            Show More Products
+            Show More Products {{ load }}
           </button>
         </span>
       </div>
     </div>
   </section>
 </template>
-<script setup lang="ts">
+<script setup>
 //import Store Data
 import { useAppStore } from '~/store/app';
-
-//Supabase stuff
 const supabase = useSupabaseClient();
-const { data, error } = await supabase.from('productinfo1').select();
-console.log(error);
+const to = ref(14);
+const load = ref(false);
+const supaPagination = () => ((to.value = to.value + 5), (load.value = true));
+const returnData = ref(null);
+const end = ref(false);
+
+//we are fetching count for rows in database
+const { count } = await supabase
+  .from('productinfo1')
+  .select('*', { count: 'exact' });
+
+watch(
+  () => to.value,
+  async () => {
+    // added async keyword here
+    if (to.value && to.value <= count) {
+      const { data, error } = await supabase
+        .from('productinfo1')
+        .select('*', { count: 'exact' })
+        .range(0, to.value);
+      if (to.value == 15) {
+        setTimeout(function () {
+          returnData.value = data;
+          load.value = false;
+        }, 1000);
+      } else {
+        load.value = true;
+        setTimeout(function () {
+          returnData.value = data;
+          load.value = false;
+        }, 1000);
+      }
+      //we are using to.value + 1 to set the value end.value = true once the last item has loaded
+      if (to.value + 1 >= count) {
+        //we are emting this to let the DOM know there are no more items to load.
+        end.value = true;
+      }
+    }
+  },
+  { immediate: true }
+);
+
 //set Store as a Constant
 const appStore = useAppStore();
 

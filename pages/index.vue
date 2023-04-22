@@ -4,7 +4,7 @@
   <!-- drawer init and toggle -->
   <!-- drawer component -->
   <div
-    :id="'drawer-right-example'"
+    id="drawer-right-example"
     class="
       fixed
       top-0
