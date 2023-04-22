@@ -24,6 +24,7 @@
             rounded-md
             group
           "
+          v-if="returnData != null"
           v-for="ProductData in returnData"
         >
           <div class="absolute z-10 left-3 top-3">
@@ -339,7 +340,7 @@
           </div>
         </div>
         <!--Before Data is loaded we are showing this-->
-        <div v-if="!returnData" v-for="n in 15">
+        <template v-if="returnData == null" v-for="n in 15">
           <div
             class="
               relative
@@ -452,10 +453,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </template>
         <!--end of before data-->
         <!--Before Data is loaded we are showing this-->
-        <div v-if="load == true" v-for="n in 5">
+        <template v-if="load == true" v-for="n in 5">
           <div
             class="
               relative
@@ -568,7 +569,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </template>
         <!--end of before data-->
       </div>
       <!--Show more Button-->
@@ -657,17 +658,17 @@ watch(
         .from('productinfo1')
         .select('*', { count: 'exact' })
         .range(0, to.value);
-      if (to.value == 15) {
+      if (to.value == 14) {
         setTimeout(function () {
           returnData.value = data;
           load.value = false;
-        }, 1000);
+        }, 500);
       } else {
         load.value = true;
         setTimeout(function () {
           returnData.value = data;
           load.value = false;
-        }, 1000);
+        }, 800);
       }
       //we are using to.value + 1 to set the value end.value = true once the last item has loaded
       if (to.value + 1 >= count) {

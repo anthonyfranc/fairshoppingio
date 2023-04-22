@@ -65,15 +65,20 @@
   <Footer/>
 </template>
 <script setup lang="ts">
+import { Drawer } from 'flowbite';
+import { onMounted } from 'vue';
 import {
   initDrawers,
   initTooltips,
   initDropdowns,
-  initFlowbite
+  
 } from 'flowbite';
 
 // initialize components based on data attribute selectors
 onMounted(() => {
+  initDrawers();
+  initTooltips();
+  initDropdowns();
   document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
 });
 </script>
