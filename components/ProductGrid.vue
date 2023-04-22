@@ -680,6 +680,10 @@ watch(
   { immediate: true }
 );
 
+nextTick(() => {
+    console.log(test)
+  })
+
 //set Store as a Constant
 const appStore = useAppStore();
 
