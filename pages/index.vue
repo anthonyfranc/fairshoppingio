@@ -4,7 +4,7 @@
   <!-- drawer init and toggle -->
   <!-- drawer component -->
   <div
-    v-if="appLoaded"
+  v-if="appLoaded"
     id="drawer-right-example"
     class="
       fixed

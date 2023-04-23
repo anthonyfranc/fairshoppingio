@@ -636,7 +636,17 @@
 <script setup>
 //import Store Data
 import { useAppStore } from '~/store/app';
-import { initTooltips, initDropdowns, initDrawers } from 'flowbite';
+import { Drawer } from 'flowbite';
+import { onMounted } from 'vue';
+import { initDrawers, initTooltips, initDropdowns } from 'flowbite';
+
+// initialize components based on data attribute selectors
+onUpdated(() => {
+  initDrawers();
+  initTooltips();
+  initDropdowns();
+});
+
 const supabase = useSupabaseClient();
 const to = ref(14);
 const load = ref(false);
@@ -675,8 +685,6 @@ watch(
         //we are emting this to let the DOM know there are no more items to load.
         end.value = true;
       }
-      initDropdowns();
-      initTooltips();
     }
   },
   { immediate: true }
@@ -692,30 +700,6 @@ watch(
     if (appStore.storeID > 0) {
       appStore.updateDataID(0);
       //console.log(document.getElementById('drawer-right-example'));
-      // options with default values
-      const options = {
-        placement: 'right',
-        backdrop: true,
-        bodyScrolling: false,
-        edge: false,
-        edgeOffset: '',
-        backdropClasses:
-          'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30',
-        onHide: () => {
-          console.log('drawer is hidden');
-        },
-        onShow: () => {
-          console.log('drawer is shown');
-        },
-        onToggle: () => {
-          console.log('drawer has been toggled');
-        },
-      };
-      const drawer = new Drawer(
-        document.getElementById('drawer-right-example'),
-        options
-      );
-      drawer.toggle();
     }
   }
 );
