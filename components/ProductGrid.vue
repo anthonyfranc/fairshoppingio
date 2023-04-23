@@ -339,7 +339,7 @@
           </div>
         </div>
         <!--Before Data is loaded we are showing this-->
-        <template v-if="returnData == null" v-for="n in 15">
+        <template v-if="returnData == null && load == false" v-for="n in 15">
           <div
             class="
               relative
@@ -668,18 +668,25 @@ watch(
         .from('productinfo1')
         .select('*', { count: 'exact' })
         .range(0, to.value);
-      if (to.value == 14) {
-        setTimeout(function () {
-          returnData.value = data;
-          load.value = false;
-        }, 1000);
-      } else {
+      //preload images this is to prevent flickering as previously the image is loaded on the DOM.
+      let img = new Image();
+      data.forEach((number, index) => {
+        img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
+      });
+      img.onload = function () {
         load.value = true;
         setTimeout(function () {
-          returnData.value = data;
-          load.value = false;
-        }, 1000);
-      }
+          if (to.value == 14) {
+            returnData.value = data;
+            load.value = false;
+          } else {
+            setTimeout(function () {
+              returnData.value = data;
+              load.value = false;
+            }, 1000);
+          }
+        });
+      };
       //we are using to.value + 1 to set the value end.value = true once the last item has loaded
       if (to.value + 1 >= count) {
         //we are emting this to let the DOM know there are no more items to load.
@@ -704,3 +711,11 @@ watch(
   }
 );
 </script>
+<style>
+.delay-display-none-leave-active {
+  transition: opacity 0.3s;
+}
+.delay-display-none-leave-to {
+  opacity: 1;
+}
+</style>
