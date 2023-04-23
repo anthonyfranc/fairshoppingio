@@ -370,11 +370,11 @@
                     space-y-0 space-x-8
                     flex
                     items-center
-                    md:h-[19.9rem]
-                    lg:h-[19rem]
-                    sm:h-[22.4rem]
-                    h-[38rem]
-                    p-3
+                    md:h-[237px]
+                    lg:h-[215px]
+                    sm:h-[160px]
+                    h-[160px]
+                    my-[2.89rem]
                   "
                 >
                   <div
@@ -384,7 +384,6 @@
                       justify-center
                       w-full
                       bg-gray-300
-                      rounded
                       sm:w-96
                       object-scale-down
                       w-full
@@ -570,6 +569,50 @@
           </div>
         </template>
         <!--end of before data-->
+      </div>
+      <div
+        v-if="!returnData && end == false"
+        class="inline-flex items-center justify-center w-full"
+      >
+        <hr class="w-2/5 h-px my-8 bg-gray-200 border-0" />
+        <span
+          class="
+            absolute
+            px-6
+            font-medium
+            text-gray-900
+            -translate-x-1/2
+            left-1/2
+            bg-slate-50
+            capitalize
+          "
+        >
+          <button
+            type="button"
+            class="
+              text-white
+              bg-blue-700
+              hover:bg-blue-800
+              focus:ring-4 focus:ring-blue-300
+              font-medium
+              rounded-lg
+              text-sm
+              px-5
+              py-2.5
+              text-center
+              mr-2
+              dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+              inline-flex
+              items-center
+            "
+          >
+            <div role="status" class="max-w-sm animate-pulse">
+              <div class="h-2.5 bg-gray-200 rounded-full w-48"></div>
+              <span class="sr-only">Loading...</span>
+            </div>
+            <span class="absolute inset-0" aria-hidden="true"></span>
+          </button>
+        </span>
       </div>
       <!--Show more Button-->
       <div
