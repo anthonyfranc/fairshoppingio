@@ -654,7 +654,7 @@
                 fill="currentColor"
               />
             </svg>
-            Show More Products {{ load }}
+            Show More Products
           </button>
         </span>
       </div>
