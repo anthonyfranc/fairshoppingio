@@ -217,7 +217,7 @@
                 :src="
                   ProductData.Image + '&tr=h-160,w-160,cm-pad_resize,bg-fff'
                 "
-                alt=""
+                rel="preload"
               />
             </div>
             <div class="px-4 py-4">
@@ -698,25 +698,23 @@ watch(
         .select('*', { count: 'exact' })
         .range(0, to.value);
       //preload images this is to prevent flickering as previously the image is loaded on the DOM.
-      let img = new Image();
       data.forEach((number, index) => {
+        let img = new Image();
         img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
       });
-      img.onload = function () {
-        setTimeout(function () {
-          if (to.value == 14) {
-            load.value = true;
+      setTimeout(function () {
+        if (to.value == 14) {
+          load.value = true;
+          returnData.value = data;
+          load.value = false;
+          initLoad.value = true;
+        } else {
+          setTimeout(function () {
             returnData.value = data;
             load.value = false;
-            initLoad.value = true;
-          } else {
-            setTimeout(function () {
-              returnData.value = data;
-              load.value = false;
-            }, 1000);
-          }
-        });
-      };
+          }, 1000);
+        }
+      }, 1000);
       //we are using to.value + 1 to set the value end.value = true once the last item has loaded
       if (to.value + 1 >= count) {
         //we are emting this to let the DOM know there are no more items to load.
