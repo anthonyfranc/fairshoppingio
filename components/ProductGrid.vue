@@ -676,23 +676,25 @@ onUpdated(() => {
 });
 
 const supabase = useSupabaseClient();
-const to = ref(14);
-const load = ref(false);
-const supaPagination = () => ((to.value = to.value + 5), (load.value = true));
-const returnData = ref(null);
-const end = ref(false);
-const initLoad = ref(false);
 
 //we are fetching count for rows in database
 const { count } = await supabase
   .from('productinfo1')
   .select('*', { count: 'exact' });
 
+const to = ref(14);
+const load = ref(false);
+const supaPagination = () => (to.value + 5, (load.value = true));
+const returnData = ref(null);
+const end = ref(false);
+const initLoad = ref(false);
+
 watch(
   () => to.value,
   async () => {
     // added async keyword here
     if (to.value && to.value <= count) {
+      console.log(to.value);
       const { data, error } = await supabase
         .from('productinfo1')
         .select('*', { count: 'exact' })
