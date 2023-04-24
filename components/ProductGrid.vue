@@ -682,19 +682,21 @@ const { count } = await supabase
   .from('productinfo1')
   .select('*', { count: 'exact' });
 
-const to = ref(14);
+const to = ref(10);
 const load = ref(false);
-const supaPagination = () => (to.value + 5, (load.value = true));
+const supaPagination = () => ((to.value = to.value + 5), (load.value = true));
 const returnData = ref(null);
 const end = ref(false);
 const initLoad = ref(false);
-
+//detect how many are left
+const left = ref();
+//todo if left.value + 5 is more than count than we need to set left.value to be count-to.value
 watch(
   () => to.value,
   async () => {
     // added async keyword here
+    //console.log(count, count - 1 - to.value + 1);
     if (to.value && to.value <= count) {
-      console.log(to.value);
       const { data, error } = await supabase
         .from('productinfo1')
         .select('*', { count: 'exact' })
@@ -705,7 +707,7 @@ watch(
         img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
       });
       setTimeout(function () {
-        if (to.value == 14) {
+        if (to.value == 10) {
           load.value = true;
           returnData.value = data;
           load.value = false;
@@ -722,6 +724,10 @@ watch(
         //we are emting this to let the DOM know there are no more items to load.
         end.value = true;
       }
+    } else {
+      //if to.value is greater than total count, we will emit just count as the range to search too.
+      to.value = count;
+      left.value = 1;
     }
   },
   { immediate: true }
