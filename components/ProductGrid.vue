@@ -706,12 +706,12 @@ watch(
       .select('*', { count: 'exact' })
       .range(0, to.value);
     if (to.value && to.value <= count) {
-      //preload images this is to prevent flickering as previously the image is loaded on the DOM.
-      data.forEach((number, index) => {
-        let img = new Image();
-        img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
-      });
       setTimeout(function () {
+        //preload images this is to prevent flickering as previously the image is loaded on the DOM.
+        data.forEach((number, index) => {
+          let img = new Image();
+          img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
+        });
         if (to.value == 14) {
           load.value = true;
           returnData.value = data;
