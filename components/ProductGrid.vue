@@ -25,7 +25,7 @@
             group
           "
           v-for="ProductData in returnData"
-          v-if="initLoad"
+          v-cloak
         >
           <div class="absolute z-10 left-3 top-3">
             <button
@@ -450,66 +450,49 @@
               group
             "
           >
-            <div class="absolute z-10 left-3 top-0">
+            <div class="absolute z-10 left-3 top-2">
               <button
                 type="button"
                 class="inline-flex items-center justify-center"
               >
                 <div role="status" class="max-w-sm animate-pulse">
-                  <div class="h-2.5 bg-gray-200 rounded-full w-12"></div>
+                  <div class="h-2.5 bg-gray-200 rounded-full w-8"></div>
                   <span class="sr-only">Loading...</span>
                 </div>
               </button>
             </div>
             <div>
-              <div class="aspect-w-1 aspect-h-1 mt-1">
-                <div
-                  role="status"
-                  class="
-                    animate-pulse
-                    space-y-0 space-x-8
-                    flex
-                    items-center
-                    md:h-[19.9rem]
-                    lg:h-[19rem]
-                    sm:h-[22.4rem]
-                    h-[38rem]
-                    p-3
-                  "
-                >
+              <div class="aspect-w-1 aspect-h-1">
+                <div role="status" class="animate-pulse">
                   <div
                     class="
                       flex
                       items-center
                       justify-center
-                      w-full
                       bg-gray-300
-                      rounded
-                      sm:w-96
                       object-scale-down
                       w-full
                       h-full
-                      top-5
                       relative
                       content-center
+                      mt-10
                     "
                   >
-                    <svg
-                      class="w-12 h-12 text-gray-200"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 640 512"
-                    >
-                      <path
-                        d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"
-                      />
-                    </svg>
+                    <img
+                      class="
+                        object-scale-down
+                        w-full
+                        h-full
+                        relative
+                        content-center
+                      "
+                      src="https://via.placeholder.com/160x160/d1d5db/d1d5db"
+                    />
                   </div>
                   <span class="sr-only">Loading...</span>
                 </div>
               </div>
-              <div class="px-4 py-4">
+              <div class="px-2 py-4">
                 <span
                   class="
                     text-md
@@ -521,7 +504,7 @@
                   "
                 >
                   <div role="status" class="max-w-sm animate-pulse">
-                    <div class="h-2.5 bg-gray-200 rounded-full w-48 mt-5"></div>
+                    <div class="h-2.5 bg-gray-200 rounded-full w-48"></div>
                     <span class="sr-only">Loading...</span>
                   </div>
                   <span class="absolute inset-0" aria-hidden="true"></span>
@@ -543,7 +526,7 @@
                   >
                     <div role="status" class="max-w-sm animate-pulse">
                       <div
-                        class="h-2.5 bg-gray-200 rounded-full w-48 mt-1"
+                        class="h-2.5 bg-gray-200 rounded-full w-34 mt-1"
                       ></div>
                       <span class="sr-only">Loading...</span>
                     </div>
@@ -718,11 +701,11 @@ watch(
         }
       }
     }
+    const { data, error } = await supabase
+      .from('productinfo1')
+      .select('*', { count: 'exact' })
+      .range(0, to.value);
     if (to.value && to.value <= count) {
-      const { data, error } = await supabase
-        .from('productinfo1')
-        .select('*', { count: 'exact' })
-        .range(0, to.value);
       //preload images this is to prevent flickering as previously the image is loaded on the DOM.
       data.forEach((number, index) => {
         let img = new Image();
@@ -735,6 +718,11 @@ watch(
           load.value = false;
           initLoad.value = true;
         } else {
+          //preload images this is to prevent flickering as previously the image is loaded on the DOM.
+          data.forEach((number, index) => {
+            let img = new Image();
+            img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
+          });
           setTimeout(function () {
             returnData.value = data;
             load.value = false;
