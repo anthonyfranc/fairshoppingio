@@ -658,6 +658,12 @@ onUpdated(() => {
   initDropdowns();
 });
 
+onMounted(() => {
+  //https://via.placeholder.com/160x160/d1d5db/d1d5db
+  let img = new Image();
+  img.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
+});
+
 const supabase = useSupabaseClient();
 
 //we are fetching count for rows in database
