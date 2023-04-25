@@ -707,11 +707,6 @@ watch(
       .range(0, to.value);
     if (to.value && to.value <= count) {
       setTimeout(function () {
-        //preload images this is to prevent flickering as previously the image is loaded on the DOM.
-        data.forEach((number, index) => {
-          let img = new Image();
-          img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
-        });
         if (to.value == 14) {
           load.value = true;
           returnData.value = data;
@@ -734,6 +729,11 @@ watch(
         //we are emting this to let the DOM know there are no more items to load.
         end.value = true;
       }
+      //preload images this is to prevent flickering as previously the image is loaded on the DOM.
+      data.forEach((number, index) => {
+        let img = new Image();
+        img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
+      });
     }
   },
   { immediate: true }
