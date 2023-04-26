@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
@@ -7,7 +7,6 @@ module.exports = {
     './nuxt.config.{js,ts}',
     'node_modules/preline/dist/*.js',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       screens: {
@@ -29,4 +28,5 @@ module.exports = {
     },
   },
   plugins: [require('preline/plugin')],
+  darkMode: 'class',
 };

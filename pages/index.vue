@@ -17,10 +17,9 @@ const appLoaded = ref(false);
 onMounted(() => {
   document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + 'px');
   appLoaded.value = true;
-});
-
-let startimg = new Image();
+  let startimg = new Image();
   startimg.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
+});
 </script>
 <style type="css">
 .h-screen {

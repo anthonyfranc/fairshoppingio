@@ -49,7 +49,7 @@
               font-medium
               dark:text-gray-400 dark:hover:text-gray-500
             "
-            href="#"
+            @click="setColor('light')"
           >
             <svg
               class="w-4 h-4"
@@ -77,7 +77,7 @@
               font-medium
               dark:text-gray-400 dark:hover:text-gray-500
             "
-            href="#"
+            @click="setColor('dark')"
           >
             <svg
               class="w-4 h-4"
