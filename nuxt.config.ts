@@ -14,11 +14,6 @@ export default defineNuxtConfig({
   },
   plugins: ['@/plugins/globalTicker.client.ts'],
   ssr: false,
-  esbuild: {
-    supported: {
-      'top-level-await': true, //browsers can handle top-level-await features
-    },
-  },
   app: {
     head: {
       charset: 'utf-8',
@@ -26,9 +21,6 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: 'h-full',
         style: 'background: #f8fafc',
-      },
-      htmlAttrs: {
-        class: 'h-full',
       },
       script: [
         {

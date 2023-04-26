@@ -1,6 +1,12 @@
-const withAnimations = require('animated-tailwindcss');
-
-export default {
+module.exports = {
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    'node_modules/preline/dist/*.js',
+  ],
   theme: {
     extend: {
       screens: {
@@ -21,14 +27,5 @@ export default {
       },
     },
   },
-  darkMode: 'media',
-  content: [
-    './components/**/*.{js,vue,ts}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue',
-    './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-    'node_modules/preline/dist/*.js',
-  ],
   plugins: [require('preline/plugin')],
 };
