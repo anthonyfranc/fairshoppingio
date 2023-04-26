@@ -525,30 +525,30 @@
         v-if="!returnData && end == false"
         class="inline-flex items-center justify-center w-full"
       >
-          <button
-            type="button"
-            class="
-              bg-white
-              border
-              shadow-sm
-              text-gray-600
-              font-medium
-              rounded-lg
-              text-sm
-              px-5
-              py-3
-              text-center
-              mr-2
-              inline-flex
-              items-center
-            "
-          >
-            <div role="status" class="max-w-sm animate-pulse">
-              <div class="h-3 bg-gray-200 rounded-full w-14"></div>
-              <span class="sr-only">Loading...</span>
-            </div>
-            <span class="absolute inset-0" aria-hidden="true"></span>
-          </button>
+        <button
+          type="button"
+          class="
+            bg-white
+            border
+            shadow-sm
+            text-gray-600
+            font-medium
+            rounded-lg
+            text-sm
+            px-5
+            py-3
+            text-center
+            mr-2
+            inline-flex
+            items-center
+          "
+        >
+          <div role="status" class="max-w-sm animate-pulse">
+            <div class="h-3 bg-gray-200 rounded-full w-14"></div>
+            <span class="sr-only">Loading...</span>
+          </div>
+          <span class="absolute inset-0" aria-hidden="true"></span>
+        </button>
       </div>
       <!--Show more Button-->
       <div
@@ -583,13 +583,6 @@
 <script setup>
 //import Store Data
 import { useAppStore } from '~/store/app';
-
-/*to do
-
-let startimg = new Image();
-  startimg.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
-
-*/
 
 const supabase = useSupabaseClient();
 

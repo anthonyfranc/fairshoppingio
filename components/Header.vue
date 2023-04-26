@@ -47,10 +47,9 @@
       "
     >
       <div class="max-w-screen-xl px-4 py-3 mx-auto">
-        <div class="items-center flex">
+        <div class="items-center flex hs-dropdown">
           <button
-            id="dropdownDividerButton"
-            data-dropdown-toggle="dropdownDivider"
+            id="hs-dropdown-default"
             class="
               text-white
               bg-blue-700
@@ -90,6 +89,11 @@
           <div
             id="dropdownDivider"
             class="
+              hs-dropdown-menu
+              transition-[opacity,margin]
+              duration-[0.1ms]
+              hs-dropdown-open:opacity-100
+              opacity-0
               z-20
               hidden
               bg-white
@@ -98,6 +102,7 @@
               shadow
               dark:bg-gray-700 dark:divide-gray-600
             "
+            aria-labelledby="hs-dropdown-default"
           >
             <div class="py-1">
               <a
