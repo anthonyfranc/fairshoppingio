@@ -22,16 +22,15 @@
           {{ ProductData.product_name }}
         </div>
         <div v-if="appStore.finishLoading == 0">
-          <div role="status" class="max-w-sm animate-pulse pb-[14px]">
+          <div role="status" class="max-w-sm animate-pulse pb-[13px]">
             <div
               class="
-                h-[12px]
+                h-[15px]
                 bg-gray-200
                 rounded-full
                 dark:bg-gray-200
                 w-60
                 mt-2
-                h-[12px]
               "
             ></div>
           </div>
