@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       },
       script: [
         {
-          src: '/assets/dist/preline.js',
+          src: '/assets/preline.js',
           body: true,
           defer: true,
         },
