@@ -16,14 +16,7 @@
         "
       >
         <div
-          class="
-            relative
-            overflow-hidden
-            bg-white
-            border border-gray-200
-            rounded-md
-            group
-          "
+          class="relative overflow-hidden group border rounded-md"
           v-for="ProductData in returnData"
           v-cloak
         >
@@ -204,7 +197,7 @@
             data-drawer-placement="right"
             aria-controls="drawer-right-example"
           >
-            <div class="aspect-w-1 aspect-h-1">
+            <div class="aspect-w-1 aspect-h-1 bg-white rounded-md">
               <img
                 class="
                   object-scale-down
@@ -220,7 +213,7 @@
                 rel="preload"
               />
             </div>
-            <div class="px-4 py-4">
+            <div class="px-4 py-4 bg-white">
               <span
                 class="
                   text-md
@@ -342,16 +335,9 @@
         <!--Before Data is loaded we are showing this-->
         <template v-if="!initLoad" v-for="n in 15">
           <div
-            class="
-              relative
-              overflow-hidden
-              bg-white
-              border border-gray-200
-              rounded-md
-              group
-            "
+            class="relative overflow-hidden group bg-white border rounded-md"
           >
-            <div class="absolute z-10 left-3 top-2">
+            <div class="absolute z-10 left-3 top-2 b">
               <button
                 type="button"
                 class="inline-flex items-center justify-center"
@@ -363,7 +349,7 @@
               </button>
             </div>
             <div>
-              <div class="aspect-w-1 aspect-h-1">
+              <div class="aspect-w-1 aspect-h-1 bg-white rounded-md">
                 <div role="status" class="animate-pulse">
                   <div
                     class="
@@ -677,8 +663,12 @@ const supaPagination = () => ((to.value = to.value + 5), (load.value = true));
 const returnData = ref(null);
 const end = ref(false);
 const initLoad = ref(false);
-//detect how many are left
 const left = ref();
+
+onMounted(() => {
+  let startimg = new Image();
+  startimg.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
+});
 
 watch(
   () => to.value,
