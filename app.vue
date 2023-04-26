@@ -6,8 +6,6 @@
 </template>
 <script setup>
 onMounted(() => {
-  const colorMode = useColorMode();
-  console.log(colorMode.preference);
   // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
   if (
     localStorage.getItem('color-theme') === 'dark' ||
@@ -18,5 +16,6 @@ onMounted(() => {
   } else {
     document.documentElement.classList.remove('dark');
   }
+  console.log(localStorage.getItem('color-theme'));
 });
 </script>

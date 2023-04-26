@@ -40,7 +40,6 @@
             class="
               hs-dark-mode-active:hidden
               block
-              hs-dark-mode
               group
               flex
               items-center
@@ -49,7 +48,7 @@
               font-medium
               dark:text-gray-400 dark:hover:text-gray-500
             "
-            @click="setColor('light')"
+            @click="setColor('dark')"
           >
             <svg
               class="w-4 h-4"
@@ -68,7 +67,6 @@
             class="
               hs-dark-mode-active:block
               hidden
-              hs-dark-mode
               group
               flex
               items-center
@@ -77,7 +75,7 @@
               font-medium
               dark:text-gray-400 dark:hover:text-gray-500
             "
-            @click="setColor('dark')"
+            @click="setColor('light')"
           >
             <svg
               class="w-4 h-4"
@@ -468,4 +466,20 @@
     opacity: 1;
   }
 }
+body * {
+  @apply transition-colors duration-200;
+}
 </style>
+<script setup>
+const colorMode = useColorMode();
+function setColor(item) {
+  if (item == 'dark') {
+    colorMode.preference = 'dark';
+    //console.log(colorMode.preference);
+  }
+  if (item == 'light') {
+    colorMode.preference = 'light';
+    //console.log(colorMode.preference);
+  }
+}
+</script>
