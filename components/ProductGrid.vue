@@ -683,7 +683,7 @@ watch(
       if (to.value > 14 && to.value < count) {
         to.value = to.value;
         left.value = 5;
-        console.log('left.value', left.value);
+        //console.log('left.value', left.value);
       } else {
         if (to.value > 14 && to.value > count) {
           /*
@@ -691,7 +691,7 @@ watch(
           */
           left.value = count - (to.value - 5 + 1);
           to.value = to.value - 5 + 1 + left.value;
-          console.log('left.value', left.value);
+          //console.log('left.value', left.value);
         } else {
           to.value = to.value;
         }
