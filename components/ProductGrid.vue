@@ -192,10 +192,7 @@
               appStore.updatefinishLoading(0),
                 appStore.updateStoreID(ProductData.id)
             "
-            data-drawer-target="drawer-right-example"
-            data-drawer-show="drawer-right-example"
-            data-drawer-placement="right"
-            aria-controls="drawer-right-example"
+            data-hs-overlay="#hs-overlay-right"
           >
             <div class="aspect-w-1 aspect-h-1 bg-white rounded-md">
               <img
@@ -633,22 +630,13 @@
 <script setup>
 //import Store Data
 import { useAppStore } from '~/store/app';
-import { Drawer } from 'flowbite';
-import { onMounted } from 'vue';
-import { initDrawers, initTooltips, initDropdowns } from 'flowbite';
 
-// initialize components based on data attribute selectors
-onUpdated(() => {
-  initDrawers();
-  initTooltips();
-  initDropdowns();
-});
+/*to do
 
-onMounted(() => {
-  //https://via.placeholder.com/160x160/d1d5db/d1d5db
-  let img = new Image();
-  img.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
-});
+let startimg = new Image();
+  startimg.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
+
+*/
 
 const supabase = useSupabaseClient();
 
@@ -664,11 +652,6 @@ const returnData = ref(null);
 const end = ref(false);
 const initLoad = ref(false);
 const left = ref();
-
-onMounted(() => {
-  let startimg = new Image();
-  startimg.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
-});
 
 watch(
   () => to.value,

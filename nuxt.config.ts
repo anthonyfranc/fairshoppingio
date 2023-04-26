@@ -30,6 +30,13 @@ export default defineNuxtConfig({
       htmlAttrs: {
         class: 'h-full',
       },
+      script: [
+        {
+          src: '/assets/preline/dist/preline.js',
+          body: true,
+          defer: true,
+        },
+      ],
     },
   },
 });

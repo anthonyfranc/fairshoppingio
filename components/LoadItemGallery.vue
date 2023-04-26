@@ -167,7 +167,6 @@
 //import Store Data
 import $ from 'jquery';
 import { useAppStore } from '~/store/app';
-import { Drawer } from 'flowbite';
 
 //set Store as a Constant
 const appStore = useAppStore();

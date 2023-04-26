@@ -10,6 +10,7 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.6.6",
     "nuxt": "^3.4.2",
+    "preline": "^1.8.0",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
     "vue-star-rating": "^2.1.0"
@@ -19,9 +20,9 @@
     "@heroicons/vue": "^2.0.17",
     "@nuxtjs/supabase": "^0.3.5",
     "@pinia/nuxt": "^0.4.9",
+    "@preline/overlay": "^1.4.0",
     "@railway/cli": "^3.0.22",
     "date-fns": "^2.29.3",
-    "flowbite": "^1.6.5",
     "jquery": "^3.6.4",
     "moment": "^2.29.4",
     "npm-check-updates": "^16.10.8",
