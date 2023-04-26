@@ -7,6 +7,7 @@ module.exports = {
     './nuxt.config.{js,ts}',
     'node_modules/preline/dist/*.js',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       screens: {
