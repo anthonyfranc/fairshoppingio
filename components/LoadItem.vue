@@ -1,6 +1,6 @@
 <template>
   <div v-for="ProductData in appStore.dataID">
-    <div class="flex justify-between items-center py-3 px-4 border-b">
+    <div class="flex justify-between items-center py-3 px-3 border-b">
       <h5
         class="
           flex-row flex-col
@@ -88,10 +88,10 @@
         </svg>
       </button>
     </div>
-    <p class="m-6 text-sm text-gray-500 dark:text-gray-400">
+    <p class="m-4 text-sm text-gray-500 dark:text-gray-400">
       <LoadItemGallery />
     </p>
-    <p v-if="appStore.finishLoading == 1" class="m-3">
+    <p v-if="appStore.finishLoading == 1" class="m-2">
       <template v-for="(item, key, index) in ProductData.store_data">
         <div
           id="alert-additional-content-5"
