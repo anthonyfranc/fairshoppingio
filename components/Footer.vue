@@ -108,7 +108,9 @@
                   <a href="#" class="hover:underline">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                  <NuxtLink to="/terms-of-service" class="hover:underline"
+                    >Terms of Service</NuxtLink
+                  >
                 </li>
               </ul>
             </div>
