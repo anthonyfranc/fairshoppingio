@@ -94,7 +94,7 @@
       </div>
     </nav>
     <nav
-      v-if="this.$route.name != hideRouter.name"
+      v-if="useRoute().name != hideRouter.name"
       class="
         bg-white
         dark:bg-gray-800
