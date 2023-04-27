@@ -485,6 +485,7 @@ function setColor(item) {
 }
 //we are hiding the category submenu on these routes
 const hideRouter = {
-  name: "terms-of-service"
+  name: "terms-of-service",
+  name: "privacy-policy"
 }
 </script>
