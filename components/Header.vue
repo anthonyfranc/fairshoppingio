@@ -94,7 +94,7 @@
       </div>
     </nav>
     <nav
-      v-if="this.$route.name != hideRouter"
+      v-if="this.$route.name != hideRouter.name"
       class="
         bg-white
         dark:bg-gray-800
@@ -484,5 +484,7 @@ function setColor(item) {
   }
 }
 //we are hiding the category submenu on these routes
-const hideRouter = ['terms-of-service'];
+const hideRouter = {
+  name: "terms-of-service"
+}
 </script>
