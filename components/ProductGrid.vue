@@ -646,9 +646,9 @@ watch(
           setTimeout(function () {
             returnData.value = data;
             load.value = false;
-          }, 750);
+          }, 1000);
         }
-      }, 750);
+      }, 1000);
       //we are using to.value + 1 to set the value end.value = true once the last item has loaded
       if (to.value + 1 >= count) {
         //we are emting this to let the DOM know there are no more items to load.
