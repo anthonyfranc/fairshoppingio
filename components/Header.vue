@@ -103,241 +103,243 @@
       "
     >
       <div class="max-w-screen-xl px-4 py-3 mx-auto">
-        <div class="items-center flex hs-dropdown">
-          <button
-            id="hs-dropdown-default"
-            class="
-              text-white
-              bg-blue-700
-              hover:bg-blue-800
-              font-medium
-              rounded-lg
-              text-sm
-              px-5
-              py-2.5
-              text-center
-              inline-flex
-              items-center
-              bg-blue-600
-              hover:bg-blue-700
-            "
-            type="button"
-          >
-            Categories
-            <svg
-              class="w-4 h-4 ml-2"
-              aria-hidden="true"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+        <div class="items-center flex">
+          <div class="hs-dropdown">
+            <button
+              id="hs-dropdown-default"
+              class="
+                text-white
+                bg-blue-700
+                hover:bg-blue-800
+                font-medium
+                rounded-lg
+                text-sm
+                px-5
+                py-2.5
+                text-center
+                inline-flex
+                items-center
+                bg-blue-600
+                hover:bg-blue-700
+              "
+              type="button"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              ></path>
-            </svg>
-          </button>
-
-          <!-- Dropdown menu -->
-          <div
-            id="dropdownDivider"
-            class="
-              hs-dropdown-menu
-              transition-[opacity,margin]
-              duration-[0.1ms]
-              hs-dropdown-open:opacity-100
-              opacity-0
-              z-20
-              hidden
-              bg-white
-              divide-y divide-gray-100
-              rounded-lg
-              shadow
-              dark:bg-gray-700 dark:divide-gray-600
-            "
-            aria-labelledby="hs-dropdown-default"
-          >
-            <div class="py-1">
-              <a
-                href="#"
-                class="
-                  block
-                  px-4
-                  py-2
-                  text-sm
-                  font-medium
-                  hover:bg-gray-800
-                  text-black
-                  dark:text-gray-400
-                  hover:text-white hover:bg-gray-800
-                "
-                >Show All</a
+              Categories
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-            </div>
-            <ul
-              class="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownDividerButton"
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div
+              id="dropdownDivider"
+              class="
+                hs-dropdown-menu
+                transition-[opacity,margin]
+                duration-[0.1ms]
+                hs-dropdown-open:opacity-100
+                opacity-0
+                z-20
+                hidden
+                bg-white
+                divide-y divide-gray-100
+                rounded-lg
+                shadow
+                dark:bg-gray-700 dark:divide-gray-600
+              "
+              aria-labelledby="hs-dropdown-default"
             >
-              <li>
+              <div class="py-1">
                 <a
-                  href="team.href"
+                  href="#"
                   class="
+                    block
+                    px-4
+                    py-2
+                    text-sm
+                    font-medium
                     hover:bg-gray-800
                     text-black
                     dark:text-gray-400
                     hover:text-white hover:bg-gray-800
-                    group
-                    flex
-                    gap-x-3
-                    rounded-md
-                    p-3
-                    text-sm
-                    leading-3
-                    font-semibold
                   "
+                  >Show All</a
                 >
-                  <span
+              </div>
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="dropdownDividerButton"
+              >
+                <li>
+                  <a
+                    href="team.href"
                     class="
+                      hover:bg-gray-800
+                      text-black
+                      dark:text-gray-400
+                      hover:text-white hover:bg-gray-800
+                      group
                       flex
-                      h-3
-                      w-3
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      ring-1 ring-white
-                      bg-amber-500
-                      text-[0.625rem]
-                      font-medium
-                      text-gray-400
-                      group-hover:text-white
+                      gap-x-3
+                      rounded-md
+                      p-3
+                      text-sm
+                      leading-3
+                      font-semibold
                     "
                   >
-                  </span>
-                  <span class="truncate">Electronics</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="team.href"
-                  class="
-                    hover:bg-gray-800
-                    text-black
-                    dark:text-gray-400
-                    hover:text-white hover:bg-gray-800
-                    group
-                    flex
-                    gap-x-3
-                    rounded-md
-                    p-3
-                    text-sm
-                    leading-3
-                    font-semibold
-                  "
-                >
-                  <span
+                    <span
+                      class="
+                        flex
+                        h-3
+                        w-3
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        ring-1 ring-white
+                        bg-amber-500
+                        text-[0.625rem]
+                        font-medium
+                        text-gray-400
+                        group-hover:text-white
+                      "
+                    >
+                    </span>
+                    <span class="truncate">Electronics</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="team.href"
                     class="
+                      hover:bg-gray-800
+                      text-black
+                      dark:text-gray-400
+                      hover:text-white hover:bg-gray-800
+                      group
                       flex
-                      h-3
-                      w-3
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      ring-1 ring-white
-                      bg-violet-600
-                      text-[0.625rem]
-                      font-medium
-                      text-gray-400
-                      group-hover:text-white
+                      gap-x-3
+                      rounded-md
+                      p-3
+                      text-sm
+                      leading-3
+                      font-semibold
                     "
                   >
-                  </span>
-                  <span class="truncate">Video Games</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="team.href"
-                  class="
-                    hover:bg-gray-800
-                    text-black
-                    dark:text-gray-400
-                    hover:text-white hover:bg-gray-800
-                    group
-                    flex
-                    gap-x-3
-                    rounded-md
-                    p-3
-                    text-sm
-                    leading-3
-                    font-semibold
-                  "
-                >
-                  <span
+                    <span
+                      class="
+                        flex
+                        h-3
+                        w-3
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        ring-1 ring-white
+                        bg-violet-600
+                        text-[0.625rem]
+                        font-medium
+                        text-gray-400
+                        group-hover:text-white
+                      "
+                    >
+                    </span>
+                    <span class="truncate">Video Games</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="team.href"
                     class="
+                      hover:bg-gray-800
+                      text-black
+                      dark:text-gray-400
+                      hover:text-white hover:bg-gray-800
+                      group
                       flex
-                      h-3
-                      w-3
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      ring-1 ring-white
-                      bg-cyan-600
-                      text-[0.625rem]
-                      font-medium
-                      text-gray-400
-                      group-hover:text-white
+                      gap-x-3
+                      rounded-md
+                      p-3
+                      text-sm
+                      leading-3
+                      font-semibold
                     "
                   >
-                  </span>
-                  <span class="truncate">Entertainment</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="team.href"
-                  class="
-                    hover:bg-gray-800
-                    text-black
-                    dark:text-gray-400
-                    hover:text-white hover:bg-gray-800
-                    group
-                    flex
-                    gap-x-3
-                    rounded-md
-                    p-3
-                    text-sm
-                    leading-3
-                    font-semibold
-                  "
-                >
-                  <span
+                    <span
+                      class="
+                        flex
+                        h-3
+                        w-3
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        ring-1 ring-white
+                        bg-cyan-600
+                        text-[0.625rem]
+                        font-medium
+                        text-gray-400
+                        group-hover:text-white
+                      "
+                    >
+                    </span>
+                    <span class="truncate">Entertainment</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="team.href"
                     class="
+                      hover:bg-gray-800
+                      text-black
+                      dark:text-gray-400
+                      hover:text-white hover:bg-gray-800
+                      group
                       flex
-                      h-3
-                      w-3
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      ring-1 ring-white
-                      bg-rose-300
-                      text-[0.625rem]
-                      font-medium
-                      text-gray-400
-                      group-hover:text-white
+                      gap-x-3
+                      rounded-md
+                      p-3
+                      text-sm
+                      leading-3
+                      font-semibold
                     "
                   >
-                  </span>
-                  <span class="truncate">Smart Home</span>
-                </a>
-              </li>
-            </ul>
+                    <span
+                      class="
+                        flex
+                        h-3
+                        w-3
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        ring-1 ring-white
+                        bg-rose-300
+                        text-[0.625rem]
+                        font-medium
+                        text-gray-400
+                        group-hover:text-white
+                      "
+                    >
+                    </span>
+                    <span class="truncate">Smart Home</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="w-full">
             <form class="float-right min-w-[23vmax]">
@@ -485,7 +487,7 @@ function setColor(item) {
 }
 //we are hiding the category submenu on these routes
 const hideRouter = {
-  name: "terms-of-service",
-  name: "privacy-policy"
-}
+  name: 'terms-of-service',
+  name: 'privacy-policy',
+};
 </script>
