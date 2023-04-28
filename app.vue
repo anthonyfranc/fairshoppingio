@@ -7,11 +7,7 @@
 <script setup>
 onMounted(() => {
   const colorMode = useColorMode();
-  const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
-  if (darkThemeMq.matches) {
-    colorMode.preference = 'light';
-  } else {
-    colorMode.preference = 'light';
-  }
+  //we prefer light mode, but users are able to switch. Since we use SSR one reload the selected user color will still exist.
+  colorMode.preference = 'light';
 });
 </script>
