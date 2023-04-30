@@ -19,6 +19,11 @@ onMounted(() => {
   appLoaded.value = true;
   let startimg = new Image();
   startimg.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
+   //use first time access cookie to launch welcome modal.
+  const load = useCookie('isNewVisit', {
+    sameSite: true,
+    default: '1'
+  });
 });
 </script>
 <style type="css">
