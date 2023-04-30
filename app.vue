@@ -16,6 +16,6 @@ onMounted(() => {
     maxAge: '1707109200',
     default: 1,
     watch: true,
-  });
+  })
 });
 </script>
