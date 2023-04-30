@@ -14,7 +14,7 @@ onMounted(() => {
     sameSite: true,
     //Chrome Does not allow anything longer than 400 days
     maxAge: '1707109200',
-    default: () => [value: '1'],
+    default: 1,
     watch: true,
   });
 });
