@@ -40,6 +40,7 @@ const firstVisit = useCookie(
   }
 )
 if (process.client) { 
+      //we are init the modal on load, once the client has processed. 
       document.querySelectorAll('.load-modal').forEach($overlayEl => {
         HSOverlay.open($overlayEl)
         
