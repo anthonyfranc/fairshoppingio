@@ -11,7 +11,7 @@ onMounted(() => {
   colorMode.preference = 'light';
   //use first time access cookie to launch welcome modal.
   const firstVisit = useCookie('isFirstVisit', {
-    default: () => ({ value: 1 }),
+    default: () => ({ defaultValue: 1 }),
     watch: true,
     maxAge: '1707109200',
   });
