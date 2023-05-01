@@ -1,4 +1,3 @@
-<meta name="viewport" content= "width=device-width, initial-scale=1.0">
 <template>
 <Header />
 <div id="hs-overlay-right" class="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 right-0 transition-all duration-300 transform h-full max-w-sm w-full z-[60] bg-white border-l hidden" tabindex="-1"
