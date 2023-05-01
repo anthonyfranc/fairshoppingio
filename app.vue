@@ -28,12 +28,10 @@
           </div>
           <!--Logo-->
         <p class="flex justify-center items-center">
-        <img class="w-5/6" src="https://ik.imagekit.io/offershackio/undraw_festivities_tvvj.svg?updatedAt=1682903516888"/>
+        <img class="w-2/6" src="https://ik.imagekit.io/offershackio/undraw_welcome_re_h3d9.svg?updatedAt=1682906238234"/>
         </p>
-        <p class="text-center pt-5">
-          <h3 class="text-base font-semibold leading-6 text-gray-900 text-center">
-          Welcome to FairShopping.io
-          </h3>
+        <p class="text-center pt-5 ">
+          <h3 class="mb-2 text-xl font-bold">Welcome to FairShopping.io</h3>
         </p>
       </div>
       <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700">
