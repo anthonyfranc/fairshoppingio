@@ -4,7 +4,6 @@
   <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
     <div class="bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
       <div class="p-4 overflow-y-auto">
-        <p class="text-gray-800">
           <!--Logo-->
           <div class="text-center pb-5">
             <span
@@ -28,12 +27,13 @@
             >
           </div>
           <!--Logo-->
-        </p>
         <p class="flex justify-center items-center">
         <img class="w-5/6" src="https://ik.imagekit.io/offershackio/undraw_festivities_tvvj.svg?updatedAt=1682903516888"/>
         </p>
-        <p class="pt-5 text-md text-center">
-        Welcome to FairShopping.io <img class="w-5 h-5 inline-flex" src="https://em-content.zobj.net/thumbs/72/apple/118/waving-hand-sign_emoji-modifier-fitzpatrick-type-1-2_1f44b-1f3fb_1f3fb.png"/><br/>We are a destination to browse for Smart Home Devices, Consoles, TVs and More! We give you the best price from multiple retailers. 100% FREE (we really mean it, we don't charge anything!
+        <p class="text-center pt-5">
+          <h3 class="text-base font-semibold leading-6 text-gray-900 text-center">
+          Welcome to FairShopping.io
+          </h3>
         </p>
       </div>
       <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700">
