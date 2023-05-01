@@ -5,7 +5,7 @@
     <div class="bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
       <div class="overflow-y-auto p-5">
            <!--Logo-->
-    <div class="text-center pb-5">
+    <div class="logoSlide text-center pb-10">
             <span
               style="
                 font-size: 29px;
@@ -28,11 +28,11 @@
           </div>
           <!--Logo-->
         <div class="grid grid-flow-col">
-  <div class="pr-8">
-    <img class="w-11/12" src="https://ik.imagekit.io/offershackio/undraw_welcome_re_h3d9.svg?updatedAt=1682906238234"/>
+  <div class="mr-8">
+    <img src="https://ik.imagekit.io/offershackio/undraw_welcome_re_h3d9.svg?updatedAt=1682906238234"/>
   </div>
-  <div class="col-span-2 leading-6">
-    <h3 class="font-semibold tracking-tight">Welcome to FairShopping.io 👋</h3>
+  <div class="col-span-2">
+    <h3 class="font-semibold">Welcome! 👋</h3>
   <p class="font-normal text-gray-500">
     Browse for your favorite products from multiple retailers, we do all the work and show you the lowest price. 😍
   </p>
