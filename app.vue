@@ -64,10 +64,7 @@ if (process.client) {
   //we are init the modal on load, once the client has processed.
   document.querySelectorAll('.load-modal').forEach(($overlayEl) => {
     HSOverlay.open($overlayEl);
-    HSOverlay.on('open', ($overlayEl) => {
-      //remove body scroll
-      $('body').addClass('fixed w-full');
-    });
+    $('body').addClass('fixed w-full');
     HSOverlay.on('close', ($overlayEl) => {
       //enable body scroll
       $('body').removeClass('fixed w-full');
