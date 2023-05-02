@@ -135,18 +135,20 @@ const firstVisit = useCookie('isfirstVisit', {
   //Chrome Does not like values more than 400 days
   maxAge: '1707109200',
 });
-if (process.client && HSOverlay) {
-  //we are init the modal on load, once the client has processed.
-  document.querySelectorAll('.load-modal').forEach(($overlayEl) => {
-    HSOverlay.open($overlayEl);
-    $('body').addClass('fixed w-full');
-    HSOverlay.on('close', ($overlayEl) => {
-      //enable body scroll
-      $('body').removeClass('fixed w-full');
-      //set cookie to 0 so the modal doesnt load on close
-      firstVisit.value = 0;
+if (process.client) {
+  if (HSOverlay) {
+    //we are init the modal on load, once the client has processed.
+    document.querySelectorAll('.load-modal').forEach(($overlayEl) => {
+      HSOverlay.open($overlayEl);
+      $('body').addClass('fixed w-full');
+      HSOverlay.on('close', ($overlayEl) => {
+        //enable body scroll
+        $('body').removeClass('fixed w-full');
+        //set cookie to 0 so the modal doesnt load on close
+        firstVisit.value = 0;
+      });
     });
-  });
+  }
 }
 onMounted(() => {
   const colorMode = useColorMode();
