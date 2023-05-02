@@ -158,32 +158,32 @@
   <Footer />
 </template>
 <script setup>
+const appLoaded = ref(false);
+// initialize components based on data attribute selectors
 const firstVisit = useCookie('isfirstVisit', {
   default: () => ({ value: 1 }),
   watch: 'true',
   //Chrome Does not like values more than 400 days
   maxAge: '1707109200',
 });
-if (process.client && firstVisit) {
-  if (HSOverlay) {
-    //we are init the modal on load, once the client has processed.
-    document.querySelectorAll('.load-modal').forEach(($overlayEl) => {
-      HSOverlay.open($overlayEl);
-      $('body').addClass('fixed w-full');
-      HSOverlay.on('close', ($overlayEl) => {
-        //enable body scroll
-        $('body').removeClass('fixed w-full');
-        //set cookie to 0 so the modal doesnt load on close
-        firstVisit.value = 0;
-      });
-    });
-  }
-}
-const appLoaded = ref(false);
-// initialize components based on data attribute selectors
 onMounted(() => {
   appLoaded.value = true;
   let startimg = new Image();
   startimg.src = 'https://via.placeholder.com/160x160/d1d5db/d1d5db';
+  if (process.client && firstVisit) {
+    if (HSOverlay) {
+      //we are init the modal on load, once the client has processed.
+      document.querySelectorAll('.load-modal').forEach(($overlayEl) => {
+        HSOverlay.open($overlayEl);
+        $('body').addClass('fixed w-full');
+        HSOverlay.on('close', ($overlayEl) => {
+          //enable body scroll
+          $('body').removeClass('fixed w-full');
+          //set cookie to 0 so the modal doesnt load on close
+          firstVisit.value = 0;
+        });
+      });
+    }
+  }
 });
 </script>
