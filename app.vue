@@ -145,7 +145,7 @@ if (process.client && HSOverlay) {
       $('body').removeClass('fixed w-full');
     });
   });
-  console.log(HSOverlay);
+  //console.log(HSOverlay);
 }
 onMounted(() => {
   const colorMode = useColorMode();
