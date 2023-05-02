@@ -50,5 +50,6 @@ export default defineNuxtConfig({
         },
       ],
     },
+    keepalive: true
   },
 });

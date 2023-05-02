@@ -105,8 +105,8 @@
                 />
               </div>
               <div class="col-span-2">
-                <h3 class="font-semibold">Welcome! 👋</h3>
-                <p class="font-normal text-gray-500">
+                <h3 class="font-semibold dark:text-gray-200">Welcome! 👋</h3>
+                <p class="font-normal text-gray-500 dark:text-gray-400">
                   Browse for your favorite products from multiple retailers, we
                   do all the work and show you the lowest price. 😍
                 </p>
