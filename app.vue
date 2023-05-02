@@ -143,9 +143,10 @@ if (process.client && HSOverlay) {
     HSOverlay.on('close', ($overlayEl) => {
       //enable body scroll
       $('body').removeClass('fixed w-full');
+      //set cookie to 0 so the modal doesnt load on close
+      firstVisit.value = 0;
     });
   });
-  //console.log(HSOverlay);
 }
 onMounted(() => {
   const colorMode = useColorMode();
