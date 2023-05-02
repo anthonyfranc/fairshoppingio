@@ -135,7 +135,7 @@ const firstVisit = useCookie('isfirstVisit', {
   //Chrome Does not like values more than 400 days
   maxAge: '1707109200',
 });
-if (process.client) {
+if (process.client && firstVisit) {
   if (HSOverlay) {
     //we are init the modal on load, once the client has processed.
     document.querySelectorAll('.load-modal').forEach(($overlayEl) => {
