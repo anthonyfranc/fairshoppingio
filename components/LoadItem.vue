@@ -232,7 +232,7 @@
       </template>
       <!-- More Details Button-->
       <nuxt-link
-        :to="'products/' + ProductData.slug"
+        :to="'p/' + ProductData.slug"
         class="
           bg-[#4b986c]
           hover:bg-green-700
