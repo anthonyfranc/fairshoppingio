@@ -22,7 +22,7 @@
             group
             border
             rounded-md
-            hover:border-zinc-400 hover:border-[2.1px]
+            hover:border-gray-400 hover:border-1
           "
           v-for="ProductData in returnData"
           v-cloak
