@@ -16,7 +16,14 @@
         "
       >
         <div
-          class="relative overflow-hidden group border rounded-md"
+          class="
+            relative
+            overflow-hidden
+            group
+            border
+            rounded-md
+            hover:border-zinc-400 hover:border-[2.1px]
+          "
           v-for="ProductData in returnData"
           v-cloak
         >
@@ -559,10 +566,10 @@
           @click="supaPagination"
           type="button"
           class="
-            bg-white
+            bg-blue-600
             border
             shadow-sm
-            text-gray-600
+            text-white
             font-medium
             rounded-lg
             text-sm
@@ -572,6 +579,7 @@
             mr-2
             inline-flex
             items-center
+            hover:bg-blue-500
           "
         >
           Show More
