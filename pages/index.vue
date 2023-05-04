@@ -22,7 +22,7 @@
       hidden
     "
     tabindex="-1"
-    style="overflow: scroll"
+    style="overflow-y: auto"
   >
     <LoadItem />
   </div>
