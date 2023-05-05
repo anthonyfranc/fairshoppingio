@@ -18,7 +18,7 @@
             ></div>
           </div>
         </div>
-        <div v-else>
+        <div v-else class="font-medium text-gray-800">
           {{ ProductData.product_name }}
         </div>
         <div v-if="appStore.finishLoading == 0">
@@ -35,7 +35,7 @@
             ></div>
           </div>
         </div>
-        <div class="flex" v-else>
+        <div class="flex font-medium text-gray-800" v-else>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -233,9 +233,10 @@
       <!-- More Details Button-->
       <nuxt-link
         :to="'p/' + ProductData.slug"
+        type="button"
         class="
-          bg-[#4b986c]
-          hover:bg-green-700
+          bg-blue-500
+          hover:opacity-90
           text-white
           font-bold
           py-2
@@ -246,21 +247,21 @@
           flex
           place-content-center
         "
+        style="background: rgb(75, 152, 108)"
       >
         More Details
         <svg
+          aria-hidden="true"
+          class="w-5 h-5 ml-2 -mr-1"
+          fill="currentColor"
+          viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6 ml-1"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
+            fill-rule="evenodd"
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
         </svg>
       </nuxt-link>
       <!--End of button-->

@@ -1,2 +1,5 @@
-<template></template>
+<template>
+  <Header />
+  <Footer />
+</template>
 <script setup></script>

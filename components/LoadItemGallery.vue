@@ -39,7 +39,6 @@
         "
       >
         <span v-for="(item, key, index) in data[0]['images']">
-          <!--We are hiding images while the rest loads so the brower is able to cache the images-->
           <div
             class="
               flex
@@ -110,7 +109,7 @@
                 <span
                   :class="[
                     openTab == item.id
-                      ? 'focus:ring focus:ring-opacity-50 focus:ring-offset-4'
+                      ? 'focus:ring focus:ring-opacity-50 focus:ring-offset-2 ring-green-700'
                       : 'ring-transparent',
                     'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2',
                   ]"
