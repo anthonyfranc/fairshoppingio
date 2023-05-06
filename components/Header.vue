@@ -108,9 +108,11 @@
             <button
               id="hs-dropdown-default"
               class="
-                text-white
-                bg-blue-700
-                hover:bg-blue-800
+                text-slate-950
+                bg-gray-100
+                focus:ring-1
+                hover:ring-1
+                ring-gray-300
                 font-medium
                 rounded-lg
                 text-sm
@@ -119,8 +121,6 @@
                 text-center
                 inline-flex
                 items-center
-                bg-blue-600
-                hover:bg-blue-700
               "
               type="button"
             >
@@ -155,8 +155,8 @@
                 hidden
                 bg-white
                 divide-y divide-gray-100
-                rounded-lg
-                shadow
+                rounded-md
+                shadow-md
                 dark:bg-gray-700 dark:divide-gray-600
               "
               aria-labelledby="hs-dropdown-default"
@@ -170,10 +170,10 @@
                     py-2
                     text-sm
                     font-medium
-                    hover:bg-gray-800
+                    dark:hover:bg-gray-800
+                    hover:bg-gray-100
                     text-black
                     dark:text-gray-400
-                    hover:text-white hover:bg-gray-800
                   "
                   >Show All</a
                 >
@@ -186,10 +186,10 @@
                   <a
                     href="team.href"
                     class="
-                      hover:bg-gray-800
+                      dark:hover:bg-gray-800
+                      hover:bg-gray-100
                       text-black
                       dark:text-gray-400
-                      hover:text-white hover:bg-gray-800
                       group
                       flex
                       gap-x-3
@@ -225,10 +225,10 @@
                   <a
                     href="team.href"
                     class="
-                      hover:bg-gray-800
+                      dark:hover:bg-gray-800
+                      hover:bg-gray-100
                       text-black
                       dark:text-gray-400
-                      hover:text-white hover:bg-gray-800
                       group
                       flex
                       gap-x-3
@@ -264,10 +264,10 @@
                   <a
                     href="team.href"
                     class="
-                      hover:bg-gray-800
+                      dark:hover:bg-gray-800
+                      hover:bg-gray-100
                       text-black
                       dark:text-gray-400
-                      hover:text-white hover:bg-gray-800
                       group
                       flex
                       gap-x-3
@@ -303,10 +303,10 @@
                   <a
                     href="team.href"
                     class="
-                      hover:bg-gray-800
+                      dark:hover:bg-gray-800
+                      hover:bg-gray-100
                       text-black
                       dark:text-gray-400
-                      hover:text-white hover:bg-gray-800
                       group
                       flex
                       gap-x-3
@@ -486,8 +486,5 @@ function setColor(item) {
   }
 }
 //we are hiding the category submenu on these routes
-const hideRouter = [
-  'terms-of-service',
-  'privacy-policy',
-];
+const hideRouter = ['terms-of-service', 'privacy-policy', 'p-:id'];
 </script>
