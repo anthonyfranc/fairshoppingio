@@ -629,7 +629,7 @@ watch(
           //preload images this is to prevent flickering as previously the image is loaded on the DOM.
           data.forEach((number, index) => {
             let img = new Image();
-            img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
+            img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize`;
           });
           setTimeout(function () {
             returnData.value = data;
@@ -645,7 +645,7 @@ watch(
       //preload images this is to prevent flickering as previously the image is loaded on the DOM.
       data.forEach((number, index) => {
         let img = new Image();
-        img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize,bg-fff`;
+        img.src = `${number.Image}&tr=h-160,w-160,cm-pad_resize`;
       });
     }
   },
