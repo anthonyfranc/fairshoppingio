@@ -109,10 +109,9 @@
               id="hs-dropdown-default"
               class="
                 text-slate-950
-                bg-gray-100
-                focus:ring-1
-                hover:ring-1
-                ring-gray-300
+                bg-gray-50
+                focus:border-gray-500
+                hover:border-gray-500
                 font-medium
                 rounded-lg
                 text-sm
@@ -121,6 +120,7 @@
                 text-center
                 inline-flex
                 items-center
+                border-2 border-gray-300
               "
               type="button"
             >
@@ -342,7 +342,7 @@
             </div>
           </div>
           <div class="w-full">
-            <form class="float-right min-w-[23vmax]">
+            <form class="float-right min-w-[23vmax] hidden">
               <label
                 for="default-search"
                 class="

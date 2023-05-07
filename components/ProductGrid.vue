@@ -201,7 +201,7 @@
             "
             data-hs-overlay="#hs-overlay-right"
           >
-            <div class="aspect-w-1 aspect-h-1 bg-white rounded-md">
+            <div class="aspect-w-1 aspect-h-1 bg-gray-50 rounded-md">
               <img
                 class="
                   object-scale-down
@@ -211,9 +211,7 @@
                   relative
                   content-center
                 "
-                :src="
-                  ProductData.Image + '&tr=h-160,w-160,cm-pad_resize,bg-fff'
-                "
+                :src="ProductData.Image + '&tr=h-160,w-160,cm-pad_resize'"
                 rel="preload"
               />
             </div>

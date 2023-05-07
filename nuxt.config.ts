@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       bodyAttrs: {
         class: 'h-full',
-        style: 'background: #f8fafc',
+        //style: 'background: #f8fafc',
       },
       script: [
         {
@@ -50,6 +50,6 @@ export default defineNuxtConfig({
         },
       ],
     },
-    keepalive: true
+    keepalive: true,
   },
 });
