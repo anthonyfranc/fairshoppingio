@@ -120,7 +120,7 @@
                 text-center
                 inline-flex
                 items-center
-                border-2 border-gray-300
+                border border-gray-300
               "
               type="button"
             >

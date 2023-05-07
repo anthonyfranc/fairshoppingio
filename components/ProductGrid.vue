@@ -16,14 +16,7 @@
         "
       >
         <div
-          class="
-            relative
-            overflow-hidden
-            group
-            border
-            rounded-md
-            hover:border-gray-400 hover:border-1
-          "
+          class="relative overflow-hidden group rounded-md"
           v-for="ProductData in returnData"
           v-cloak
         >
@@ -201,7 +194,7 @@
             "
             data-hs-overlay="#hs-overlay-right"
           >
-            <div class="aspect-w-1 aspect-h-1 bg-gray-50 rounded-md">
+            <div class="aspect-w-1 aspect-h-1 bg-gray-100 rounded-md">
               <img
                 class="
                   object-scale-down
@@ -336,10 +329,8 @@
         </div>
         <!--Before Data is loaded we are showing this-->
         <template v-if="!initLoad" v-for="n in 15">
-          <div
-            class="relative overflow-hidden group bg-white border rounded-md"
-          >
-            <div class="absolute z-10 left-3 top-2 b">
+          <div class="relative overflow-hidden bg-gray-300 rounded-md group">
+            <div class="absolute z-10 left-3 top-2">
               <button
                 type="button"
                 class="inline-flex items-center justify-center"
@@ -351,7 +342,7 @@
               </button>
             </div>
             <div>
-              <div class="aspect-w-1 aspect-h-1 bg-white rounded-md">
+              <div class="aspect-w-1 aspect-h-1">
                 <div role="status" class="animate-pulse">
                   <div
                     class="
@@ -428,16 +419,7 @@
         <!--end of before data-->
         <!--Before Data is loaded we are showing this-->
         <template v-if="load == true" v-for="n in left">
-          <div
-            class="
-              relative
-              overflow-hidden
-              bg-white
-              border border-gray-200
-              rounded-md
-              group
-            "
-          >
+          <div class="relative overflow-hidden bg-gray-300 rounded-md group">
             <div class="absolute z-10 left-3 top-2">
               <button
                 type="button"
@@ -654,7 +636,7 @@ watch(
             load.value = false;
           }, 1000);
         }
-      }, 1000);
+      }, 500);
       //we are using to.value + 1 to set the value end.value = true once the last item has loaded
       if (to.value + 1 >= count) {
         //we are emting this to let the DOM know there are no more items to load.
