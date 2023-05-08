@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white divide-y-[0.124em] shadow-sm dark:divide-gray-600">
-    <nav class="dark:border-gray-200 dark:bg-gray-950">
+    <nav class="dark:border-gray-200 dark:bg-gray-900">
       <div
         class="
           flex flex-wrap
