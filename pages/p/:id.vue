@@ -44,8 +44,8 @@
     </ol>
     <!--Breadcrumb-->
     <div class="bg-white border rounded">
-      <div class="grid grid-cols-[19rem,8fr] p-12">
-        <div>
+      <div class="grid grid-cols-[19rem,8fr] xs:grid-cols-1 p-12">
+        <div class="xs:pb-5">
           <main class="mx-auto max-w-7xl" v-for="ProductData in data">
             <div id="image_main" class="mx-auto max-w-2xl lg:max-w-none">
               <!-- Product -->
@@ -424,6 +424,7 @@
               whitespace-nowrap
               text-gray-500
               hover:text-blue-600
+              hidden
             "
             id="tabs-with-underline-item-2"
             data-hs-tab="#tabs-with-underline-2"
