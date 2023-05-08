@@ -162,10 +162,7 @@
                 dark:text-gray-400
               "
             >
-              Standard glass ,3.8GHz 8-core 10th-generation Intel Core i7
-              processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory,
-              Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage,
-              Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US.
+              <div v-html="data[0].description"></div>
             </dd>
           </dl>
           <!--Right Section-->
@@ -177,8 +174,7 @@
                   p-3
                   border border-gray-300
                   rounded
-                  bg-slate-100
-                  bg-opacity-50
+                  bg-slate-100 bg-opacity-50
                   mb-4
                   relative
                 "
@@ -454,5 +450,7 @@ onMounted(() => {
   jqueryScript.src = 'https://cdn.getreplybox.com/js/embed.js';
   jqueryScript.defer = false;
   docHeadObj.appendChild(jqueryScript);
+  //changes to Ul and Tailwind
+  $('ul').addClass('list-disc pl-3');
 });
 </script>
