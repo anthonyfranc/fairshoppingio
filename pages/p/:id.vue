@@ -151,52 +151,6 @@
           >
             {{ data[0].product_name }}
           </h2>
-          <p
-            class="
-              mb-4
-              text-xl
-              font-semibold
-              leading-none
-              text-gray-800
-              md:text-1xl
-            "
-          >
-            <span
-              v-if="
-                data[0].current_price !== null &&
-                data[0].current_price < data[0].previous_price_day
-              "
-            >
-              <!--Show Previous price-->
-              <span class="line-through">
-                {{
-                  Number(data[0].previous_price_day).toLocaleString('en-US', {
-                    style: 'currency',
-                    currency: 'USD',
-                  })
-                }}
-              </span>
-              <!-- End of Previous Price-->
-              <!--Show Current Price-->
-              <span class="text-green-600 pl-1">
-                {{
-                  Number(data[0].current_price).toLocaleString('en-US', {
-                    style: 'currency',
-                    currency: 'USD',
-                  })
-                }}
-              </span>
-              <!--End of Current Price-->
-            </span>
-            <span v-else>
-              {{
-                Number(data[0].current_price).toLocaleString('en-US', {
-                  style: 'currency',
-                  currency: 'USD',
-                })
-              }}
-            </span>
-          </p>
           <dl>
             <dd
               class="
@@ -239,18 +193,6 @@
                     class="text-lg font-medium text-gray-800 flex items-center"
                   >
                     {{ item.store }}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="green"
-                      class="w-[20px] h-[20px] mt-0.5 ml-0.5"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
                   </h3>
                 </div>
                 <div class="mt-2 mb-4 text-sm text-gray-800 flex">
@@ -261,12 +203,12 @@
                       px-2.5
                       py-0.5
                       rounded
-                      bg-green-200
+                      bg-blue-300
                       text-black
                       flex
                       items-center
                       bg-opacity-30
-                      border-[1.9px] border-green-500
+                      border border-slate-400
                     "
                   >
                     {{
@@ -283,13 +225,13 @@
                       px-2
                       py-0.5
                       rounded
-                      bg-green-200
+                      bg-blue-300
                       text-black
                       ml-2
                       flex
                       items-center
                       bg-opacity-30
-                      border-[1.9px] border-green-500
+                      border border-slate-400
                     "
                   >
                     <svg
@@ -315,13 +257,13 @@
                       px-2.5
                       py-0.5
                       rounded
-                      bg-green-200
+                      bg-blue-300
                       text-black
                       ml-2
                       flex
                       items-center
                       bg-opacity-30
-                      border-[1.9px] border-green-500
+                      border border-slate-400
                     "
                   >
                     <svg
@@ -347,16 +289,16 @@
                       hover:bg-blue-700
                       focus:ring-4 focus:outline-none focus:ring-gray-300
                       font-medium
-                      rounded-lg
+                      rounded-md
                       text-xs
-                      px-3
+                      px-4
                       py-1.5
                       mr-2
                       text-center
                       inline-flex
                       items-center
+                      bg-blue-500
                     "
-                    style="background: rgb(75, 152, 108)"
                   >
                     Purchase
                   </button>
