@@ -158,7 +158,7 @@
             class="
               mb-4
               text-xl
-              font-bold
+              font-semibold
               leading-none
               text-gray-800
               md:text-1xl
