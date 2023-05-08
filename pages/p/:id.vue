@@ -367,7 +367,7 @@
         </div>
       </div>
       <div class="bg-slate-50 rounded p-5">
-        <div id="loadComment"></div>
+        <div id="commento"></div>
       </div>
     </div>
   </div>
@@ -401,6 +401,10 @@ function toggleTabs(tabNumber) {
 
 openTab.value = data[0]['images'][0]['id'];
 onMounted(() => {
-  $('<div id="commento"></div>').appendTo('#loadComment');
+  const docHeadObj = document.getElementsByTagName('head')[0];
+  const jqueryScript = document.createElement('script');
+  jqueryScript.src = 'https://cdn.commento.io/js/commento.js';
+  jqueryScript.defer = true;
+  docHeadObj.appendChild(jqueryScript);
 });
 </script>
