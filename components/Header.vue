@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white divide-y-[0.124em] shadow-sm dark:divide-gray-600">
-    <nav class="dark:border-gray-200 dark:bg-gray-700">
+    <nav class="dark:border-gray-200 dark:bg-gray-950">
       <div
         class="
           flex flex-wrap
@@ -108,13 +108,21 @@
             <button
               id="hs-dropdown-default"
               class="
-                text-slate-950
-                bg-gray-50
-                focus:border-gray-500
-                hover:border-gray-500
+                text-gray-900
+                bg-white
+                border border-gray-300
+                focus:outline-none
+                hover:bg-gray-100
+                focus:ring-4 focus:ring-gray-200
                 font-medium
                 rounded-lg
                 text-sm
+                dark:bg-gray-800
+                dark:text-white
+                dark:border-gray-600
+                dark:hover:bg-gray-700
+                dark:hover:border-gray-600
+                dark:focus:ring-gray-700
                 px-5
                 py-2.5
                 text-center

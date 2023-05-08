@@ -16,7 +16,18 @@
         "
       >
         <div
-          class="relative overflow-hidden group rounded-md"
+          class="
+            relative
+            overflow-hidden
+            group
+            rounded-md
+            border border-gray-200
+            hover:bg-gray-50
+            dark:border-gray-700
+            rounded-lg
+            shadow-sm
+            dark:bg-gray-800 dark:hover:bg-gray-700
+          "
           v-for="ProductData in returnData"
           v-cloak
         >
@@ -194,7 +205,7 @@
             "
             data-hs-overlay="#hs-overlay-right"
           >
-            <div class="aspect-w-1 aspect-h-1 bg-gray-100 rounded-md">
+            <div class="aspect-w-1 aspect-h-1">
               <img
                 class="
                   object-scale-down
@@ -208,13 +219,14 @@
                 rel="preload"
               />
             </div>
-            <div class="px-4 py-4 bg-white">
+            <div class="px-4 py-4">
               <span
                 class="
                   text-md
                   font-semibold
                   tracking-tight
                   text-gray-900
+                  dark:text-white
                   truncate
                   block
                 "
@@ -236,7 +248,11 @@
                   ></path>
                 </svg>
                 <template v-if="ProductData.current_rating == null">
-                  <p class="ml-1 text-sm font-bold text-gray-900">0</p>
+                  <p
+                    class="ml-1 text-sm font-bold text-gray-900 dark:text-white"
+                  >
+                    0
+                  </p>
                   <span
                     class="
                       bg-blue-100
@@ -254,7 +270,9 @@
                   </span>
                 </template>
                 <template v-else>
-                  <p class="ml-1 text-sm font-bold text-gray-900">
+                  <p
+                    class="ml-1 text-sm font-bold text-gray-900 dark:text-white"
+                  >
                     {{ ProductData.current_rating }}
                   </p>
                   <span
@@ -276,7 +294,13 @@
               </div>
               <p class="mt-1.5">
                 <span
-                  class="text-md font-semibold tracking-tight text-gray-900"
+                  class="
+                    text-md
+                    font-semibold
+                    tracking-tight
+                    text-gray-900
+                    dark:text-white
+                  "
                 >
                   <span
                     v-if="
@@ -546,10 +570,10 @@
           @click="supaPagination"
           type="button"
           class="
-            bg-blue-600
-            border
-            shadow-sm
             text-white
+            bg-blue-700
+            hover:bg-blue-800
+            focus:ring-4 focus:ring-blue-300
             font-medium
             rounded-lg
             text-sm

@@ -34,8 +34,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       bodyAttrs: {
-        class: 'h-full',
-        //style: 'background: #f8fafc',
+        class: 'h-full dark:bg-gray-900',
       },
       script: [
         {
