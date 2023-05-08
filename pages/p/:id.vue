@@ -48,7 +48,6 @@
         <div>
           <main
             class="mx-auto max-w-7xl"
-            v-if="loading == true"
             v-for="ProductData in data"
           >
             <div id="image_main" class="mx-auto max-w-2xl lg:max-w-none">
@@ -404,13 +403,6 @@ function toggleTabs(tabNumber) {
 }
 
 openTab.value = data[0]['images'][0]['id'];
-
-setTimeout(function () {
-  appStore.updatefinishLoading(1);
-  //reset Store to help Skeleton Loading look better
-  appStore.reset();
-  loading.value = true;
-}, 1000);
 
 onMounted(() => {
   (function () {
