@@ -46,10 +46,7 @@
     <div class="bg-white border rounded">
       <div class="grid grid-cols-[19rem,8fr] p-12">
         <div>
-          <main
-            class="mx-auto max-w-7xl"
-            v-for="ProductData in data"
-          >
+          <main class="mx-auto max-w-7xl" v-for="ProductData in data">
             <div id="image_main" class="mx-auto max-w-2xl lg:max-w-none">
               <!-- Product -->
               <div class="grid grid-cols-1 items-start">
@@ -370,7 +367,7 @@
         </div>
       </div>
       <div class="bg-slate-50 rounded p-5">
-        <div id="commento"></div>
+        <div id="loadComment"></div>
       </div>
     </div>
   </div>
@@ -403,15 +400,7 @@ function toggleTabs(tabNumber) {
 }
 
 openTab.value = data[0]['images'][0]['id'];
-
 onMounted(() => {
-  (function () {
-    // DON'T EDIT BELOW THIS LINE
-    var d = document,
-      s = d.createElement('script');
-    s.src = 'https://fairshoppingio.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
+  $('<div id="commento"></div>').appendTo('#loadComment');
 });
 </script>

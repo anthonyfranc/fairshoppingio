@@ -51,6 +51,7 @@ export default defineNuxtConfig({
           src: 'https://cdn.commento.io/js/commento.js',
           body: true,
           defer: true,
+          async: true,
         },
       ],
     },
