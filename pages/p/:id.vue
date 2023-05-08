@@ -370,7 +370,7 @@
         </div>
       </div>
       <div class="bg-slate-50 rounded p-5">
-        <div id="disqus_thread"></div>
+        <div id="commento"></div>
       </div>
     </div>
   </div>
