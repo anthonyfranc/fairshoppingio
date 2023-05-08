@@ -113,7 +113,7 @@
                 border border-gray-300
                 focus:outline-none
                 hover:bg-gray-100
-                focus:ring-4 focus:ring-gray-200
+                focus:ring-1 focus:ring-gray-200
                 font-medium
                 rounded-lg
                 text-sm
@@ -128,7 +128,6 @@
                 text-center
                 inline-flex
                 items-center
-                border border-gray-300
               "
               type="button"
             >
