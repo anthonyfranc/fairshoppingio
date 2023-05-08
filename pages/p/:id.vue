@@ -91,9 +91,9 @@
                         <span
                           :class="[
                             openTab == item.id
-                              ? 'focus:ring focus:ring-opacity-50 focus:ring-offset-2 ring-green-700'
+                              ? 'focus:ring focus:ring-opacity-50 focus:ring-offset-2 ring-slate-600'
                               : 'ring-transparent',
-                            'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-2',
+                            'pointer-events-none absolute inset-0 rounded-md ring-2 ring-offset-1',
                           ]"
                         >
                         </span>
