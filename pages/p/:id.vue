@@ -367,7 +367,7 @@
         </div>
       </div>
       <div class="bg-slate-50 rounded p-5">
-        <div id="commento"></div>
+        <div id="replybox"></div>
       </div>
     </div>
   </div>
@@ -401,9 +401,12 @@ function toggleTabs(tabNumber) {
 
 openTab.value = data[0]['images'][0]['id'];
 onMounted(() => {
+  window.replybox = {
+    site: 'POBODlPRVa',
+  };
   const docHeadObj = document.getElementsByTagName('head')[0];
   const jqueryScript = document.createElement('script');
-  jqueryScript.src = 'https://cdn.commento.io/js/commento.js';
+  jqueryScript.src = 'https://cdn.getreplybox.com/js/embed.js';
   jqueryScript.defer = true;
   docHeadObj.appendChild(jqueryScript);
 });
