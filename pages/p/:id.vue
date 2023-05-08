@@ -156,8 +156,7 @@
               class="
                 mb-4
                 leading
-                font-light
-                text-gray-500
+                text-gray-700
                 sm:mb-5
                 dark:text-gray-400
               "
@@ -451,6 +450,6 @@ onMounted(() => {
   jqueryScript.defer = false;
   docHeadObj.appendChild(jqueryScript);
   //changes to Ul and Tailwind
-  $('ul').addClass('list-disc pl-3');
+  $('ul').addClass('list-disc list-inside');
 });
 </script>
