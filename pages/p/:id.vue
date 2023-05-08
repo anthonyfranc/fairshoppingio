@@ -176,8 +176,9 @@
                 class="
                   p-3
                   border border-gray-300
-                  rounded-md
-                  bg-gray-50
+                  rounded
+                  bg-slate-100
+                  bg-opacity-50
                   mb-4
                   relative
                 "
@@ -203,7 +204,7 @@
                       px-2.5
                       py-0.5
                       rounded
-                      bg-blue-300
+                      bg-gray-200
                       text-black
                       flex
                       items-center
@@ -225,7 +226,7 @@
                       px-2
                       py-0.5
                       rounded
-                      bg-blue-300
+                      bg-gray-200
                       text-black
                       ml-2
                       flex
@@ -257,7 +258,7 @@
                       px-2.5
                       py-0.5
                       rounded
-                      bg-blue-300
+                      bg-gray-200
                       text-black
                       ml-2
                       flex
