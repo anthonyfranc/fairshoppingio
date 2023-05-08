@@ -7,7 +7,7 @@
       aria-label="Breadcrumb"
     >
       <li class="text-sm text-gray-600 dark:text-gray-400">
-        <NuxtLink to="/" class="flex items-center hover:text-blue-600" href="#">
+        <NuxtLink to="/" class="flex items-center hover:text-blue-600">
           Home
           <svg
             class="
