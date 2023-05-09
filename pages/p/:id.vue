@@ -46,7 +46,7 @@
     <div class="bg-white border rounded">
       <div
         class="
-          grid 
+          grid
           sm:grid-cols-1
           xs:grid-cols-1
           md:grid-cols-[19rem,8fr]
@@ -360,11 +360,32 @@
       </div>
 
       <div class="bg-slate-50 rounded p-5">
+        <div id="container" class="w-full"></div>
         <div
           id="tabs-with-underline-1"
           role="tabpanel"
           aria-labelledby="tabs-with-underline-item-1"
-        ></div>
+        >
+          <table id="datatable" class="hidden">
+            <!--data[0].logs-->
+            <thead>
+              <tr>
+                <th>Last Updated</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(value, key, index) in data[0].logs">
+                <td>
+                  {{ new Date(value.last_updated) }}
+                </td>
+                <td>
+                  {{ value.price }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -399,16 +420,35 @@ function toggleTabs(tabNumber) {
 openTab.value = data[0]['images'][0]['id'];
 
 onMounted(() => {
-  window.replybox = {
-    site: 'POBODlPRVa',
-  };
-  const docHeadObj = document.getElementsByTagName('head')[0];
-  const jqueryScript = document.createElement('script');
-  jqueryScript.src = 'https://cdn.getreplybox.com/js/embed.js';
-  jqueryScript.defer = false;
-  docHeadObj.appendChild(jqueryScript);
   //changes to Ul and Tailwind
   $('.productDescription ul').addClass('list-disc list-inside');
   $('body').attr('style', 'overflow-y');
+  Highcharts.chart('container', {
+    data: {
+      table: 'datatable',
+      startRow: 1,
+      startColumn: 0,
+      endColumn: 1,
+    },
+    title: {
+      text: 'Data extracted from a HTML table in the page',
+    },
+    yAxis: {
+      title: {
+        text: 'Values in thousands',
+      },
+    },
+    legend: {
+      enabled: false,
+    },
+    xAxis: {
+      title: {
+        text: null,
+      },
+    },
+    tooltip: {
+      pointFormat: 'Price: <b>${point.y}</b>',
+    },
+  });
 });
 </script>

@@ -47,6 +47,14 @@ export default defineNuxtConfig({
           body: true,
           defer: true,
         },
+        {
+          src: 'https://code.highcharts.com/highcharts.js',
+          body: true,
+        },
+        {
+          src: 'https://code.highcharts.com/modules/data.js',
+          body: true,
+        },
       ],
     },
     keepalive: true,
