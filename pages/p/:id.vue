@@ -405,6 +405,10 @@ to do -- foreach Object.keys
 to do -- foreach Object.values based on keys
 to do -- progress mulit series for highcharts
 console.log(Object.values(data[0].price_log[0]));
+
+for (const [key, value] of Object.entries(data[0].price_log[0])) {
+  console.log(`${key}: ${value}`);
+}
 */
 
 onMounted(() => {
