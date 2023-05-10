@@ -360,31 +360,12 @@
       </div>
 
       <div class="bg-slate-50 rounded p-5">
-        <div id="container" class="w-full"></div>
         <div
           id="tabs-with-underline-1"
           role="tabpanel"
           aria-labelledby="tabs-with-underline-item-1"
         >
-          <table id="datatable" class="hidden">
-            <!--data[0].logs-->
-            <thead>
-              <tr>
-                <th>Last Updated</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(value, key, index) in data[0].logs">
-                <td>
-                  {{ new Date(value.last_updated) }}
-                </td>
-                <td>
-                  {{ value.price }}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div id="container" class="w-full"></div>
         </div>
       </div>
     </div>
@@ -419,36 +400,16 @@ function toggleTabs(tabNumber) {
 
 openTab.value = data[0]['images'][0]['id'];
 
+/*
+to do -- foreach Object.keys
+to do -- foreach Object.values based on keys
+to do -- progress mulit series for highcharts
+console.log(Object.values(data[0].price_log[0]));
+*/
+
 onMounted(() => {
   //changes to Ul and Tailwind
   $('.productDescription ul').addClass('list-disc list-inside');
   $('body').attr('style', 'overflow-y');
-  Highcharts.chart('container', {
-    data: {
-      table: 'datatable',
-      startRow: 1,
-      startColumn: 0,
-      endColumn: 1,
-    },
-    title: {
-      text: 'Data extracted from a HTML table in the page',
-    },
-    yAxis: {
-      title: {
-        text: 'Values in thousands',
-      },
-    },
-    legend: {
-      enabled: false,
-    },
-    xAxis: {
-      title: {
-        text: null,
-      },
-    },
-    tooltip: {
-      pointFormat: 'Price: <b>${point.y}</b>',
-    },
-  });
 });
 </script>
