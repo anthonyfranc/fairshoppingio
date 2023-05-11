@@ -415,5 +415,69 @@ onMounted(() => {
   //changes to Ul and Tailwind
   $('.productDescription ul').addClass('list-disc list-inside');
   $('body').attr('style', 'overflow-y');
+
+  $(function () {
+    var options = {
+      chart: {
+        renderTo: 'container',
+        type: 'line',
+        options3d: {
+          enabled: true,
+          alpha: 0,
+          beta: 0,
+          depth: 0,
+          viewDistance: 25,
+        },
+      },
+      title: {
+        text: '',
+      },
+      plotOptions: {
+        column: {
+          depth: 0,
+        },
+      },
+      xAxis: [
+        {
+          //--- Primary yAxis
+          type: 'datetime',
+        },
+      ],
+      yAxis: [
+        {
+          labels: {
+            formatter: function () {
+              return '$' + Highcharts.numberFormat(this.value, 0, '.', ',');
+            },
+          },
+        },
+      ],
+      series: [],
+      credits: {
+        enabled: false,
+      },
+    };
+
+    var newseries = {
+      name: '',
+      data: [],
+    };
+
+    $.each(data[0].price_log, function (i, item) {
+      //newseries.name = i;
+      Array.from(item.Data.sort()).forEach((el) => {
+        el[0] = new Date(el[0]).getTime();
+        newseries.data.push(el);
+      });
+      //newseries.data.push(parseFloat(item.Data));
+      options.series.push({
+        name: i,
+        data: item.Data,
+      });
+    });
+
+    var chart = new Highcharts.Chart(options);
+    console.log(options);
+  });
 });
 </script>
