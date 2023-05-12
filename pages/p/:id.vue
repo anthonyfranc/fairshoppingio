@@ -146,6 +146,49 @@
               </div>
             </div>
           </main>
+          <!--High / Low -->
+          <div
+            class="
+              flex
+              h-3
+              my-8
+              mr-8
+              bg-gray-100
+              border
+              dark:bg-gray-700
+              rounded-md
+            "
+          >
+            <span class="bg-blue-500 bg-opacity-70  w-4/6 ml-10">
+              <div class="grid grid-cols-2 text-xs">
+                <div class="place-self-start flex flex-col">
+                  <span
+                    class="
+                      border-dashed border-2 border-gray-300
+                      pt-10
+                      mt-2.5
+                      w-1
+                      self-center
+                    "
+                  ></span>
+                  <span>$249.99</span>
+                </div>
+                <div class="place-self-end flex flex-col">
+                  <span
+                    class="
+                      border-dashed border-2 border-gray-300
+                      pt-10
+                      mt-2.5
+                      w-1
+                      self-center
+                    "
+                  ></span>
+                  <span class="border rounded p-5">$249.99</span>
+                </div>
+              </div>
+            </span>
+          </div>
+          <!--High / Low-->
         </div>
         <!--Right Section-->
         <div>
@@ -178,7 +221,7 @@
                   p-3
                   border border-gray-300
                   rounded
-                  bg-slate-100 bg-opacity-50
+                  bg-white
                   mb-4
                   relative
                 "
@@ -298,7 +341,7 @@
                       text-center
                       inline-flex
                       items-center
-                      bg-blue-500
+                      bg-[#4B986C]
                     "
                   >
                     Purchase
@@ -309,14 +352,14 @@
           </div>
         </div>
       </div>
-      <div class="border-b border-gray-200 dark:border-gray-700 hidden">
+      <div class="border-b border-gray-200 dark:border-gray-700">
         <nav class="flex space-x-2" aria-label="Tabs" role="tablist">
           <button
             type="button"
             class="
               hs-tab-active:font-semibold
-              hs-tab-active:border-blue-600
-              hs-tab-active:text-blue-600
+              hs-tab-active:border-[#4B986C]
+              hs-tab-active:text-[#4B986C]
               py-4
               px-1
               inline-flex
@@ -359,7 +402,7 @@
         </nav>
       </div>
 
-      <div class="bg-slate-50 rounded p-5">
+      <div class="bg-slate-200 bg-opacity-5 rounded p-5">
         <div
           id="tabs-with-underline-1"
           role="tabpanel"
@@ -400,17 +443,6 @@ function toggleTabs(tabNumber) {
 
 openTab.value = data[0]['images'][0]['id'];
 
-/*
-to do -- foreach Object.keys
-to do -- foreach Object.values based on keys
-to do -- progress mulit series for highcharts
-console.log(Object.values(data[0].price_log[0]));
-
-for (const [key, value] of Object.entries(data[0].price_log[0])) {
-  console.log(`${key}: ${value}`);
-}
-*/
-
 onMounted(() => {
   //changes to Ul and Tailwind
   $('.productDescription ul').addClass('list-disc list-inside');
@@ -419,6 +451,7 @@ onMounted(() => {
   $(function () {
     var options = {
       chart: {
+        backgroundColor: null,
         renderTo: 'container',
         type: 'line',
         options3d: {
@@ -426,7 +459,7 @@ onMounted(() => {
           alpha: 0,
           beta: 0,
           depth: 0,
-          viewDistance: 25,
+          viewDistance: 0,
         },
       },
       title: {
@@ -445,6 +478,9 @@ onMounted(() => {
       ],
       yAxis: [
         {
+          title: {
+            text: 'Price',
+          },
           labels: {
             formatter: function () {
               return '$' + Highcharts.numberFormat(this.value, 0, '.', ',');
@@ -464,12 +500,10 @@ onMounted(() => {
     };
 
     $.each(data[0].price_log, function (i, item) {
-      //newseries.name = i;
       Array.from(item.Data.sort()).forEach((el) => {
         el[0] = new Date(el[0]).getTime();
         newseries.data.push(el);
       });
-      //newseries.data.push(parseFloat(item.Data));
       options.series.push({
         name: i,
         data: item.Data,
