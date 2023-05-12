@@ -147,20 +147,21 @@
             </div>
           </main>
           <!--High / Low -->
+          <div class="mt-5 relative border rounded h-32 bg-gray-50">
           <div
             class="
               flex
               justify-center
               h-3
               my-8
-              mr-8
-              bg-gray-100
+              m-2
+              bg-gray-200
               border
               dark:bg-gray-700
               rounded-md
             "
           >
-            <span class="bg-blue-500 bg-opacity-70 w-4/6">
+            <span class="bg-blue-500 bg-opacity-80 w-4/6">
               <div class="grid grid-cols-2 text-xs text-gray-800">
                 <div
                   class="
@@ -200,6 +201,7 @@
                 </div>
               </div>
             </span>
+          </div>
           </div>
           <!--High / Low-->
         </div>
