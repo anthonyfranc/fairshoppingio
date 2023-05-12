@@ -150,6 +150,7 @@
           <div
             class="
               flex
+              justify-center
               h-3
               my-8
               mr-8
@@ -159,9 +160,15 @@
               rounded-md
             "
           >
-            <span class="bg-blue-500 bg-opacity-70  w-4/6 ml-10">
+            <span class="bg-blue-500 bg-opacity-70 w-">
               <div class="grid grid-cols-2 text-xs">
-                <div class="place-self-start flex flex-col">
+                <div
+                  class="
+                    place-self-start
+                    flex flex-col
+                    -translate-x-[calc(50%-(theme(spacing.1)/2))]
+                  "
+                >
                   <span
                     class="
                       border-dashed border-2 border-gray-300
@@ -173,7 +180,13 @@
                   ></span>
                   <span>$249.99</span>
                 </div>
-                <div class="place-self-end flex flex-col">
+                <div
+                  class="
+                    place-self-end
+                    flex flex-col
+                    translate-x-[calc(50%-(theme(spacing.1)/2))]
+                  "
+                >
                   <span
                     class="
                       border-dashed border-2 border-gray-300
