@@ -147,7 +147,7 @@
             </div>
           </main>
           <!--High / Low -->
-          <div class="mt-5 relative border rounded h-32 bg-gray-50">
+          <div class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30">
           <div
             class="
               flex
