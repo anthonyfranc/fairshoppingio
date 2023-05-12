@@ -61,11 +61,11 @@
               <!-- Product -->
               <div class="grid grid-cols-1 items-start">
                 <!-- Image gallery -->
-                <div class="flex flex-col-reverse">
+                <div class="flex flex-col-reverse ">
                   <!-- Image selector -->
-                  <div class="mt-6 w-4/5 max-w-3xl lg:max-w-none">
+                  <div class="mt-6 w-4/5 max-w-3xl lg:max-w-none  ">
                     <div
-                      class="grid grid-cols-4 gap-6"
+                      class="grid grid-flow-col gap-4"
                       aria-orientation="horizontal"
                       role="tablist"
                     >
@@ -125,7 +125,7 @@
                   <!--End of Image Selector-->
 
                   <!--Image Shown on Top-->
-                  <div class="aspect-w-1 aspect-h-1 w-4/5">
+                  <div class="aspect-w-1 aspect-h-1 w-4/5 pt-10">
                     <!-- Tab panel, show/hide based on tab state. -->
                     <div
                       v-for="(item, key, index) in ProductData.images"
@@ -137,7 +137,7 @@
                       <img
                         :src="item.image_url"
                         alt="Angled front view with bag zipped and handles upright."
-                        class="h-[11rem] w-full object-scale-down rounded-xl"
+                        class="h-[15rem] w-full object-scale-down rounded-xl"
                       />
                     </div>
                   </div>
@@ -160,8 +160,8 @@
               rounded-md
             "
           >
-            <span class="bg-blue-500 bg-opacity-70 w-">
-              <div class="grid grid-cols-2 text-xs">
+            <span class="bg-blue-500 bg-opacity-70 w-4/6">
+              <div class="grid grid-cols-2 text-xs text-gray-800">
                 <div
                   class="
                     place-self-start
@@ -196,7 +196,7 @@
                       self-center
                     "
                   ></span>
-                  <span class="border rounded p-5">$249.99</span>
+                  <span>$249.99</span>
                 </div>
               </div>
             </span>
@@ -204,7 +204,7 @@
           <!--High / Low-->
         </div>
         <!--Right Section-->
-        <div>
+        <div class="pt-10">
           <h2
             class="
               mb-2
