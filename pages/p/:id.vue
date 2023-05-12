@@ -61,9 +61,9 @@
               <!-- Product -->
               <div class="grid grid-cols-1 items-start">
                 <!-- Image gallery -->
-                <div class="flex flex-col-reverse ">
+                <div class="flex flex-col-reverse">
                   <!-- Image selector -->
-                  <div class="mt-6 w-4/5 max-w-3xl lg:max-w-none  ">
+                  <div class="mt-6 w-4/5 max-w-3xl lg:max-w-none">
                     <div
                       class="grid grid-flow-col gap-4"
                       aria-orientation="horizontal"
@@ -147,61 +147,63 @@
             </div>
           </main>
           <!--High / Low -->
-          <div class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30">
           <div
-            class="
-              flex
-              justify-center
-              h-3
-              my-8
-              m-2
-              bg-gray-200
-              border
-              dark:bg-gray-700
-              rounded-md
-            "
+            class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30"
           >
-            <span class="bg-blue-500 bg-opacity-80 w-4/6">
-              <div class="grid grid-cols-2 text-xs text-gray-800">
-                <div
-                  class="
-                    place-self-start
-                    flex flex-col
-                    -translate-x-[calc(50%-(theme(spacing.1)/2))]
-                  "
-                >
-                  <span
+            <div
+              class="
+                flex
+                justify-center
+                h-3
+                my-10
+                m-2
+                bg-gray-200
+                border
+                dark:bg-gray-700
+                rounded-md
+              "
+            >
+              <span class="bg-blue-500 bg-opacity-80 w-4/6">
+                <div class="grid grid-cols-2 text-xs text-gray-800">
+                  <div
                     class="
-                      border-dashed border-2 border-gray-300
-                      pt-10
-                      mt-2.5
-                      w-1
-                      self-center
+                      place-self-start
+                      flex flex-col
+                      -translate-x-[calc(50%-(theme(spacing.1)/2))]
                     "
-                  ></span>
-                  <span>$249.99</span>
-                </div>
-                <div
-                  class="
-                    place-self-end
-                    flex flex-col
-                    translate-x-[calc(50%-(theme(spacing.1)/2))]
-                  "
-                >
-                  <span
+                  >
+                    <span
+                      class="
+                        border-dashed border-2 border-gray-300
+                        pt-10
+                        mt-2.5
+                        w-1
+                        self-center
+                      "
+                    ></span>
+                    <span>$249.99</span>
+                  </div>
+                  <div
                     class="
-                      border-dashed border-2 border-gray-300
-                      pt-10
-                      mt-2.5
-                      w-1
-                      self-center
+                      place-self-end
+                      flex flex-col
+                      translate-x-[calc(50%-(theme(spacing.1)/2))]
                     "
-                  ></span>
-                  <span>$249.99</span>
+                  >
+                    <span
+                      class="
+                        border-dashed border-2 border-gray-300
+                        pt-10
+                        mt-2.5
+                        w-1
+                        self-center
+                      "
+                    ></span>
+                    <span>$249.99</span>
+                  </div>
                 </div>
-              </div>
-            </span>
-          </div>
+              </span>
+            </div>
           </div>
           <!--High / Low-->
         </div>
