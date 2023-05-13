@@ -55,15 +55,15 @@
           sm:p-4
         "
       >
-        <div class="xs:pb-5 sm:pb-5">
+        <div class="xs:pb-5 sm:pb-5 pr-5">
           <main class="mx-auto max-w-7xl" v-for="ProductData in data">
             <div id="image_main" class="mx-auto max-w-2xl lg:max-w-none">
               <!-- Product -->
-              <div class="grid grid-cols-1 items-start">
+              <div class="grid grid-cols-1">
                 <!-- Image gallery -->
-                <div class="flex flex-col-reverse">
+                <div class="flex flex-col-reverse place-items-center">
                   <!-- Image selector -->
-                  <div class="mt-6 w-4/5 max-w-3xl lg:max-w-none">
+                  <div class="mt-6 w-4/6 max-w-3xl lg:max-w-none">
                     <div
                       class="grid grid-flow-col gap-4"
                       aria-orientation="horizontal"
@@ -163,8 +163,29 @@
                 rounded-md
               "
             >
-              <span class="bg-blue-500 bg-opacity-80 w-4/6">
-                <div class="grid grid-cols-2 text-xs text-gray-800">
+              <span class="absolute left-[1.5em] mt-2.5 text-xs text-gray-400"
+                >Low</span
+              >
+              <span class="absolute right-[1.5em] mt-2.5 text-xs text-gray-400"
+                >High</span
+              >
+              <p class="absolute top-1.5 left text-xs text-gray-400 flex">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-3 h-4 mr-0.5"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1 2.75A.75.75 0 011.75 2h16.5a.75.75 0 010 1.5H18v8.75A2.75 2.75 0 0115.25 15h-1.072l.798 3.06a.75.75 0 01-1.452.38L13.41 18H6.59l-.114.44a.75.75 0 01-1.452-.38L5.823 15H4.75A2.75 2.75 0 012 12.25V3.5h-.25A.75.75 0 011 2.75zM7.373 15l-.391 1.5h6.037l-.392-1.5H7.373zm7.49-8.931a.75.75 0 01-.175 1.046 19.326 19.326 0 00-3.398 3.098.75.75 0 01-1.097.04L8.5 8.561l-2.22 2.22A.75.75 0 115.22 9.72l2.75-2.75a.75.75 0 011.06 0l1.664 1.663a20.786 20.786 0 013.122-2.74.75.75 0 011.046.176z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                The current Low and High Price.
+              </p>
+              <span class="bg-[#4B986C] bg-o pacity-70 w-4/6">
+                <div class="grid grid-cols-2 text-xs text-base">
                   <div
                     class="
                       place-self-start
@@ -176,7 +197,7 @@
                       class="
                         border-dashed border-2 border-gray-300
                         pt-10
-                        mt-2.5
+                        mt-[11px]
                         w-1
                         self-center
                       "
@@ -419,13 +440,13 @@
         </nav>
       </div>
 
-      <div class="bg-slate-200 bg-opacity-5 rounded p-5">
+      <div class="bg-slate-200 bg-opacity-5 p-10 border-t">
         <div
           id="tabs-with-underline-1"
           role="tabpanel"
           aria-labelledby="tabs-with-underline-item-1"
         >
-          <div id="container" class="w-full"></div>
+          <div id="container"></div>
         </div>
       </div>
     </div>
