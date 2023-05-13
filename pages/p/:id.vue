@@ -147,6 +147,7 @@
             </div>
           </main>
           <!--High / Low -->
+          <template>
           <div
             class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30"
           >
@@ -226,6 +227,7 @@
               </span>
             </div>
           </div>
+          </template>
           <!--High / Low-->
         </div>
         <!--Right Section-->
