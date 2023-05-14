@@ -193,7 +193,7 @@
                       class="
                         place-self-start
                         flex flex-col
-                        -translate-x-[calc(50%-(theme(spacing.1)/5))]
+                        -translate-x-[calc(50%-(theme(spacing.1)/2))]
                       "
                     >
                       <span
@@ -202,6 +202,7 @@
                           pt-10
                           mt-[11px]
                           self-center
+                          w-1
                         "
                       ></span>
                       <span>${{ item.Data[0].toString() }}</span>
@@ -210,7 +211,7 @@
                       class="
                         place-self-end
                         flex flex-col
-                        translate-x-[calc(50%-(theme(spacing.1)/5))]
+                        translate-x-[calc(50%-(theme(spacing.1)/2))]
                       "
                     >
                       <span
@@ -219,6 +220,7 @@
                           pt-10
                           mt-2.5
                           self-center
+                          w-1
                         "
                       ></span>
                       <span>${{ item.Data[1].toString() }}</span>
