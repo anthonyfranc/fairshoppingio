@@ -150,7 +150,10 @@
           <template v-for="(item, key, index) in data[0].min_max">
             <div
               class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30"
-              v-if="item.Data.length == 2 && item.Data[0].toString() != item.Data[1].toString() "
+              v-if="
+                item.Data.length == 2 &&
+                item.Data[0].toString() != item.Data[1].toString()
+              "
             >
               <div
                 class="
@@ -230,9 +233,12 @@
               </div>
             </div>
             <!--Else-->
-             <div
+            <div
               class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30"
-              v-if="item.Data.length < 2 || item.Data[0].toString() == item.Data[1].toString()"
+              v-if="
+                item.Data.length < 2 ||
+                item.Data[0].toString() == item.Data[1].toString()
+              "
             >
               <div
                 class="
@@ -271,12 +277,7 @@
                 </p>
                 <span class="bg-[#4B986C] bg-o pacity-70 w-4/6">
                   <div class="grid grid-cols-1 text-xs text-base">
-                    <div
-                      class="
-                        place-self-center
-                        flex flex-col
-                      "
-                    >
+                    <div class="place-self-center flex flex-col">
                       <span
                         class="
                           border-dashed border-2 border-gray-300
