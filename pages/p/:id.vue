@@ -147,86 +147,148 @@
             </div>
           </main>
           <!--High / Low -->
-          <template>
-          <div
-            class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30"
-          >
+          <template v-for="(item, key, index) in data[0].min_max">
             <div
-              class="
-                flex
-                justify-center
-                h-3
-                my-10
-                m-2
-                bg-gray-200
-                border
-                dark:bg-gray-700
-                rounded-md
-              "
+              class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30"
+              v-if="item.Data.length == 2 && item.Data[0].toString() != item.Data[1].toString() "
             >
-              <span class="absolute left-[1.5em] mt-2.5 text-xs text-gray-400"
-                >Low</span
+              <div
+                class="
+                  flex
+                  justify-center
+                  h-3
+                  my-10
+                  m-2
+                  bg-gray-200
+                  border
+                  dark:bg-gray-700
+                  rounded-md
+                "
               >
-              <span class="absolute right-[1.5em] mt-2.5 text-xs text-gray-400"
-                >High</span
-              >
-              <p class="absolute top-1.5 left text-xs text-gray-400 flex">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="w-3 h-4 mr-0.5"
+                <span class="absolute left-[1.5em] mt-2.5 text-xs text-gray-400"
+                  >Low</span
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 2.75A.75.75 0 011.75 2h16.5a.75.75 0 010 1.5H18v8.75A2.75 2.75 0 0115.25 15h-1.072l.798 3.06a.75.75 0 01-1.452.38L13.41 18H6.59l-.114.44a.75.75 0 01-1.452-.38L5.823 15H4.75A2.75 2.75 0 012 12.25V3.5h-.25A.75.75 0 011 2.75zM7.373 15l-.391 1.5h6.037l-.392-1.5H7.373zm7.49-8.931a.75.75 0 01-.175 1.046 19.326 19.326 0 00-3.398 3.098.75.75 0 01-1.097.04L8.5 8.561l-2.22 2.22A.75.75 0 115.22 9.72l2.75-2.75a.75.75 0 011.06 0l1.664 1.663a20.786 20.786 0 013.122-2.74.75.75 0 011.046.176z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                The current Low and High Price.
-              </p>
-              <span class="bg-[#4B986C] bg-o pacity-70 w-4/6">
-                <div class="grid grid-cols-2 text-xs text-base">
-                  <div
-                    class="
-                      place-self-start
-                      flex flex-col
-                      -translate-x-[calc(50%-(theme(spacing.1)/2))]
-                    "
+                <span
+                  class="absolute right-[1.5em] mt-2.5 text-xs text-gray-400"
+                  >High</span
+                >
+                <p class="absolute top-1.5 left text-xs text-gray-400 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-3 h-4 mr-0.5"
                   >
-                    <span
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 2.75A.75.75 0 011.75 2h16.5a.75.75 0 010 1.5H18v8.75A2.75 2.75 0 0115.25 15h-1.072l.798 3.06a.75.75 0 01-1.452.38L13.41 18H6.59l-.114.44a.75.75 0 01-1.452-.38L5.823 15H4.75A2.75 2.75 0 012 12.25V3.5h-.25A.75.75 0 011 2.75zM7.373 15l-.391 1.5h6.037l-.392-1.5H7.373zm7.49-8.931a.75.75 0 01-.175 1.046 19.326 19.326 0 00-3.398 3.098.75.75 0 01-1.097.04L8.5 8.561l-2.22 2.22A.75.75 0 115.22 9.72l2.75-2.75a.75.75 0 011.06 0l1.664 1.663a20.786 20.786 0 013.122-2.74.75.75 0 011.046.176z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  The current Low and High Price.
+                </p>
+                <span class="bg-[#4B986C] bg-o pacity-70 w-4/6">
+                  <div class="grid grid-cols-2 text-xs text-base">
+                    <div
                       class="
-                        border-dashed border-2 border-gray-300
-                        pt-10
-                        mt-[11px]
-                        w-1
-                        self-center
+                        place-self-start
+                        flex flex-col
+                        -translate-x-[calc(50%-(theme(spacing.1)/5))]
                       "
-                    ></span>
-                    <span>$249.99</span>
-                  </div>
-                  <div
-                    class="
-                      place-self-end
-                      flex flex-col
-                      translate-x-[calc(50%-(theme(spacing.1)/2))]
-                    "
-                  >
-                    <span
+                    >
+                      <span
+                        class="
+                          border-dashed border-2 border-gray-300
+                          pt-10
+                          mt-[11px]
+                          self-center
+                        "
+                      ></span>
+                      <span>${{ item.Data[0].toString() }}</span>
+                    </div>
+                    <div
                       class="
-                        border-dashed border-2 border-gray-300
-                        pt-10
-                        mt-2.5
-                        w-1
-                        self-center
+                        place-self-end
+                        flex flex-col
+                        translate-x-[calc(50%-(theme(spacing.1)/5))]
                       "
-                    ></span>
-                    <span>$249.99</span>
+                    >
+                      <span
+                        class="
+                          border-dashed border-2 border-gray-300
+                          pt-10
+                          mt-2.5
+                          self-center
+                        "
+                      ></span>
+                      <span>${{ item.Data[1].toString() }}</span>
+                    </div>
                   </div>
-                </div>
-              </span>
+                </span>
+              </div>
             </div>
-          </div>
+            <!--Else-->
+             <div
+              class="mt-5 relative border rounded h-32 bg-gray-50 bg-opacity-30"
+              v-if="item.Data.length < 2 || item.Data[0].toString() == item.Data[1].toString()"
+            >
+              <div
+                class="
+                  flex
+                  justify-center
+                  h-3
+                  my-10
+                  m-2
+                  bg-gray-200
+                  border
+                  dark:bg-gray-700
+                  rounded-md
+                "
+              >
+                <span class="absolute left-[1.5em] mt-2.5 text-xs text-gray-400"
+                  >Low</span
+                >
+                <span
+                  class="absolute right-[1.5em] mt-2.5 text-xs text-gray-400"
+                  >High</span
+                >
+                <p class="absolute top-1.5 left text-xs text-gray-400 flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-3 h-4 mr-0.5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 2.75A.75.75 0 011.75 2h16.5a.75.75 0 010 1.5H18v8.75A2.75 2.75 0 0115.25 15h-1.072l.798 3.06a.75.75 0 01-1.452.38L13.41 18H6.59l-.114.44a.75.75 0 01-1.452-.38L5.823 15H4.75A2.75 2.75 0 012 12.25V3.5h-.25A.75.75 0 011 2.75zM7.373 15l-.391 1.5h6.037l-.392-1.5H7.373zm7.49-8.931a.75.75 0 01-.175 1.046 19.326 19.326 0 00-3.398 3.098.75.75 0 01-1.097.04L8.5 8.561l-2.22 2.22A.75.75 0 115.22 9.72l2.75-2.75a.75.75 0 011.06 0l1.664 1.663a20.786 20.786 0 013.122-2.74.75.75 0 011.046.176z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  The current Low and High Price.
+                </p>
+                <span class="bg-[#4B986C] bg-o pacity-70 w-4/6">
+                  <div class="grid grid-cols-1 text-xs text-base">
+                    <div
+                      class="
+                        place-self-center
+                        flex flex-col
+                      "
+                    >
+                      <span
+                        class="
+                          border-dashed border-2 border-gray-300
+                          pt-10
+                          mt-[11px]
+                          self-center
+                        "
+                      ></span>
+                      <span>${{ item.Data[0].toString() }}</span>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
           </template>
           <!--High / Low-->
         </div>
