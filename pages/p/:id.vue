@@ -190,44 +190,57 @@
                   </svg>
                   The current Low and High Price.
                 </p>
-                <span class="bg-[#4B986C] bg-o pacity-70 w-4/6">
+                <span class="bg-[#4B986C] bg-o pacity-70 w-1/2">
                   <div class="grid grid-cols-2 text-xs text-base">
                     <div
                       class="
                         place-self-start
                         flex flex-col
-                        -translate-x-[calc(50%-(theme(spacing.1)/2))]
+                        -translate-x-[calc(50%-(theme(spacing.1)/4))]
                       "
-                      style="-webkit-transform:translateX(calc(50%-(theme(spacing.1)/2)))"
                     >
                       <span
                         class="
-                          border-dashed border-2 border-gray-300
                           pt-10
-                          mt-[11px]
+                          mt-[0.8em]
                           self-center
-                          w-1
+                          h-[4em]
+                          min-h-[1em]
+                          w-[2px]
+                          bg-gray-300
                         "
                       ></span>
-                      <span>${{ item.Data[0].toString() }}</span>
+                      <span>{{
+                        Number(item.Data[0]).toLocaleString('en-US', {
+                          style: 'currency',
+                          currency: 'USD',
+                        })
+                      }}</span>
                     </div>
                     <div
                       class="
                         place-self-end
                         flex flex-col
-                        translate-x-[calc(50%-(theme(spacing.1)/2))]
+                        translate-x-[calc(50%-(theme(spacing.1)/4))]
                       "
                     >
                       <span
                         class="
-                          border-dashed border-2 border-gray-300
                           pt-10
-                          mt-2.5
+                          mt-[0.8em]
                           self-center
-                          w-1
+                          h-[4em]
+                          min-h-[1em]
+                          w-[2px]
+                          bg-gray-300
                         "
                       ></span>
-                      <span>${{ item.Data[1].toString() }}</span>
+                      <span>{{
+                        Number(item.Data[1]).toLocaleString('en-US', {
+                          style: 'currency',
+                          currency: 'USD',
+                        })
+                      }}</span>
                     </div>
                   </div>
                 </span>
@@ -281,13 +294,21 @@
                     <div class="place-self-center flex flex-col">
                       <span
                         class="
-                          border-dashed border-2 border-gray-300
                           pt-10
-                          mt-[11px]
+                          mt-[0.8em]
                           self-center
+                          h-[4em]
+                          min-h-[1em]
+                          w-[2px]
+                          bg-gray-300
                         "
                       ></span>
-                      <span>${{ item.Data[0].toString() }}</span>
+                      <span>{{
+                        Number(item.Data[0]).toLocaleString('en-US', {
+                          style: 'currency',
+                          currency: 'USD',
+                        })
+                      }}</span>
                     </div>
                   </div>
                 </span>
