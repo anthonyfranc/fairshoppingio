@@ -198,6 +198,7 @@
                         flex flex-col
                         -translate-x-[calc(50%-(theme(spacing.1)/2))]
                       "
+                      style="-webkit-transform:translateX(calc(50%-(theme(spacing.1)/2)))"
                     >
                       <span
                         class="
